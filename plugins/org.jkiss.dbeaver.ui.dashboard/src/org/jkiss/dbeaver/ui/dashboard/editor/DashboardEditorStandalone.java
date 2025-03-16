@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.model.dashboard.DashboardConstants;
 import org.jkiss.dbeaver.model.dashboard.DashboardIcons;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dashboard.control.DashboardListViewer;
 import org.jkiss.dbeaver.ui.dashboard.model.DashboardConfiguration;
@@ -100,7 +100,7 @@ public class DashboardEditorStandalone extends SinglePageDatabaseEditor<IEditorI
         if (fileName.endsWith("." + DashboardConstants.DASHBOARD_EXT)) {
             fileName = fileName.substring(0, fileName.length() - 1 - DashboardConstants.DASHBOARD_EXT.length());
         }
-        setTitleImage(DBeaverIcons.getImage(DashboardIcons.DASHBOARD));
+        setTitleImage(BoberKurwaIcons.getImage(DashboardIcons.DASHBOARD));
         setPartName(fileName);
     }
 

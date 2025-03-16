@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import org.eclipse.jface.action.IMenuCreator;
 import org.eclipse.jface.action.MenuManager;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.MenuCreator;
 import org.jkiss.dbeaver.ui.gis.internal.GISMessages;
 import org.jkiss.dbeaver.ui.gis.panel.GISLeafletViewer;
@@ -34,7 +34,7 @@ public class ToggleLabelsAction extends Action {
         this.viewer = viewer;
 
         setText(getActionText());
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.SMALL_INFO));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_INFO));
     }
 
     @Override

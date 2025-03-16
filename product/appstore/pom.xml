@@ -12,7 +12,7 @@
     <version>25.0.1-SNAPSHOT</version>
     <artifactId>appstore</artifactId>
     <packaging>eclipse-repository</packaging>
-    <name>DBeaver CE AppStore</name>
+    <name>BoberKurwa CE AppStore</name>
 
     <build>
         <plugins>
@@ -30,7 +30,7 @@
                             <id>org.jkiss.dbeaver.core.appstore</id>
                             <archiveFileName>dbeaver-ce-${dbeaver-version}</archiveFileName>
                             <rootFolders>
-                                <macosx>DBeaver.app</macosx>
+                                <macosx>BoberKurwa.app</macosx>
                                 <win32>dbeaver</win32>
                             </rootFolders>
                         </product>

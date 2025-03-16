@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -70,7 +70,7 @@ import org.jkiss.dbeaver.tools.transfer.database.DatabaseTransferProducer;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferProcessorDescriptor;
 import org.jkiss.dbeaver.tools.transfer.ui.wizard.DataTransferWizard;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.ConnectionCommands;
 import org.jkiss.dbeaver.ui.contentassist.ContentAssistUtils;
@@ -696,7 +696,7 @@ public class ResultSetHandlerMain extends AbstractHandler implements IElementUpd
                 element.setTooltip(ActionUtils.findCommandDescription(CMD_EXPORT, element.getServiceLocator(), false));
             } else {
                 element.setText(descriptor.getAppName());
-                element.setIcon(DBeaverIcons.getImageDescriptor(descriptor.getIcon()));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(descriptor.getIcon()));
                 element.setTooltip(descriptor.getDescription());
             }
         }

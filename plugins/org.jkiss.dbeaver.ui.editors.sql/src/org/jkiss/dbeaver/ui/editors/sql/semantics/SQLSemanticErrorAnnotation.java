@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.ui.texteditor.MarkerAnnotation;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.sql.semantics.SQLQueryRecognitionProblemInfo;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.editors.sql.syntax.SQLProblemAnnotation;
 import org.jkiss.utils.CommonUtils;
 
@@ -40,8 +40,8 @@ public class SQLSemanticErrorAnnotation extends MarkerAnnotation implements IAnn
     public static final String MARKER_ATTRIBUTE_NAME = "org.jkiss.dbeaver.ui.editors.sql.semantics.semanticProblemAnnotation";
 
     private static final Map<SQLQueryRecognitionProblemInfo.Severity, Image> imageByProblemSeverity = Map.of(
-        SQLQueryRecognitionProblemInfo.Severity.ERROR, DBeaverIcons.getImage(DBIcon.TINY_ERROR),
-        SQLQueryRecognitionProblemInfo.Severity.WARNING, DBeaverIcons.getImage(DBIcon.TINY_WARNING)
+        SQLQueryRecognitionProblemInfo.Severity.ERROR, BoberKurwaIcons.getImage(DBIcon.TINY_ERROR),
+        SQLQueryRecognitionProblemInfo.Severity.WARNING, BoberKurwaIcons.getImage(DBIcon.TINY_WARNING)
     );
 
     @NotNull

@@ -2,7 +2,7 @@
 <?eclipse version="3.4"?>
 <plugin>
 
-    <extension-point id="org.jkiss.dbeaver.debug.ui.configurationPanels" name="DBeaver debug configuration panels" schema="schema/org.jkiss.dbeaver.debug.configurationPanels.exsd"/>
+    <extension-point id="org.jkiss.dbeaver.debug.ui.configurationPanels" name="BoberKurwa debug configuration panels" schema="schema/org.jkiss.dbeaver.debug.configurationPanels.exsd"/>
 
     <extension point="org.eclipse.debug.ui.launchConfigurationTypeImages">
         <launchConfigurationTypeImage
@@ -155,9 +155,9 @@
     </extension>
 
 
-    <!-- DBeaver perspective hook -->
+    <!-- BoberKurwa perspective hook -->
     <extension point="org.eclipse.ui.perspectiveExtensions">
-        <!-- Extension to default DBeaver perspectiver -->
+        <!-- Extension to default BoberKurwa perspectiver -->
         <perspectiveExtension targetID="org.jkiss.dbeaver.core.perspective">
             <!-- Bottom Left -->
             <view

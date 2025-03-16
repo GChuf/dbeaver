@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ import org.eclipse.ui.internal.wizards.AbstractExtensionWizardRegistry;
 import org.eclipse.ui.wizards.IWizardCategory;
 import org.eclipse.ui.wizards.IWizardDescriptor;
 import org.jkiss.code.NotNull;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.core.CoreFeatures;
@@ -63,18 +63,18 @@ import org.jkiss.dbeaver.registry.BasePlatformImpl;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.OperationSystemState;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIFonts;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceHandler;
 import org.jkiss.dbeaver.ui.app.standalone.internal.CoreApplicationActivator;
 import org.jkiss.dbeaver.ui.app.standalone.internal.CoreApplicationMessages;
 import org.jkiss.dbeaver.ui.app.standalone.rpc.IInstanceController;
-import org.jkiss.dbeaver.ui.app.standalone.update.DBeaverVersionChecker;
+import org.jkiss.dbeaver.ui.app.standalone.update.BoberKurwaVersionChecker;
 import org.jkiss.dbeaver.ui.dialogs.ConfirmationDialog;
 import org.jkiss.dbeaver.ui.editors.EditorUtils;
 import org.jkiss.dbeaver.ui.editors.content.ContentEditorInput;
-import org.jkiss.dbeaver.ui.perspective.DBeaverPerspective;
+import org.jkiss.dbeaver.ui.perspective.BoberKurwaPerspective;
 import org.jkiss.dbeaver.ui.preferences.PrefPageConnectionsGeneral;
 import org.jkiss.dbeaver.ui.preferences.PrefPageDatabaseEditors;
 import org.jkiss.dbeaver.ui.preferences.PrefPageDatabaseUserInterface;
@@ -94,7 +94,7 @@ import java.util.List;
 public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
     private static final Log log = Log.getLog(ApplicationWorkbenchAdvisor.class);
 
-    private static final String PERSPECTIVE_ID = DBeaverPerspective.PERSPECTIVE_ID;
+    private static final String PERSPECTIVE_ID = BoberKurwaPerspective.PERSPECTIVE_ID;
     public static final String DBEAVER_SCHEME_NAME = "org.jkiss.dbeaver.defaultKeyScheme"; //$NON-NLS-1$
 
     protected static final String WORKBENCH_PREF_PAGE_ID = "org.eclipse.ui.preferencePages.Workbench";
@@ -235,14 +235,14 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
 
         // Replace Eclipse error icon shown in the "Problems" view with our own
         WorkbenchImages.getImageRegistry().remove(IDEInternalWorkbenchImages.IMG_OBJS_ERROR_PATH);
-        WorkbenchImages.getImageRegistry().put(IDEInternalWorkbenchImages.IMG_OBJS_ERROR_PATH, DBeaverIcons.getImageDescriptor(DBIcon.SMALL_ERROR));
-        WorkbenchImages.getDescriptors().put(IDEInternalWorkbenchImages.IMG_OBJS_ERROR_PATH, DBeaverIcons.getImageDescriptor(DBIcon.SMALL_ERROR));
+        WorkbenchImages.getImageRegistry().put(IDEInternalWorkbenchImages.IMG_OBJS_ERROR_PATH, BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_ERROR));
+        WorkbenchImages.getDescriptors().put(IDEInternalWorkbenchImages.IMG_OBJS_ERROR_PATH, BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_ERROR));
 
         FontPreferenceOverrides.overrideFontPrefValues(fontOverrides);
             
 /*
         // Set default resource encoding to UTF-8
-        String defEncoding = DBWorkbench.getPlatform().getPreferenceStore().getString(DBeaverPreferences.DEFAULT_RESOURCE_ENCODING);
+        String defEncoding = DBWorkbench.getPlatform().getPreferenceStore().getString(BoberKurwaPreferences.DEFAULT_RESOURCE_ENCODING);
         if (CommonUtils.isEmpty(defEncoding)) {
             defEncoding = GeneralUtils.UTF8_ENCODING;
         }
@@ -293,8 +293,8 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
 
     protected boolean isPropertyChangeRequiresRestart(String property) {
         return
-            property.equals(DBeaverPreferences.LOGS_DEBUG_ENABLED) ||
-            property.equals(DBeaverPreferences.LOGS_DEBUG_LOCATION) ||
+            property.equals(BoberKurwaPreferences.LOGS_DEBUG_ENABLED) ||
+            property.equals(BoberKurwaPreferences.LOGS_DEBUG_LOCATION) ||
             property.equals(ModelPreferences.PLATFORM_LANGUAGE);
     }
     
@@ -355,9 +355,9 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
 
     private void patchJFaceIcons() {
         final Map<String, ImageDescriptor> icons = Map.of(
-            Dialog.DLG_IMG_MESSAGE_INFO, DBeaverIcons.getImageDescriptor(DBIcon.SMALL_INFO),
-            Dialog.DLG_IMG_MESSAGE_WARNING, DBeaverIcons.getImageDescriptor(DBIcon.SMALL_WARNING),
-            Dialog.DLG_IMG_MESSAGE_ERROR, DBeaverIcons.getImageDescriptor(DBIcon.SMALL_ERROR)
+            Dialog.DLG_IMG_MESSAGE_INFO, BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_INFO),
+            Dialog.DLG_IMG_MESSAGE_WARNING, BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_WARNING),
+            Dialog.DLG_IMG_MESSAGE_ERROR, BoberKurwaIcons.getImageDescriptor(DBIcon.SMALL_ERROR)
         );
 
         final ImageRegistry registry = JFaceResources.getImageRegistry();
@@ -372,7 +372,7 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
         if (mainShell != null) {
             UIUtils.scheduleDelayedPopup(
                 mainShell,
-                () -> new DBeaverVersionChecker(false).schedule(),
+                () -> new BoberKurwaVersionChecker(false).schedule(),
                 "Version Checker Wrapper"
             );
         }
@@ -435,10 +435,10 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
 
     public static boolean closeOpenEditors(IWorkbenchWindow window, boolean forceRevert, boolean showConfirmation) {
         if (showConfirmation && !forceRevert &&
-                !MessageDialogWithToggle.NEVER.equals(ConfirmationDialog.getSavedPreference(DBeaverPreferences.CONFIRM_EXIT))
+                !MessageDialogWithToggle.NEVER.equals(ConfirmationDialog.getSavedPreference(BoberKurwaPreferences.CONFIRM_EXIT))
         ) {
             // Workaround of #703 bug. NEVER doesn't make sense for Exit confirmation. It is the same as ALWAYS.
-            if (ConfirmationDialog.confirmAction(window.getShell(), DBeaverPreferences.CONFIRM_EXIT, ConfirmationDialog.QUESTION)
+            if (ConfirmationDialog.confirmAction(window.getShell(), BoberKurwaPreferences.CONFIRM_EXIT, ConfirmationDialog.QUESTION)
                     != IDialogConstants.YES_ID) {
                 return false;
             }
@@ -548,7 +548,7 @@ public class ApplicationWorkbenchAdvisor extends IDEWorkbenchAdvisor {
             if (filesToOpen.isEmpty()) {
                 return;
             }
-            IInstanceController controller = DBeaverApplication.getInstance().getInstanceServer();
+            IInstanceController controller = BoberKurwaApplication.getInstance().getInstanceServer();
             if (controller != null) {
                 controller.openExternalFiles(filesToOpen.toArray(String[]::new));
                 filesToOpen.clear();

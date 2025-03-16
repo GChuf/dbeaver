@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.ui.internal.WorkbenchWindow;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBPDataSourceContainerProvider;
 import org.jkiss.dbeaver.model.app.DBPProject;
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.model.runtime.LocalCacheProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.AbstractPartListener;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.AbstractPageListener;
 import org.jkiss.dbeaver.ui.controls.breadcrumb.BreadcrumbViewer;
@@ -87,14 +87,14 @@ public class BreadcrumbTrim {
         boolean dirty = false;
 
         var breadcrumbsElement = modelService.find(BREADCRUMBS_ID, model);
-        var breadcrumbsVisible = store.getBoolean(DBeaverPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS);
+        var breadcrumbsVisible = store.getBoolean(BoberKurwaPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS);
         if (breadcrumbsElement != null && breadcrumbsElement.isToBeRendered() != breadcrumbsVisible) {
             breadcrumbsElement.setToBeRendered(breadcrumbsVisible);
             dirty = true;
         }
 
         var statusLineElement = modelService.find(WorkbenchWindow.STATUS_LINE_ID, model);
-        var statusLineVisible = store.getBoolean(DBeaverPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE);
+        var statusLineVisible = store.getBoolean(BoberKurwaPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE);
         if (statusLineElement != null && statusLineElement.isToBeRendered() != statusLineVisible) {
             statusLineElement.setToBeRendered(statusLineVisible);
             dirty = true;
@@ -189,8 +189,8 @@ public class BreadcrumbTrim {
 
         DBWorkbench.getPlatform().getPreferenceStore().addPropertyChangeListener(event -> {
             switch (event.getProperty()) {
-                case DBeaverPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS:
-                case DBeaverPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE:
+                case BoberKurwaPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS:
+                case BoberKurwaPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE:
                     updateElementVisibility();
                     break;
                 default:
@@ -233,7 +233,7 @@ public class BreadcrumbTrim {
     private static class BreadcrumbNodeLabelProvider extends LabelProvider {
         @Override
         public Image getImage(Object element) {
-            return DBeaverIcons.getImage(((DBNNode) element).getNodeIconDefault());
+            return BoberKurwaIcons.getImage(((DBNNode) element).getNodeIconDefault());
         }
 
         @Override

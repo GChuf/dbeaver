@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ package org.jkiss.dbeaver.erd.ui.editor.tools;
 import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gef.tools.SelectionTool;
 import org.jkiss.dbeaver.erd.ui.ERDIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 /**
  * This class is used to override default GEF icons.
@@ -28,7 +28,7 @@ import org.jkiss.dbeaver.ui.DBeaverIcons;
  */
 public class SelectionToolEntry extends ToolEntry {
     public SelectionToolEntry() {
-        super("Select", "Select diagram objects", DBeaverIcons.getImageDescriptor(ERDIcon.SELECT), DBeaverIcons.getImageDescriptor(ERDIcon.SELECT), SelectionTool.class);
+        super("Select", "Select diagram objects", BoberKurwaIcons.getImageDescriptor(ERDIcon.SELECT), BoberKurwaIcons.getImageDescriptor(ERDIcon.SELECT), SelectionTool.class);
         setUserModificationPermission(PERMISSION_NO_MODIFICATION);
     }
 }

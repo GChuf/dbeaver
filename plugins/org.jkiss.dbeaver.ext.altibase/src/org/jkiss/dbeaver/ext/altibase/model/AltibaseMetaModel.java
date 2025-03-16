@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -469,7 +469,7 @@ public class AltibaseMetaModel extends GenericMetaModel {
         JDBCPreparedStatement dbStat = session.prepareStatement(
                 "SELECT"
                         + "   TR.OWNER_SCHEMA"
-                        + " , TR.OWNER_TABLE AS OWNER" // DBeaver dependent column alias
+                        + " , TR.OWNER_TABLE AS OWNER" // BoberKurwa dependent column alias
                         + " , TR.USER_NAME AS TRIGGER_SCHEMA"
                         + " , TR.TRIGGER_NAME"
                         + " , TR.IS_ENABLE"

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.handlers.HandlerUtil;
 import org.jkiss.dbeaver.core.CoreCommands;
 import org.jkiss.dbeaver.core.CoreMessages;
-import org.jkiss.dbeaver.core.DBeaverActivator;
+import org.jkiss.dbeaver.core.BoberKurwaActivator;
 import org.jkiss.dbeaver.ui.ActionUtils;
 import org.jkiss.dbeaver.ui.actions.AbstractDataSourceHandler;
 import org.jkiss.dbeaver.ui.actions.ConnectionCommands;
@@ -72,7 +72,7 @@ public class ToolsContextMenuHandler extends AbstractDataSourceHandler
             menuManager.add(ActionUtils.makeCommandContribution(part.getSite(), ConnectionCommands.CMD_ROLLBACK));
             {
                 final MenuManager txnMenu = new MenuManager(
-                    DBeaverActivator.getPluginResourceBundle().getString("command.org.jkiss.dbeaver.core.transaction_mode.name"));
+                    BoberKurwaActivator.getPluginResourceBundle().getString("command.org.jkiss.dbeaver.core.transaction_mode.name"));
                 txnMenu.add(new DataSourceTransactionModeContributor());
                 menuManager.add(txnMenu);
             }
@@ -83,7 +83,7 @@ public class ToolsContextMenuHandler extends AbstractDataSourceHandler
             menuManager.add(ActionUtils.makeCommandContribution(part.getSite(), SQLEditorCommands.CMD_SQL_EDITOR_OPEN));
 /*
             final MenuManager toolsMenu = new MenuManager(
-                DBeaverActivator.getPluginResourceBundle().getString("menu.database.tools"));
+                BoberKurwaActivator.getPluginResourceBundle().getString("menu.database.tools"));
             toolsMenu.add(new DataSourceToolsContributor());
             menuManager.add(toolsMenu);
 */

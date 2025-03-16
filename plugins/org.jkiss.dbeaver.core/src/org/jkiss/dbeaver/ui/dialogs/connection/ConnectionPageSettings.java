@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.DBConstants;
@@ -373,7 +373,7 @@ class ConnectionPageSettings extends ActiveWizardPage<ConnectionWizard> implemen
             final int decision = ConfirmationDialog.confirmAction(
                 getShell(),
                 ConfirmationDialog.INFORMATION,
-                DBeaverPreferences.CONFIRM_DISABLE_NETWORK_HANDLER,
+                BoberKurwaPreferences.CONFIRM_DISABLE_NETWORK_HANDLER,
                 ConfirmationDialog.CONFIRM,
                 descriptor.getCodeName()
             );
@@ -480,7 +480,7 @@ class ConnectionPageSettings extends ActiveWizardPage<ConnectionWizard> implemen
                 item.setImage(null);
                 item.setToolTipText(page.getDescription());
             } else {
-                item.setImage(DBeaverIcons.getImage(DBIcon.SMALL_ERROR));
+                item.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_ERROR));
                 item.setToolTipText(Objects.requireNonNullElse(page.getErrorMessage(), "Page is incomplete"));
             }
         }

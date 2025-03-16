@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Rectangle;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UITextUtils;
 import org.jkiss.utils.CommonUtils;
@@ -40,10 +40,10 @@ class GridColumnRenderer extends AbstractRenderer {
     public static final int ARROW_MARGIN = 6;
     public static final int IMAGE_SPACING = 3;
 
-    public static final Image IMAGE_ASTERISK = DBeaverIcons.getImage(UIIcon.SORT_UNKNOWN);
-    public static final Image IMAGE_DESC = DBeaverIcons.getImage(UIIcon.SORT_INCREASE);
-    public static final Image IMAGE_ASC = DBeaverIcons.getImage(UIIcon.SORT_DECREASE);
-    public static final Image IMAGE_FILTER = DBeaverIcons.getImage(UIIcon.DROP_DOWN);
+    public static final Image IMAGE_ASTERISK = BoberKurwaIcons.getImage(UIIcon.SORT_UNKNOWN);
+    public static final Image IMAGE_DESC = BoberKurwaIcons.getImage(UIIcon.SORT_INCREASE);
+    public static final Image IMAGE_ASC = BoberKurwaIcons.getImage(UIIcon.SORT_DECREASE);
+    public static final Image IMAGE_FILTER = BoberKurwaIcons.getImage(UIIcon.DROP_DOWN);
 
     public static final int SORT_WIDTH = IMAGE_DESC.getBounds().width;
     public static final int SORT_HEIGHT = IMAGE_DESC.getBounds().height;
@@ -145,7 +145,7 @@ class GridColumnRenderer extends AbstractRenderer {
             }
             int maxWidth = 0;
             for (DBPImage hi : hintInfo.icons) {
-                Image hintImage = DBeaverIcons.getImage(hi);
+                Image hintImage = BoberKurwaIcons.getImage(hi);
                 Rectangle imageBounds = hintImage.getBounds();
 
                 if (hintInfo.icons.size() == 1) {

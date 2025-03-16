@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -114,7 +114,7 @@ public class DataSourceConfigurationManagerNIO implements DataSourceConfiguratio
     public InputStream readConfiguration(@NotNull String name, Collection<String> dataSourceIds) throws IOException {
         Path path = getConfigurationPath(false).resolve(name);
         if (Files.notExists(path)) {
-            // maybe it's .dbeaver-data-sources*.xml in the project folder (DBeaver < 6.1.3 (Legacy))
+            // maybe it's .dbeaver-data-sources*.xml in the project folder (BoberKurwa < 6.1.3 (Legacy))
             path = project.getAbsolutePath().resolve(name);
         }
         if (Files.notExists(path)) {

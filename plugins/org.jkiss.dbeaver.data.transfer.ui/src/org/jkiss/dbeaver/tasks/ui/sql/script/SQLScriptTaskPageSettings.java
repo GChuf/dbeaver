@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ import org.jkiss.dbeaver.tools.sql.SQLScriptExecuteSettings;
 import org.jkiss.dbeaver.tools.transfer.DTUtils;
 import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ListContentProvider;
@@ -136,7 +136,7 @@ class SQLScriptTaskPageSettings extends ActiveWizardPage<SQLScriptTaskConfigurat
                     } else {
                         icon = node.getNodeIconDefault();
                     }
-                    return DBeaverIcons.getImage(icon);
+                    return BoberKurwaIcons.getImage(icon);
                 }
             });
             scriptsViewer.addDoubleClickListener(event -> {
@@ -274,7 +274,7 @@ class SQLScriptTaskPageSettings extends ActiveWizardPage<SQLScriptTaskConfigurat
                 }
                 @Override
                 public Image getImage(Object element) {
-                    return DBeaverIcons.getImage(((DBNDataSource)element).getNodeIcon());
+                    return BoberKurwaIcons.getImage(((DBNDataSource)element).getNodeIcon());
                 }
             });
             GridData gd = new GridData(GridData.FILL_BOTH);

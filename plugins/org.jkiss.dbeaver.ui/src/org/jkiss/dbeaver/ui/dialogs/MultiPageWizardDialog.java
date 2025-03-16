@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -354,7 +354,7 @@ public class MultiPageWizardDialog extends TitleAreaDialog implements IWizardCon
             return;
         }
         TreeItem selectedItem = selection[0];
-        selectedItem.setImage(DBeaverIcons.getImage(UIIcon.OK_MARK));
+        selectedItem.setImage(BoberKurwaIcons.getImage(UIIcon.OK_MARK));
     }
 
     @Override
@@ -462,9 +462,9 @@ public class MultiPageWizardDialog extends TitleAreaDialog implements IWizardCon
                 // Don't show any completion marks for current page
                 item.setImage((Image) null);
             } else if (page instanceof IWizardPage wizardPage && !wizardPage.isPageComplete()) {
-                item.setImage(shownCompletionMarks.contains(PageCompletionMark.ERROR) ? DBeaverIcons.getImage(DBIcon.SMALL_ERROR) : null);
+                item.setImage(shownCompletionMarks.contains(PageCompletionMark.ERROR) ? BoberKurwaIcons.getImage(DBIcon.SMALL_ERROR) : null);
             } else {
-                item.setImage(shownCompletionMarks.contains(PageCompletionMark.COMPLETE) ? DBeaverIcons.getImage(UIIcon.OK_MARK) : null);
+                item.setImage(shownCompletionMarks.contains(PageCompletionMark.COMPLETE) ? BoberKurwaIcons.getImage(UIIcon.OK_MARK) : null);
             }
             updatePageCompleteMark(item);
         }
@@ -561,7 +561,7 @@ public class MultiPageWizardDialog extends TitleAreaDialog implements IWizardCon
         if (shell != null) {
             shell.setText(getWizard().getWindowTitle());
             // Do not update dialog icon. It can be disposed in the page and this will break connection dialog
-            //getShell().setImage(getWizard().getDefaultPageImage());//DBeaverIcons.getImage(activeDataSource.getObjectImage()));
+            //getShell().setImage(getWizard().getDefaultPageImage());//BoberKurwaIcons.getImage(activeDataSource.getObjectImage()));
 
             updateMessage();
         }

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package org.jkiss.dbeaver.ui.controls.resultset.actions;
 
 import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer;
 
 public abstract class AbstractResultSetViewerAction extends Action {
@@ -30,7 +30,7 @@ public abstract class AbstractResultSetViewerAction extends Action {
     }
 
     public AbstractResultSetViewerAction(ResultSetViewer resultSetViewer, String text, DBPImage icon) {
-        super(text, DBeaverIcons.getImageDescriptor(icon));
+        super(text, BoberKurwaIcons.getImageDescriptor(icon));
         this.resultSetViewer = resultSetViewer;
     }
 

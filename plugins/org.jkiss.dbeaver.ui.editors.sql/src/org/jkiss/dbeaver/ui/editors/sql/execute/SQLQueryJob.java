@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1096,7 +1096,7 @@ public class SQLQueryJob extends DataSourceJob
 
                     @Override
                     protected IDialogSettings getDialogBoundsSettings() {
-                        return UIUtils.getDialogSettings("DBeaver.SQLQueryConfirmDialog"); //$NON-NLS-1$
+                        return UIUtils.getDialogSettings("BoberKurwa.SQLQueryConfirmDialog"); //$NON-NLS-1$
                     }
 
                     @Override

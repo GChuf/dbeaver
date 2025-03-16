@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -136,7 +136,7 @@ public class WorkbenchInitializerCreateSampleDatabase implements IWorkbenchWindo
         dataSource = dsRegistry.createDataSource(SAMPLE_DB1_ID, sqliteDriver, connectionInfo);
         dataSource.setSavePassword(true);
         dataSource.getNavigatorSettings().setShowSystemObjects(true);
-        dataSource.setName("DBeaver Sample Database (SQLite)");
+        dataSource.setName("BoberKurwa Sample Database (SQLite)");
         try {
             dsRegistry.addDataSource(dataSource);
         } catch (DBException e) {

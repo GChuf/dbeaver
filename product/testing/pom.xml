@@ -12,7 +12,7 @@
     <version>24.3.1-SNAPSHOT</version>
     <artifactId>standalone</artifactId>
     <packaging>eclipse-repository</packaging>
-    <name>DBeaver CE Standalone</name>
+    <name>BoberKurwa CE Standalone</name>
 
     <build>
         <plugins>
@@ -33,7 +33,7 @@
                             <archiveFileName>dbeaver-ce-${dbeaver-version}</archiveFileName>
                             <rootFolders>
                                 <!-- for MacOSX, make sure you use a folder ending with .app , see bug 463670 -->
-                                <macosx>DBeaver.app</macosx>
+                                <macosx>BoberKurwa.app</macosx>
                                 <win32>dbeaver</win32>
                                 <linux>dbeaver</linux>
                                 <solaris>dbeaver</solaris>

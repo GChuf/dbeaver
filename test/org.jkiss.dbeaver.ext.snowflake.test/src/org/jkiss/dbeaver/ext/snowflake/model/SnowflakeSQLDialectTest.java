@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,13 +17,13 @@
 package org.jkiss.dbeaver.ext.snowflake.model;
 
 import org.jkiss.dbeaver.model.sql.SQLDialect;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class SnowflakeSQLDialectTest extends DBeaverUnitTest {
+public class SnowflakeSQLDialectTest extends BoberKurwaUnitTest {
     @Test
     public void quoteStatusStringTest() {
         SQLDialect dialect = new SnowflakeSQLDialect();

@@ -7,7 +7,7 @@ Bundle-Release-Date: 20250325
 Require-Bundle: org.jkiss.dbeaver.model
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Bundle-Vendor: DBeaver Corp
+Bundle-Vendor: BoberKurwa Corp
 Export-Package: org.slf4j.impl
 Fragment-Host: slf4j.api
 Automatic-Module-Name: org.jkiss.dbeaver.slf4j

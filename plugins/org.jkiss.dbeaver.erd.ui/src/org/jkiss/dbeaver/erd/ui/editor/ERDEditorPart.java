@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -528,7 +528,7 @@ public abstract class ERDEditorPart extends GraphicalEditorWithFlyoutPalette
     }
 
     protected void installKeyHandler(GraphicalViewer viewer) {
-        viewer.setKeyHandler(new DBeaverNavigationKeyHandler(viewer));
+        viewer.setKeyHandler(new BoberKurwaNavigationKeyHandler(viewer));
     }
 
     protected void registerDropTargetListeners(GraphicalViewer viewer) {
@@ -1071,9 +1071,9 @@ public abstract class ERDEditorPart extends GraphicalEditorWithFlyoutPalette
         //toolBarManager.add(new PrintAction(ERDEditorPart.this));
 
         ZoomInAction zoomInAction = new ZoomInAction(zoomManager);
-        zoomInAction.setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.ZOOM_IN));
+        zoomInAction.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.ZOOM_IN));
         ZoomOutAction zoomOutAction = new ZoomOutAction(zoomManager);
-        zoomOutAction.setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.ZOOM_OUT));
+        zoomOutAction.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.ZOOM_OUT));
         toolBarManager.add(zoomInAction);
         toolBarManager.add(zoomOutAction);
 
@@ -1113,7 +1113,7 @@ public abstract class ERDEditorPart extends GraphicalEditorWithFlyoutPalette
                 getDiagram().setAttributeStyles(ERDViewStyle.getDefaultStyles(ERDUIActivator.getDefault().getPreferences()));
             }
         };
-        configAction.setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+        configAction.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
         toolBarManager.add(configAction);
     }
 
@@ -1793,7 +1793,7 @@ public abstract class ERDEditorPart extends GraphicalEditorWithFlyoutPalette
             });
 
             label = new CLabel(this, SWT.LEFT);
-            label.setImage(DBeaverIcons.getImage(DBIcon.SMALL_WARNING));
+            label.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_WARNING));
             label.setText(ERDUIMessages.erd_editor_control_edit_mode_label);
 
             setEditMode(false);

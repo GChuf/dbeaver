@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ import org.jkiss.dbeaver.model.struct.DBSWrapper;
 import org.jkiss.dbeaver.model.struct.rdb.DBSProcedure;
 import org.jkiss.dbeaver.model.struct.rdb.DBSTable;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.IResultSetController;
@@ -153,7 +153,7 @@ public class SQLGeneratorContributor extends CompoundContributionItem {
 
     private static ContributionItem makeAction(String text, SQLGeneratorDescriptor sqlGenerator, List<?> objects) {
         return new ActionContributionItem(
-            new Action(text, DBeaverIcons.getImageDescriptor(UIIcon.SQL_TEXT)) {
+            new Action(text, BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_TEXT)) {
                 @Override
                 public void run() {
                     IWorkbenchPage activePage = UIUtils.getActiveWorkbenchWindow().getActivePage();

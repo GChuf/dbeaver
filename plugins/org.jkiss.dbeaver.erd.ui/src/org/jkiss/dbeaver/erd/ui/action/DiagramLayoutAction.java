@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.erd.ui.ERDIcon;
 import org.jkiss.dbeaver.erd.ui.editor.ERDEditorPart;
 import org.jkiss.dbeaver.erd.ui.internal.ERDUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 /**
  * Action to toggle the layout between manual and automatic
@@ -34,7 +34,7 @@ public class DiagramLayoutAction extends Action {
     private ERDEditorPart editor;
 
     public DiagramLayoutAction(ERDEditorPart editor) {
-        super(ERDUIMessages.action_diagram_layout_name, DBeaverIcons.getImageDescriptor(ERDIcon.ARRANGE_ALL));
+        super(ERDUIMessages.action_diagram_layout_name, BoberKurwaIcons.getImageDescriptor(ERDIcon.ARRANGE_ALL));
         this.editor = editor;
     }
 

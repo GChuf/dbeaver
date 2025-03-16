@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.registry.DriverCategoryDescriptor;
 import org.jkiss.dbeaver.registry.DriverManagerRegistry;
 import org.jkiss.dbeaver.registry.driver.DriverUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ListContentProvider;
 import org.jkiss.dbeaver.ui.controls.finder.viewer.AdvancedListViewer;
@@ -57,7 +57,7 @@ import java.util.List;
 public class DriverTabbedViewer extends StructuredViewer {
     private static final Log log = Log.getLog(DriverTabbedViewer.class);
 
-    private static final String DIALOG_ID = "DBeaver.DriverTabbedViewer";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DriverTabbedViewer";//$NON-NLS-1$
     private static final String PARAM_LAST_FOLDER = "folder";
 
     private final TabbedFolderComposite folderComposite;
@@ -341,7 +341,7 @@ public class DriverTabbedViewer extends StructuredViewer {
         private class DriverLabelProvider extends LabelProvider implements IToolTipProvider {
             @Override
             public Image getImage(Object element) {
-                return DBeaverIcons.getImage(((DBPDriver) element).getIconBig());
+                return BoberKurwaIcons.getImage(((DBPDriver) element).getIconBig());
             }
 
             @Override

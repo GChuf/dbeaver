@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -180,13 +180,13 @@ public class SQLEditor extends SQLEditorBase implements
     private static final String EMBEDDED_BINDING_PREFIX = "-- CONNECTION: ";
     private static final Pattern EMBEDDED_BINDING_PREFIX_PATTERN = Pattern.compile("--\\s*CONNECTION:\\s*(.+)", Pattern.CASE_INSENSITIVE);
 
-    private static final Image IMG_DATA_GRID = DBeaverIcons.getImage(UIIcon.SQL_PAGE_DATA_GRID);
-    private static final Image IMG_DATA_GRID_LOCKED = DBeaverIcons.getImage(UIIcon.SQL_PAGE_DATA_GRID_LOCKED);
-    private static final Image IMG_EXPLAIN_PLAN = DBeaverIcons.getImage(UIIcon.SQL_PAGE_EXPLAIN_PLAN);
-    private static final Image IMG_LOG = DBeaverIcons.getImage(UIIcon.SQL_PAGE_LOG);
-    private static final Image IMG_VARIABLES = DBeaverIcons.getImage(UIIcon.SQL_VARIABLE);
-    private static final Image IMG_OUTPUT = DBeaverIcons.getImage(UIIcon.SQL_PAGE_OUTPUT);
-    private static final Image IMG_OUTPUT_ALERT = DBeaverIcons.getImage(UIIcon.SQL_PAGE_OUTPUT_ALERT);
+    private static final Image IMG_DATA_GRID = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_DATA_GRID);
+    private static final Image IMG_DATA_GRID_LOCKED = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_DATA_GRID_LOCKED);
+    private static final Image IMG_EXPLAIN_PLAN = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_EXPLAIN_PLAN);
+    private static final Image IMG_LOG = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_LOG);
+    private static final Image IMG_VARIABLES = BoberKurwaIcons.getImage(UIIcon.SQL_VARIABLE);
+    private static final Image IMG_OUTPUT = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_OUTPUT);
+    private static final Image IMG_OUTPUT_ALERT = BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_OUTPUT_ALERT);
 
     private static final String SIDE_TOP_TOOLBAR_CONTRIBUTION_ID = "toolbar:org.jkiss.dbeaver.ui.editors.sql.toolbar.side.top";
     private static final String SIDE_BOTTOM_TOOLBAR_CONTRIBUTION_ID = "toolbar:org.jkiss.dbeaver.ui.editors.sql.toolbar.side.bottom";
@@ -1180,7 +1180,7 @@ public class SQLEditor extends SQLEditorBase implements
 
         switchPresentationSQLButton = new VerticalButton(presentationSwitchFolder, SWT.RIGHT | SWT.CHECK);
         switchPresentationSQLButton.setText(SQLEditorMessages.editors_sql_editor_presentation);
-        switchPresentationSQLButton.setImage(DBeaverIcons.getImage(DBIcon.TREE_SCRIPT));
+        switchPresentationSQLButton.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_SCRIPT));
         switchPresentationSQLButton.setChecked(true);
         switchPresentationSQLButton.addSelectionListener(switchListener);
 
@@ -1232,7 +1232,7 @@ public class SQLEditor extends SQLEditorBase implements
 
                 if (CommonUtils.isNotEmpty(status)) {
                     field.setText(status);
-                    field.setImage(DBeaverIcons.getImage(DBIcon.SMALL_WARNING));
+                    field.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_WARNING));
                 } else {
                     field.setText(null);
                     field.setImage(null);
@@ -2110,7 +2110,7 @@ public class SQLEditor extends SQLEditorBase implements
             super(panel.getLabel(), Action.AS_CHECK_BOX);
             setId(PANEL_ITEM_PREFIX + panel.getId());
             if (panel.getIcon() != null) {
-                setImageDescriptor(DBeaverIcons.getImageDescriptor(panel.getIcon()));
+                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(panel.getIcon()));
             }
             if (panel.getDescription() != null) {
                 setToolTipText(panel.getDescription());
@@ -2148,7 +2148,7 @@ public class SQLEditor extends SQLEditorBase implements
                 tabItem.setControl(panelControl);
                 tabItem.setText(panel.getLabel());
                 tabItem.setToolTipText(panel.getDescription());
-                tabItem.setImage(DBeaverIcons.getImage(panel.getIcon()));
+                tabItem.setImage(BoberKurwaIcons.getImage(panel.getIcon()));
                 tabItem.setData(panelInstance);
 
                 // De-select tool item on tab close
@@ -2298,7 +2298,7 @@ public class SQLEditor extends SQLEditorBase implements
 
         setPartName(getEditorName());
         if (isNonPersistentEditor() && isDetectTitleImageFromInput()) {
-            setTitleImage(DBeaverIcons.getImage(UIIcon.SQL_CONSOLE));
+            setTitleImage(BoberKurwaIcons.getImage(UIIcon.SQL_CONSOLE));
         }
         baseEditorImage = getTitleImage();
         editorImage = new Image(Display.getCurrent(), baseEditorImage, SWT.IMAGE_COPY);
@@ -3142,7 +3142,7 @@ public class SQLEditor extends SQLEditorBase implements
         }
         if (bottomLeft != null || bottomRight != null) {
             DBPImage image = new DBIconComposite(new DBIconBinary(null, baseEditorImage), false, null, null, bottomLeft, bottomRight);
-            editorImage = DBeaverIcons.getImage(image, false);
+            editorImage = BoberKurwaIcons.getImage(image, false);
         } else {
             editorImage = new Image(Display.getCurrent(), baseEditorImage, SWT.IMAGE_COPY);
         }
@@ -3211,7 +3211,7 @@ public class SQLEditor extends SQLEditorBase implements
                 if (pd == extraPresentationManager.activePresentationDescriptor) {
                     continue;
                 }
-                menu.insertAfter(GROUP_SQL_EXTRAS, new Action(pd.getDescription(), DBeaverIcons.getImageDescriptor(pd.getIcon())) {
+                menu.insertAfter(GROUP_SQL_EXTRAS, new Action(pd.getDescription(), BoberKurwaIcons.getImageDescriptor(pd.getIcon())) {
                     @Override
                     public void run() {
                         showExtraPresentation(pd);
@@ -4904,7 +4904,7 @@ public class SQLEditor extends SQLEditorBase implements
                 boolean isInExecute = getTotalQueryRunning() > 0;
                 if (!isInExecute) {
                     UIUtils.asyncExec(() -> {
-                        setTitleImage(DBeaverIcons.getImage(UIIcon.SQL_SCRIPT_EXECUTE));
+                        setTitleImage(BoberKurwaIcons.getImage(UIIcon.SQL_SCRIPT_EXECUTE));
                         updateDirtyFlag();
                         if (!scriptMode) {
                             clearProblems(query);
@@ -5345,7 +5345,7 @@ public class SQLEditor extends SQLEditorBase implements
             final VerticalButton button = new VerticalButton(editor.presentationSwitchFolder, SWT.RIGHT | SWT.CHECK);
             button.setData(presentation);
             button.setText(presentation.getLabel());
-            button.setImage(DBeaverIcons.getImage(presentation.getIcon()));
+            button.setImage(BoberKurwaIcons.getImage(presentation.getIcon()));
 
             final String toolTip = ActionUtils.findCommandDescription(
                 SQLEditorHandlerSwitchPresentation.CMD_SWITCH_PRESENTATION_ID, getSite(), true,
@@ -5616,7 +5616,7 @@ public class SQLEditor extends SQLEditorBase implements
     private class OutputAutoShowToggleAction extends Action {
         OutputAutoShowToggleAction() {
             super(SQLEditorMessages.pref_page_sql_editor_label_auto_open_output_view, AS_CHECK_BOX);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.SHOW_ALL_DETAILS));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.SHOW_ALL_DETAILS));
             setChecked(getActivePreferenceStore().getBoolean(SQLPreferenceConstants.OUTPUT_PANEL_AUTO_SHOW));
         }
 

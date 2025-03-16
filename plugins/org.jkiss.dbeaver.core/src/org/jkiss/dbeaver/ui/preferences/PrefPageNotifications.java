@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.eclipse.swt.widgets.*;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.jkiss.code.NotNull;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
@@ -114,14 +114,14 @@ public class PrefPageNotifications extends AbstractPrefPage implements IWorkbenc
                 group,
                 CoreMessages.pref_page_ui_general_label_enable_long_operations,
                 CoreMessages.pref_page_ui_general_label_enable_long_operations_tip,
-                preferences.getBoolean(DBeaverPreferences.AGENT_LONG_OPERATION_NOTIFY),
+                preferences.getBoolean(BoberKurwaPreferences.AGENT_LONG_OPERATION_NOTIFY),
                 2
             );
 
             longOperationsTimeout = UIUtils.createLabelSpinner(
                 group,
                 CoreMessages.pref_page_ui_general_label_long_operation_timeout + UIMessages.label_sec,
-                preferences.getInt(DBeaverPreferences.AGENT_LONG_OPERATION_TIMEOUT), 0, Integer.MAX_VALUE
+                preferences.getInt(BoberKurwaPreferences.AGENT_LONG_OPERATION_TIMEOUT), 0, Integer.MAX_VALUE
             );
         }
 
@@ -277,8 +277,8 @@ public class PrefPageNotifications extends AbstractPrefPage implements IWorkbenc
         preferences.setValue(ModelPreferences.NOTIFICATIONS_CLOSE_DELAY_TIMEOUT, hideDelaySpinner.getSelection());
         preferences.setValue(ModelPreferences.NOTIFICATIONS_SOUND_ENABLED, enableSoundsCheckbox.getSelection());
         preferences.setValue(ModelPreferences.NOTIFICATIONS_SOUND_VOLUME, soundVolumeSpinner.getSelection());
-        preferences.setValue(DBeaverPreferences.AGENT_LONG_OPERATION_NOTIFY, longOperationsCheck.getSelection());
-        preferences.setValue(DBeaverPreferences.AGENT_LONG_OPERATION_TIMEOUT, longOperationsTimeout.getSelection());
+        preferences.setValue(BoberKurwaPreferences.AGENT_LONG_OPERATION_NOTIFY, longOperationsCheck.getSelection());
+        preferences.setValue(BoberKurwaPreferences.AGENT_LONG_OPERATION_TIMEOUT, longOperationsTimeout.getSelection());
 
         return super.performOk();
     }
@@ -299,8 +299,8 @@ public class PrefPageNotifications extends AbstractPrefPage implements IWorkbenc
         hideDelaySpinner.setSelection(preferences.getDefaultInt(ModelPreferences.NOTIFICATIONS_CLOSE_DELAY_TIMEOUT));
         enableSoundsCheckbox.setSelection(preferences.getDefaultBoolean(ModelPreferences.NOTIFICATIONS_SOUND_ENABLED));
         soundVolumeSpinner.setSelection(preferences.getDefaultInt(ModelPreferences.NOTIFICATIONS_SOUND_VOLUME));
-        longOperationsCheck.setSelection(preferences.getDefaultBoolean(DBeaverPreferences.AGENT_LONG_OPERATION_NOTIFY));
-        longOperationsTimeout.setSelection(preferences.getDefaultInt(DBeaverPreferences.AGENT_LONG_OPERATION_TIMEOUT));
+        longOperationsCheck.setSelection(preferences.getDefaultBoolean(BoberKurwaPreferences.AGENT_LONG_OPERATION_NOTIFY));
+        longOperationsTimeout.setSelection(preferences.getDefaultInt(BoberKurwaPreferences.AGENT_LONG_OPERATION_TIMEOUT));
 
         viewer.refresh();
 

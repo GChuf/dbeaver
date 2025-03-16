@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import org.jkiss.dbeaver.model.DBPDataSourceContainer;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
 import org.jkiss.dbeaver.model.navigator.DBNModel;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UINavigatorMessages;
 
@@ -41,12 +41,12 @@ public class DatabaseLabelProviders {
         @Override
         public Image getImage(Object element) {
             if (element == null) {
-                return DBeaverIcons.getImage(DBIcon.DATABASE_DEFAULT);
+                return BoberKurwaIcons.getImage(DBIcon.DATABASE_DEFAULT);
             }
             DBNModel nm = DBWorkbench.getPlatform().getNavigatorModel();
             nm.ensureProjectLoaded(((DBPDataSourceContainer) element).getRegistry().getProject());
             final DBNDatabaseNode node = nm.findNode((DBPDataSourceContainer) element);
-            return node == null ? null : DBeaverIcons.getImage(node.getNodeIcon());
+            return node == null ? null : BoberKurwaIcons.getImage(node.getNodeIcon());
         }
 
         @Override
@@ -72,9 +72,9 @@ public class DatabaseLabelProviders {
         @Override
         public Image getImage(Object element) {
             if (element == null) {
-                return DBeaverIcons.getImage(DBIcon.DATABASE_DEFAULT);
+                return BoberKurwaIcons.getImage(DBIcon.DATABASE_DEFAULT);
             }
-            return DBeaverIcons.getImage(((DBNDatabaseNode)element).getNodeIconDefault());
+            return BoberKurwaIcons.getImage(((DBNDatabaseNode)element).getNodeIconDefault());
         }
 
         @Override

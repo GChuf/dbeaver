@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,9 +17,9 @@
 package org.jkiss.dbeaver.ui.browser;
 
 import org.eclipse.ui.PlatformUI;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.Log;
-import org.jkiss.dbeaver.core.DBeaverActivator;
+import org.jkiss.dbeaver.core.BoberKurwaActivator;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.ui.UIUtils;
 
@@ -36,8 +36,8 @@ public class BrowsePeerMethods {
      * @return true if request is redirectable
      */
     public static boolean canBrowseInSWTBrowser() {
-        DBPPreferenceStore store = DBeaverActivator.getInstance().getPreferences();
-        boolean useEmbeddedAuth = store.getBoolean(DBeaverPreferences.UI_USE_EMBEDDED_AUTH);
+        DBPPreferenceStore store = BoberKurwaActivator.getInstance().getPreferences();
+        boolean useEmbeddedAuth = store.getBoolean(BoberKurwaPreferences.UI_USE_EMBEDDED_AUTH);
         if (!useEmbeddedAuth) {
             return false;
         }
@@ -60,8 +60,8 @@ public class BrowsePeerMethods {
      * @return was it opened successfully
      */
     public static boolean browseInSWTBrowser(URI uri) {
-        DBPPreferenceStore store = DBeaverActivator.getInstance().getPreferences();
-        if (store.getBoolean(DBeaverPreferences.UI_USE_EMBEDDED_AUTH)) {
+        DBPPreferenceStore store = BoberKurwaActivator.getInstance().getPreferences();
+        if (store.getBoolean(BoberKurwaPreferences.UI_USE_EMBEDDED_AUTH)) {
             AtomicBoolean result = new AtomicBoolean();
             UIUtils.syncExec(() -> {
                 try {

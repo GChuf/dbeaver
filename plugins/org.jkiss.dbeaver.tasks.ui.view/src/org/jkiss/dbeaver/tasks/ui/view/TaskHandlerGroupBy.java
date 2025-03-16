@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -68,11 +68,11 @@ public class TaskHandlerGroupBy extends AbstractHandler implements IElementUpdat
             switch (groupBy) {
                 case category:
                     element.setChecked(tasksTree.isGroupByCategory());
-                    //element.setIcon(DBeaverIcons.getImageDescriptor(DBIcon.TREE_DATABASE_CATEGORY));
+                    //element.setIcon(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_DATABASE_CATEGORY));
                     break;
                 case type:
                     element.setChecked(tasksTree.isGroupByType());
-                    //element.setIcon(DBeaverIcons.getImageDescriptor(DBIcon.TREE_TASK));
+                    //element.setIcon(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_TASK));
                     break;
             }
             String commandName = Platform.getResourceBundle(Platform.getBundle(TaskUIViewBundle.BUDLE_ID)).getString("command.org.jkiss.dbeaver.task.group." + groupBy.name() + ".name");

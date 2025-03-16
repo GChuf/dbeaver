@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.model.task.DBTTask;
 import org.jkiss.dbeaver.tasks.ui.view.TaskHandlerRun;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceMenuContributor;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
 
@@ -51,7 +51,7 @@ public class RecentTasksMenuContributor extends DataSourceMenuContributor
         for (DBTTask task : tasks) {
             DBPImage taskIcon = task.getType().getIcon();
             if (taskIcon == null) taskIcon = DBIcon.TREE_TASK;
-            menuItems.add(ActionUtils.makeActionContribution(new Action(task.getName(), DBeaverIcons.getImageDescriptor(taskIcon)) {
+            menuItems.add(ActionUtils.makeActionContribution(new Action(task.getName(), BoberKurwaIcons.getImageDescriptor(taskIcon)) {
                 @Override
                 public void run() {
                     TaskHandlerRun.runTask(task);

@@ -6,7 +6,7 @@
     <extension-point id="org.jkiss.dbeaver.ui.propertyConfigurator" name="Property configurator" schema="schema/org.jkiss.dbeaver.ui.propertyConfigurator.exsd"/>
 
    <extension point="org.eclipse.core.expressions.definitions">
-      <definition id="DBeaverPerspectiveActive">
+      <definition id="BoberKurwaPerspectiveActive">
           <or>
               <with variable="selection">
                   <test property="org.jkiss.dbeaver.core.global.standalone"/>
@@ -80,8 +80,8 @@
         <context
                 id="org.jkiss.dbeaver.ui.perspective"
                 parentId="org.eclipse.ui.contexts.window"
-                name="DBeaver Perspective"
-                description="DBeaver Perspective Context"/>
+                name="BoberKurwa Perspective"
+                description="BoberKurwa Perspective Context"/>
     </extension>
 
     <extension point="org.eclipse.ui.handlers">

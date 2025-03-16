@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.swt.widgets.*;
 import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.model.connection.DBPDriverDependencies;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
@@ -33,7 +33,7 @@ import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
  */
 public class DriverDownloadDialog extends WizardDialog
 {
-    private static final String DIALOG_ID = "DBeaver.DriverDownloadDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DriverDownloadDialog";//$NON-NLS-1$
     public static final int EDIT_DRIVER_BUTTON_ID = 2000;
 
     private boolean doDownload = false;
@@ -85,7 +85,7 @@ public class DriverDownloadDialog extends WizardDialog
     protected Button createButton(Composite parent, int id, String label, boolean defaultButton) {
         if (id == IDialogConstants.FINISH_ID) {
             Button button = super.createButton(parent, id, getWizard().getFinishText(), defaultButton);
-            button.setImage(DBeaverIcons.getImage(UIIcon.BROWSER));
+            button.setImage(BoberKurwaIcons.getImage(UIIcon.BROWSER));
             setButtonLayoutData(button);
             return button;
         }

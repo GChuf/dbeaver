@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.data.DBDAttributeConstraintBase;
 import org.jkiss.dbeaver.model.data.DBDDataFilter;
 import org.jkiss.dbeaver.model.exec.DBCExecutionContext;
 import org.jkiss.dbeaver.model.sql.SQLUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IHelpContextIds;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -57,7 +57,7 @@ import java.util.List;
 import java.util.*;
 
 class FilterSettingsDialog extends HelpEnabledDialog {
-    private static final String DIALOG_ID = "DBeaver.FilterSettingsDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.FilterSettingsDialog";//$NON-NLS-1$
 
     private final Comparator<DBDAttributeBinding> POSITION_SORTER = (o1, o2) -> {
         final DBDAttributeConstraint c1 = getBindingConstraint(o1);
@@ -105,7 +105,7 @@ class FilterSettingsDialog extends HelpEnabledDialog {
     protected Composite createDialogArea(Composite parent)
     {
         getShell().setText(ResultSetMessages.controls_resultset_filter_title);
-        getShell().setImage(DBeaverIcons.getImage(UIIcon.FILTER));
+        getShell().setImage(BoberKurwaIcons.getImage(UIIcon.FILTER));
 
         Composite composite = super.createDialogArea(parent);
 
@@ -133,7 +133,7 @@ class FilterSettingsDialog extends HelpEnabledDialog {
                     final DBDAttributeBinding binding = (DBDAttributeBinding) cell.getElement();
                     final DBDAttributeConstraint constraint = getBindingConstraint(binding);
                     cell.setText(constraint.getAttribute().getName());
-                    cell.setImage(DBeaverIcons.getImage(DBValueFormatting.getObjectImage(binding.getMetaAttribute())));
+                    cell.setImage(BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(binding.getMetaAttribute())));
                 }
             });
 
@@ -219,7 +219,7 @@ class FilterSettingsDialog extends HelpEnabledDialog {
                         final DBDAttributeConstraint constraint = getBindingConstraint(binding);
                         if (constraint.getOrderPosition() > 0) {
                             cell.setText(" " + constraint.getOrderPosition());
-                            cell.setImage(DBeaverIcons.getImage(constraint.isOrderDescending() ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE));
+                            cell.setImage(BoberKurwaIcons.getImage(constraint.isOrderDescending() ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE));
                         } else {
                             cell.setText(null);
                             cell.setImage(null);
@@ -560,13 +560,13 @@ class FilterSettingsDialog extends HelpEnabledDialog {
         {
             DBDAttributeBinding binding = (DBDAttributeBinding) element;
             if (columnIndex == 0) {
-                return DBeaverIcons.getImage(
+                return BoberKurwaIcons.getImage(
                     DBValueFormatting.getObjectImage(binding.getMetaAttribute()));
             }
             if (columnIndex == 2) {
                 DBDAttributeConstraint constraint = getBindingConstraint(binding);
                 if (constraint.getOrderPosition() > 0) {
-                    return DBeaverIcons.getImage(constraint.isOrderDescending() ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE);
+                    return BoberKurwaIcons.getImage(constraint.isOrderDescending() ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE);
                 }
             }
             return null;
@@ -632,7 +632,7 @@ class FilterSettingsDialog extends HelpEnabledDialog {
     {
         ToolItem item = new ToolItem(toolBar, SWT.PUSH);
         if (icon != null) {
-            item.setImage(DBeaverIcons.getImage(icon));
+            item.setImage(BoberKurwaIcons.getImage(icon));
         }
         if (text != null) {
             //item.setText(text);

@@ -6,7 +6,7 @@
          <meta.schema plugin="org.jkiss.dbeaver.core" id="org.jkiss.dbeaver.dataSourceProvider" name="Datasource provider"/>
       </appInfo>
       <documentation>
-         DBeaver data source provider
+         BoberKurwa data source provider
       </documentation>
    </annotation>
 

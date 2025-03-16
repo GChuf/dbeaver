@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package org.jkiss.utils;
 
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.jkiss.utils.rest.RequestMapping;
 import org.jkiss.utils.rest.RequestParameter;
 import org.jkiss.utils.rest.RestClient;
@@ -29,7 +29,7 @@ import org.junit.Test;
 import java.net.URI;
 import java.util.Map;
 
-public class RestTest extends DBeaverUnitTest {
+public class RestTest extends BoberKurwaUnitTest {
     @Test
     public void restClientServerTest() {
         final RestServer<Controller> server = RestServer

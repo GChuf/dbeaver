@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2908,9 +2908,9 @@ public class SpreadsheetPresentation extends AbstractPresentation
 
             if (item.getElement() instanceof DBDAttributeBinding attr) {
                 DBPImage image = DBValueFormatting.getObjectImage(attr.getAttribute());
-                return DBeaverIcons.getImage(image);
+                return BoberKurwaIcons.getImage(image);
             } else if (item.getElement() instanceof DBSAttributeBase attrBase) {
-                return DBeaverIcons.getImage(
+                return BoberKurwaIcons.getImage(
                     DBValueFormatting.getObjectImage(attrBase));
             }
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -140,7 +140,7 @@ public class ApplicationWorkbenchWindowAdvisor extends IDEWorkbenchWindowAdvisor
     public ApplicationWorkbenchWindowAdvisor(ApplicationWorkbenchAdvisor advisor, IWorkbenchWindowConfigurer configurer) {
         super(advisor, configurer);
 
-        if (DBeaverApplication.WORKSPACE_MIGRATED) {
+        if (BoberKurwaApplication.WORKSPACE_MIGRATED) {
             refreshProjects();
         }
 
@@ -343,9 +343,9 @@ public class ApplicationWorkbenchWindowAdvisor extends IDEWorkbenchWindowAdvisor
 
 
         try {
-            DBeaverCommandLine.executeCommandLineCommands(
-                DBeaverCommandLine.getCommandLine(),
-                DBeaverApplication.getInstance().getInstanceServer(),
+            BoberKurwaCommandLine.executeCommandLineCommands(
+                BoberKurwaCommandLine.getCommandLine(),
+                BoberKurwaApplication.getInstance().getInstanceServer(),
                 true);
         } catch (Exception e) {
             log.error("Error processing command line", e);

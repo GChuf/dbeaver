@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.jface.viewers.ILabelProvider;
 import org.eclipse.swt.graphics.Image;
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.model.DBPImageProvider;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.utils.CommonUtils;
 
 public class ContentAssistLabelProvider extends BaseLabelProvider implements ILabelProvider {
@@ -31,7 +31,7 @@ public class ContentAssistLabelProvider extends BaseLabelProvider implements ILa
     public Image getImage(Object element) {
         if (element instanceof DBPImageProvider) {
             DBPImage image = ((DBPImageProvider) element).getObjectImage();
-            return image == null ? null : DBeaverIcons.getImage(image);
+            return image == null ? null : BoberKurwaIcons.getImage(image);
         }
         return null;
     }

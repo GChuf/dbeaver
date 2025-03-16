@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
-import org.jkiss.dbeaver.model.rcp.DBeaverNature;
+import org.jkiss.dbeaver.model.rcp.BoberKurwaNature;
 import org.jkiss.dbeaver.model.rcp.RCPProject;
 import org.jkiss.utils.ArrayUtils;
 
@@ -52,8 +52,8 @@ public class DesktopDataSourceRegistry<T extends DataSourceDescriptor> extends D
                     String[] natureIds = description.getNatureIds();
                     if (getDataSourceCount() > 0) {
                         // Add nature
-                        if (!ArrayUtils.contains(natureIds, DBeaverNature.NATURE_ID)) {
-                            description.setNatureIds(ArrayUtils.add(String.class, natureIds, DBeaverNature.NATURE_ID));
+                        if (!ArrayUtils.contains(natureIds, BoberKurwaNature.NATURE_ID)) {
+                            description.setNatureIds(ArrayUtils.add(String.class, natureIds, BoberKurwaNature.NATURE_ID));
                             try {
                                 eclipseProject.setDescription(description, new NullProgressMonitor());
                             } catch (CoreException e) {

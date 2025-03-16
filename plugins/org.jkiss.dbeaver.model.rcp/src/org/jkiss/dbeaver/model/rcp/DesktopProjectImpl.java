@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -254,7 +254,7 @@ public class DesktopProjectImpl extends BaseProjectImpl implements RCPProject, D
 
     /**
      * Validates project files structure.
-     * If project was created in older DBeaver version then converts it to newer format
+     * If project was created in older BoberKurwa version then converts it to newer format
      */
     private void checkAndUpdateProjectStructure() {
         if (getFormat() == ProjectFormat.UNKNOWN || getFormat() == ProjectFormat.MODERN) {

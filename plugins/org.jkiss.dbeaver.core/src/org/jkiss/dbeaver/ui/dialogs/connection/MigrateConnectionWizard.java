@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ import org.jkiss.dbeaver.model.struct.DBSWrapper;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
 import org.jkiss.dbeaver.registry.DataSourceProviderRegistry;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.driver.DriverSelectViewer;
 
@@ -151,7 +151,7 @@ public class MigrateConnectionWizard extends Wizard
                     TableItem item = new TableItem(connectionsViewer, SWT.NONE);
                     item.setText(ds.getName());
                     item.setData(ds);
-                    item.setImage(DBeaverIcons.getImage(ds.getDriver().getIcon()));
+                    item.setImage(BoberKurwaIcons.getImage(ds.getDriver().getIcon()));
                     if (selectedConnections.contains(ds)) {
                         item.setChecked(true);
                     }

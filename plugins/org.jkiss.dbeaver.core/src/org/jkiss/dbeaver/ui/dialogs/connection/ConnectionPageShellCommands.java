@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.jkiss.dbeaver.model.connection.DBPConnectionEventType;
 import org.jkiss.dbeaver.model.connection.DataSourceVariableResolver;
 import org.jkiss.dbeaver.model.runtime.DBRShellCommand;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.TextWithOpenFolder;
@@ -66,7 +66,7 @@ public class ConnectionPageShellCommands extends ConnectionWizardPage {
         this.dataSource = dataSource;
         setTitle(CoreMessages.dialog_connection_edit_wizard_shell_cmd);
         setDescription(CoreMessages.dialog_connection_events_title);
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.EVENT));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.EVENT));
         for (DBPConnectionEventType eventType : DBPConnectionEventType.values()) {
             DBRShellCommand command = dataSource.getConnectionConfiguration().getEvent(eventType);
             eventsCache.put(eventType, command == null ? null : new DBRShellCommand(command));
@@ -97,7 +97,7 @@ public class ConnectionPageShellCommands extends ConnectionWizardPage {
                 TableItem item = new TableItem(eventTypeTable, SWT.NONE);
                 item.setData(eventType);
                 item.setText(eventType.getTitle());
-                item.setImage(DBeaverIcons.getImage(UIIcon.EVENT));
+                item.setImage(BoberKurwaIcons.getImage(UIIcon.EVENT));
                 item.setChecked(command != null && command.isEnabled());
             }
 

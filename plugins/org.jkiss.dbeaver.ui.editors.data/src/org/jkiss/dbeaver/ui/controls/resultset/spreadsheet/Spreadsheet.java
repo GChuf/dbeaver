@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.data.DBDDisplayFormat;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.lightgrid.*;
@@ -401,7 +401,7 @@ public class Spreadsheet extends LightGrid implements Listener {
     @Override
     protected void paintTopLeftCellCustom(GC gc, int y) {
         if (presentation.getController().isRecordMode() && getColumnCount() > 1) {
-            Image searchIcon = DBeaverIcons.getImage(UIIcon.SEARCH);
+            Image searchIcon = BoberKurwaIcons.getImage(UIIcon.SEARCH);
             gc.drawImage(searchIcon, 3, y + 3);
         }
     }

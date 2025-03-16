@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ import org.jkiss.dbeaver.model.struct.*;
 import org.jkiss.dbeaver.model.struct.rdb.*;
 import org.jkiss.dbeaver.model.virtual.*;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CSmartCombo;
 import org.jkiss.dbeaver.ui.controls.ObjectContainerSelectorPanel;
@@ -269,7 +269,7 @@ public class EditForeignKeyPage extends BaseObjectEditPage {
         }
 
         if (ownerTableNode != null) {
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(ownerTableNode.getNodeIcon()));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(ownerTableNode.getNodeIcon()));
             setTitle(NLS.bind(ObjectEditorMessages.dialog_struct_edit_fk_title,
                 title,
                 ownerTableNode.getNodeDisplayName()));
@@ -631,7 +631,7 @@ public class EditForeignKeyPage extends BaseObjectEditPage {
             ILabelProvider labelProvider = new LabelProvider() {
                 @Override
                 public Image getImage(Object element) {
-                    return DBeaverIcons.getImage(((DBNDatabaseNode) element).getNodeIcon());
+                    return BoberKurwaIcons.getImage(((DBNDatabaseNode) element).getNodeIcon());
                 }
 
                 @Override
@@ -1035,7 +1035,7 @@ public class EditForeignKeyPage extends BaseObjectEditPage {
                     item.setImage(0, getColumnIcon(fkColumnInfo.ownColumn));
                     item.setText(1, fkColumnInfo.ownColumn.getFullTypeName());
                     item.setText(2, "");
-                    item.setImage(2, DBeaverIcons.getImage(DBIcon.TYPE_UNKNOWN));
+                    item.setImage(2, BoberKurwaIcons.getImage(DBIcon.TYPE_UNKNOWN));
                     item.setText(3, "");
                     item.setData(fkColumnInfo);
                 }
@@ -1076,7 +1076,7 @@ public class EditForeignKeyPage extends BaseObjectEditPage {
     }
 
     private Image getColumnIcon(DBSEntityAttribute column) {
-        return DBeaverIcons.getImage(DBValueFormatting.getObjectImage(column));
+        return BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(column));
     }
 
     @Override

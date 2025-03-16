@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -48,7 +48,7 @@ import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.rcp.RCPProject;
 import org.jkiss.dbeaver.model.rm.RMConstants;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.AbstractPopupPanel;
 import org.jkiss.dbeaver.ui.editors.sql.SQLEditorUtils;
@@ -73,7 +73,7 @@ public class ScriptSelectorPanel extends AbstractPopupPanel {
     public static final String PREF_SCRIPT_SELECTOR_SHOW_PROJECT_SCRIPTS = "script_dialog_mode";
     private static final Log log = Log.getLog(ScriptSelectorPanel.class);
 
-    private static final String DIALOG_ID = "DBeaver.ScriptSelectorPopup";
+    private static final String DIALOG_ID = "BoberKurwa.ScriptSelectorPopup";
 
     private final IWorkbenchWindow workbenchWindow;
     @NotNull
@@ -225,12 +225,12 @@ public class ScriptSelectorPanel extends AbstractPopupPanel {
                 final ResourceInfo ri = (ResourceInfo) element;
                 if (!ri.isDirectory()) {
                     if (ri.getDataSource() == null) {
-                        return DBeaverIcons.getImage(DBIcon.TREE_SCRIPT);
+                        return BoberKurwaIcons.getImage(DBIcon.TREE_SCRIPT);
                     } else {
-                        return DBeaverIcons.getImage(ri.getDataSource().getDriver().getIcon());
+                        return BoberKurwaIcons.getImage(ri.getDataSource().getDriver().getIcon());
                     }
                 } else {
-                    return DBeaverIcons.getImage(DBIcon.TREE_FOLDER);
+                    return BoberKurwaIcons.getImage(DBIcon.TREE_FOLDER);
                 }
             }
 
@@ -248,7 +248,7 @@ public class ScriptSelectorPanel extends AbstractPopupPanel {
             @Override
             public Image getToolTipImage(Object element) {
                 final DBPDataSourceContainer dataSource = ((ResourceInfo) element).getDataSource();
-                return dataSource == null ? null : DBeaverIcons.getImage(dataSource.getDriver().getIcon());
+                return dataSource == null ? null : BoberKurwaIcons.getImage(dataSource.getDriver().getIcon());
             }
         });
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.*;
 import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.jkiss.code.NotNull;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.LogOutputStream;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
@@ -67,7 +67,7 @@ public class PrefPageErrorLogs extends AbstractPrefPage implements IWorkbenchPre
                 groupLogs,
                 CoreMessages.pref_page_ui_general_label_enable_debug_logs,
                 CoreMessages.pref_page_ui_general_label_enable_debug_logs_tip,
-                store.getBoolean(DBeaverPreferences.LOGS_DEBUG_ENABLED),
+                store.getBoolean(BoberKurwaPreferences.LOGS_DEBUG_ENABLED),
                 2);
             UIUtils.createControlLabel(groupLogs, CoreMessages.pref_page_ui_general_label_log_file_location);
             logsDebugLocation = new TextWithOpenFile(groupLogs, CoreMessages.pref_page_ui_general_label_open_file_text, new String[] { "*.log", "*.txt" } );
@@ -78,7 +78,7 @@ public class PrefPageErrorLogs extends AbstractPrefPage implements IWorkbenchPre
                     GeneralUtils.variablePattern(SystemVariablesResolver.VAR_WORKSPACE),
                     GeneralUtils.variablePattern(SystemVariablesResolver.VAR_HOME)));
             logsDebugLocation.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-            logsDebugLocation.setText(store.getString(DBeaverPreferences.LOGS_DEBUG_LOCATION));
+            logsDebugLocation.setText(store.getString(BoberKurwaPreferences.LOGS_DEBUG_LOCATION));
 
             final DBPPreferenceStore preferenceStore = DBWorkbench.getPlatform().getPreferenceStore();
             UIUtils.createControlLabel(groupLogs, CoreMessages.pref_page_logs_files_max_size_label);
@@ -109,8 +109,8 @@ public class PrefPageErrorLogs extends AbstractPrefPage implements IWorkbenchPre
     @Override
     protected void performDefaults() {
         DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
-        logsDebugEnabled.setSelection(store.getDefaultBoolean(DBeaverPreferences.LOGS_DEBUG_ENABLED));
-        logsDebugLocation.setText(store.getDefaultString(DBeaverPreferences.LOGS_DEBUG_LOCATION));
+        logsDebugEnabled.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.LOGS_DEBUG_ENABLED));
+        logsDebugLocation.setText(store.getDefaultString(BoberKurwaPreferences.LOGS_DEBUG_LOCATION));
         logFilesMaxSizeSpinner.setSelection((int) store.getDefaultLong(LogOutputStream.LOGS_MAX_FILE_SIZE) / 1024);
         logFilesMaxCountSpinner.setSelection(store.getDefaultInt(LogOutputStream.LOGS_MAX_FILES_COUNT));
 
@@ -121,8 +121,8 @@ public class PrefPageErrorLogs extends AbstractPrefPage implements IWorkbenchPre
     public boolean performOk() {
         DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
 
-        store.setValue(DBeaverPreferences.LOGS_DEBUG_ENABLED, logsDebugEnabled.getSelection());
-        store.setValue(DBeaverPreferences.LOGS_DEBUG_LOCATION, logsDebugLocation.getText());
+        store.setValue(BoberKurwaPreferences.LOGS_DEBUG_ENABLED, logsDebugEnabled.getSelection());
+        store.setValue(BoberKurwaPreferences.LOGS_DEBUG_LOCATION, logsDebugLocation.getText());
 
         store.setValue(LogOutputStream.LOGS_MAX_FILE_SIZE, logFilesMaxSizeSpinner.getSelection() * 1024L);
         store.setValue(LogOutputStream.LOGS_MAX_FILES_COUNT, logFilesMaxCountSpinner.getSelection());

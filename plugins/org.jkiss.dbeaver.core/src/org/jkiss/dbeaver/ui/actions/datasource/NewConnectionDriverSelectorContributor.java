@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.registry.driver.DriverUtils;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.connection.NewConnectionDialog;
 
@@ -68,7 +68,7 @@ public class NewConnectionDriverSelectorContributor extends DataSourceMenuContri
         private DBPDriver driver;
 
         public NewConnectionAction(IWorkbenchWindow window, DBPDriver driver) {
-            super(driver.getName(), DBeaverIcons.getImageDescriptor(driver.getIcon()));
+            super(driver.getName(), BoberKurwaIcons.getImageDescriptor(driver.getIcon()));
             this.window = window;
             this.driver = driver;
         }

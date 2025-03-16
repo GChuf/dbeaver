@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  * Copyright (C) 2017-2018 Alexander Fedorov (alexander.fedorov@jkiss.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,7 +43,7 @@ import org.jkiss.dbeaver.model.runtime.DBRRunnableContext;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.RunnableContextDelegate;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.SelectDataSourceCombo;
 import org.jkiss.utils.CommonUtils;
@@ -235,10 +235,10 @@ public class DatabaseDebugConfigurationTab extends AbstractLaunchConfigurationTa
         if (connectionCombo != null) {
             DBPDataSourceContainer dataSource = connectionCombo.getSelectedItem();
             if (dataSource != null) {
-                return DBeaverIcons.getImage(dataSource.getDriver().getIcon());
+                return BoberKurwaIcons.getImage(dataSource.getDriver().getIcon());
             }
         }
-        return DBeaverIcons.getImage(DBIcon.TREE_DATABASE);
+        return BoberKurwaIcons.getImage(DBIcon.TREE_DATABASE);
     }
 
     @Override

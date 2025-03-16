@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import java.util.logging.Level;
 import java.util.logging.LogRecord;
 
 /**
- * Implementation of {@link Handler} that redirects JUL logging to DBeaver log.
+ * Implementation of {@link Handler} that redirects JUL logging to BoberKurwa log.
  */
 public class JULHandler extends Handler {
     private final Log log;

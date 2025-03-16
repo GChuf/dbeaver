@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
 import org.jkiss.dbeaver.registry.driver.DriverUtils;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
@@ -253,7 +253,7 @@ public class DriverSelectViewer extends Viewer {
         // Create browser control toggle
         ToolBar switcherToolbar = new ToolBar(parent, SWT.RIGHT | SWT.HORIZONTAL);
         ToolItem clearItem = new ToolItem(switcherToolbar, SWT.PUSH);
-        clearItem.setImage(DBeaverIcons.getImage(UIIcon.ERASE));
+        clearItem.setImage(BoberKurwaIcons.getImage(UIIcon.ERASE));
         clearItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -266,7 +266,7 @@ public class DriverSelectViewer extends Viewer {
             switchItem = new ToolItem(switcherToolbar, SWT.CHECK | SWT.DROP_DOWN);
             switchItem.setText("Switch view");
             switchItem.setWidth(UIUtils.getFontHeight(switcherToolbar) * 15);
-            switchItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_SCHEMA));
+            switchItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_SCHEMA));
             switchItem.addSelectionListener(new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
@@ -299,7 +299,7 @@ public class DriverSelectViewer extends Viewer {
         try {
             if (forceViewType == SelectorViewType.tree || (forceViewType == null && getCurrentSelectorViewType() == SelectorViewType.tree)) {
                 if (forceViewType == null) {
-                    switchItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_SCHEMA));
+                    switchItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_SCHEMA));
                     switchItem.setText(UIConnectionMessages.viewer_selector_control_text_gallery);
                     switchItem.setSelection(true);
                 }
@@ -313,7 +313,7 @@ public class DriverSelectViewer extends Viewer {
                 });
             } else {
                 if (forceViewType == null) {
-                    switchItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_TABLE));
+                    switchItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_TABLE));
                     switchItem.setText(UIConnectionMessages.viewer_selector_control_text_classic);
                     switchItem.setSelection(false);
                 }

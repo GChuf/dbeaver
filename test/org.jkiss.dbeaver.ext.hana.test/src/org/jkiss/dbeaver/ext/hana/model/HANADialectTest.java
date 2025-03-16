@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
  */
 package org.jkiss.dbeaver.ext.hana.model;
 
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class HANADialectTest extends DBeaverUnitTest {
+public class HANADialectTest extends BoberKurwaUnitTest {
     @Test
     public void quoteStatusStringTest() {
         final HANASQLDialect dialect = new HANASQLDialect();

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ import org.jkiss.dbeaver.registry.configurator.UIPropertyConfiguratorRegistry;
 import org.jkiss.dbeaver.registry.network.NetworkHandlerDescriptor;
 import org.jkiss.dbeaver.registry.network.NetworkHandlerRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IObjectPropertyConfigurator;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -240,7 +240,7 @@ public abstract class PrefPageNetworkProfiles extends AbstractPrefPage {
 
         TableItem item = new TableItem(profilesTable, SWT.NONE);
         item.setText(newProfile.getProfileName());
-        item.setImage(DBeaverIcons.getImage(DBIcon.TYPE_DOCUMENT));
+        item.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_DOCUMENT));
         item.setData(newProfile);
 
         profilesTable.select(profilesTable.getItemCount() - 1);
@@ -414,7 +414,7 @@ public abstract class PrefPageNetworkProfiles extends AbstractPrefPage {
 
                 TableItem item = new TableItem(profilesTable, SWT.NONE);
                 item.setText(profile.getProfileName());
-                item.setImage(DBeaverIcons.getImage(DBIcon.TYPE_DOCUMENT));
+                item.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_DOCUMENT));
                 item.setData(profile);
                 if (selectedProfile == null) {
                     selectedProfile = profile;

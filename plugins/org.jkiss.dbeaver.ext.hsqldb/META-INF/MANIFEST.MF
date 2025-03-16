@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: DBeaver HSQLDB Model
+Bundle-Name: BoberKurwa HSQLDB Model
 Bundle-SymbolicName: org.jkiss.dbeaver.ext.hsqldb;singleton:=true
 Bundle-Version: 1.0.198.qualifier
 Bundle-Release-Date: 20250325
@@ -9,6 +9,6 @@ Require-Bundle: org.jkiss.dbeaver.model,
  org.jkiss.dbeaver.ext.generic
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Bundle-Vendor: DBeaver Corp
+Bundle-Vendor: BoberKurwa Corp
 Bundle-ClassPath: .
 Automatic-Module-Name: org.jkiss.dbeaver.ext.hsqldb

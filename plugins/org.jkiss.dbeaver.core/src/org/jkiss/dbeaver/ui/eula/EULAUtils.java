@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import java.io.IOException;
 public class EULAUtils {
     private static final Log log = Log.getLog(EULAUtils.class);
 
-    public static final String DBEAVER_EULA = "DBeaver.eula";
+    public static final String DBEAVER_EULA = "BoberKurwa.eula";
 
     //TODO change hardcoded eula version to something more flexible
     private static final String eulaVersion = "1.0";

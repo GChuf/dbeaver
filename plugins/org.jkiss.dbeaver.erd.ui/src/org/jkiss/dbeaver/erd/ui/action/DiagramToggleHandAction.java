@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.jkiss.dbeaver.erd.ui.ERDIcon;
 import org.jkiss.dbeaver.erd.ui.ERDUIUtils;
 import org.jkiss.dbeaver.erd.ui.editor.tools.HandToolEntry;
 import org.jkiss.dbeaver.erd.ui.internal.ERDUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 /**
  * Action to cycle between hand tool and previously selected tool
@@ -48,7 +48,7 @@ public class DiagramToggleHandAction extends Action implements PaletteListener, 
 
         setId(CMD_TOGGLE_HAND);
         setActionDefinitionId(CMD_TOGGLE_HAND);
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(ERDIcon.MOVE));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(ERDIcon.MOVE));
     }
 
     @Override

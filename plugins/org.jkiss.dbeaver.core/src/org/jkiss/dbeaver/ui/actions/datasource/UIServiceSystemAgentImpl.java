@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,10 +19,10 @@ package org.jkiss.dbeaver.ui.actions.datasource;
 
 import org.eclipse.core.runtime.IStatus;
 import org.eclipse.swt.widgets.Display;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSystemAgent;
 import org.jkiss.dbeaver.ui.TrayIconHandler;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -40,12 +40,12 @@ public class UIServiceSystemAgentImpl implements UIServiceSystemAgent {
 
     @Override
     public long getLongOperationTimeout() {
-        return DBWorkbench.getPlatform().getPreferenceStore().getLong(DBeaverPreferences.AGENT_LONG_OPERATION_TIMEOUT);
+        return DBWorkbench.getPlatform().getPreferenceStore().getLong(BoberKurwaPreferences.AGENT_LONG_OPERATION_TIMEOUT);
     }
 
     @Override
     public void notifyAgent(String message, int status) {
-        if (!DBWorkbench.getPlatform().getPreferenceStore().getBoolean(DBeaverPreferences.AGENT_LONG_OPERATION_NOTIFY)) {
+        if (!DBWorkbench.getPlatform().getPreferenceStore().getBoolean(BoberKurwaPreferences.AGENT_LONG_OPERATION_NOTIFY)) {
             // Notifications disabled
             return;
         }
@@ -53,7 +53,7 @@ public class UIServiceSystemAgentImpl implements UIServiceSystemAgent {
             UIUtils.syncExec(() -> Display.getCurrent().beep());
             trayItem.notify(message, status);
         } else {
-            DBeaverNotifications.showNotification(
+            BoberKurwaNotifications.showNotification(
                 "agent.notify",
                 "Agent Notification",
                 message,

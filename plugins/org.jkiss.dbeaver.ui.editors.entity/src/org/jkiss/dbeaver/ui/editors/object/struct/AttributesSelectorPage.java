@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ import org.jkiss.dbeaver.model.struct.DBSAttributeBase;
 import org.jkiss.dbeaver.model.struct.DBSEntityAttribute;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomTableEditor;
 import org.jkiss.dbeaver.ui.controls.TableColumnSortListener;
@@ -301,7 +301,7 @@ public abstract class AttributesSelectorPage<T_OBJECT extends DBSObject, T_ATTRI
 
                         DBNDatabaseNode attributeNode = DBWorkbench.getPlatform().getNavigatorModel().findNode(attribute);
                         if (attributeNode != null) {
-                            columnItem.setImage(0, DBeaverIcons.getImage(attributeNode.getNodeIcon()));
+                            columnItem.setImage(0, BoberKurwaIcons.getImage(attributeNode.getNodeIcon()));
                         }
                         fillAttributeColumns(attribute, col, columnItem);
                         columnItem.setData(col);

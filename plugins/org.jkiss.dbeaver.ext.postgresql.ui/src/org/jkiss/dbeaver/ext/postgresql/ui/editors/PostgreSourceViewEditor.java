@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import org.jkiss.dbeaver.model.runtime.DBRRunnableWithResult;
 import org.jkiss.dbeaver.model.struct.rdb.DBSProcedure;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.editors.sql.SQLSourceViewer;
 import org.jkiss.dbeaver.ui.editors.sql.handlers.SQLEditorHandlerOpenObjectConsole;
@@ -85,7 +85,7 @@ public class PostgreSourceViewEditor extends SQLSourceViewer<PostgreScriptObject
             contributionManager.add(ActionUtils.makeActionContribution(
                 new Action(PostgreMessages.source_view_show_header_label, Action.AS_CHECK_BOX) {
                     {
-                        setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_PROCEDURE));
+                        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_PROCEDURE));
                         setToolTipText(PostgreMessages.source_view_show_header_description);
                         setChecked(!isInDebugMode());
                     }

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.dbeaver.ui.BaseThemeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIStyles;
 import org.jkiss.dbeaver.ui.UIUtils;
 
@@ -212,7 +212,7 @@ public class TabbedFolderList extends Composite {
                 } else {
                     textIndent = textIndent - 3;
                 }
-                Image image = DBeaverIcons.getImage(tab.getImage());
+                Image image = BoberKurwaIcons.getImage(tab.getImage());
                 final Rectangle imageBounds = image.getBounds();
                 final int imageMiddle = (bounds.height - imageBounds.height) / 2;
                 if (selected || hover) {
@@ -600,7 +600,7 @@ public class TabbedFolderList extends Composite {
 		 * an icon the width of the tab doesn't change.
 		 */
         if (folderInfo.getImage() != null) {
-            Image image = DBeaverIcons.getImage(folderInfo.getImage());
+            Image image = BoberKurwaIcons.getImage(folderInfo.getImage());
             width = width + image.getBounds().width + 4;
         }
         if (folderInfo.isIndented()) {

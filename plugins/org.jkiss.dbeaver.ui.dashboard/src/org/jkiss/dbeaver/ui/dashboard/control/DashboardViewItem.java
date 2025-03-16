@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.model.dashboard.DashboardIcons;
 import org.jkiss.dbeaver.model.dashboard.data.DashboardDataset;
 import org.jkiss.dbeaver.model.dashboard.registry.DashboardItemConfiguration;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIStyles;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dashboard.DashboardUIConstants;
@@ -109,7 +109,7 @@ public class DashboardViewItem extends Composite implements DashboardItemContain
                 icon = item.getDashboardProvider().getIcon();
             }
             Label titleIcon = new Label(titleComposite, SWT.NONE);
-            titleIcon.setImage(DBeaverIcons.getImage(icon));
+            titleIcon.setImage(BoberKurwaIcons.getImage(icon));
 
             titleLabel = new Label(titleComposite, SWT.NONE);
             titleLabel.setFont(parent.getTitleFont());
@@ -505,7 +505,7 @@ public class DashboardViewItem extends Composite implements DashboardItemContain
                     }
                 };
                 if (viewType.getIcon() != null) {
-                    changeViewAction.setImageDescriptor(DBeaverIcons.getImageDescriptor(viewType.getIcon()));
+                    changeViewAction.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(viewType.getIcon()));
                 }
                 viewMenu.add(changeViewAction);
             }

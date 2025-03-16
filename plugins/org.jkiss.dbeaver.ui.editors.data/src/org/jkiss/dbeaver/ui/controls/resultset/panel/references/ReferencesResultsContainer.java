@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.struct.*;
 import org.jkiss.dbeaver.model.virtual.DBVEntity;
 import org.jkiss.dbeaver.model.virtual.DBVUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CSmartCombo;
@@ -513,10 +513,10 @@ class ReferencesResultsContainer implements IResultSetContainer {
         @Override
         public Image getImage(Object element) {
             if (element == null) {
-                return DBeaverIcons.getImage(DBIcon.TREE_ASSOCIATION);
+                return BoberKurwaIcons.getImage(DBIcon.TREE_ASSOCIATION);
             }
             ReferenceKey key = (ReferenceKey) element;
-            return DBeaverIcons.getImage(
+            return BoberKurwaIcons.getImage(
                 key.isReference ? UIIcon.ARROW_LEFT_ALL : UIIcon.ARROW_RIGHT_ALL);
         }
 

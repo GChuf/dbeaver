@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.runtime.DefaultProgressMonitor;
 import org.jkiss.dbeaver.model.struct.*;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UINavigatorMessages;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
@@ -422,7 +422,7 @@ public class SearchMetadataPage extends AbstractSearchPage {
                 TableItem item = new TableItem(typesTable, SWT.NONE);
                 item.setText(objectType.getTypeName());
                 if (objectType.getImage() != null) {
-                    item.setImage(0, DBeaverIcons.getImage(objectType.getImage()));
+                    item.setImage(0, BoberKurwaIcons.getImage(objectType.getImage()));
                 }
                 if (!CommonUtils.isEmpty(objectType.getDescription())) {
                     item.setText(1, objectType.getDescription());

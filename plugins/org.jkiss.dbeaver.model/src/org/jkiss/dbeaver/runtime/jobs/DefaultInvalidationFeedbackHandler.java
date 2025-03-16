@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.DBPDataSourceContainer;
 import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 
 import java.util.Collection;
 import java.util.Set;
@@ -36,9 +36,9 @@ public class DefaultInvalidationFeedbackHandler implements InvalidateJob.Invalid
         @NotNull DBPDataSourceContainer container,
         @NotNull Collection<InvalidateJob.ContextInvalidateResult> results
     ) {
-        DBeaverNotifications.showNotification(
+        BoberKurwaNotifications.showNotification(
             container.getDataSource(),
-            DBeaverNotifications.NT_RECONNECT_SUCCESS,
+            BoberKurwaNotifications.NT_RECONNECT_SUCCESS,
             "Datasource was invalidated\n\nLive connection count: " + InvalidateJob.getSucceededCount(results) + "/" + results.size(),
             DBPMessageType.INFORMATION
         );
@@ -49,9 +49,9 @@ public class DefaultInvalidationFeedbackHandler implements InvalidateJob.Invalid
         @NotNull DBPDataSourceContainer container,
         @NotNull Collection<InvalidateJob.ContextInvalidateResult> results
     ) {
-        DBeaverNotifications.showNotification(
+        BoberKurwaNotifications.showNotification(
             container.getDataSource(),
-            DBeaverNotifications.NT_RECONNECT_FAILURE,
+            BoberKurwaNotifications.NT_RECONNECT_FAILURE,
             "Datasource invalidate failed",
             DBPMessageType.ERROR,
             () -> onNotificationFeedback(container)

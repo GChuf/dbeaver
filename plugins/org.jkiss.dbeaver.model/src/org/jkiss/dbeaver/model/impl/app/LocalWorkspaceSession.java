@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import java.time.LocalDateTime;
 
 public class LocalWorkspaceSession extends AbstractSessionPersistent implements SMSession, SMSessionPrincipal, SMSessionSecretKeeper {
 
-    public static final SMSessionType DB_SESSION_TYPE = new SMSessionType("DBeaver");
+    public static final SMSessionType DB_SESSION_TYPE = new SMSessionType("BoberKurwa");
 
     private final DBPWorkspace workspace;
     private String userName;

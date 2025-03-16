@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.jkiss.dbeaver.model.admin.locks.DBAServerLock;
 import org.jkiss.dbeaver.model.admin.locks.DBAServerLockItem;
 import org.jkiss.dbeaver.model.admin.locks.DBAServerLockManager;
 import org.jkiss.dbeaver.model.impl.admin.locks.LockGraphManager;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.autorefresh.AutoRefreshControl;
@@ -232,7 +232,7 @@ public class LockManagerViewer {
             contributionManager.add(killAction);
             contributionManager.add(new Separator());
             refreshControl.populateRefreshButton(contributionManager);
-            contributionManager.add(new Action(LocksUIMessages.actions_refresh_control_refresh_locks, DBeaverIcons.getImageDescriptor(UIIcon.REFRESH)) {
+            contributionManager.add(new Action(LocksUIMessages.actions_refresh_control_refresh_locks, BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH)) {
                 @Override
                 public void run() {
                     refreshLocks(curLock);

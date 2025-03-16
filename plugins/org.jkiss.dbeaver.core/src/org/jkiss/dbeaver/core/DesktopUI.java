@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -54,7 +54,7 @@ import org.jkiss.dbeaver.model.runtime.load.ILoadService;
 import org.jkiss.dbeaver.model.runtime.load.ILoadVisualizer;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.ui.console.ConsoleUserInterface;
 import org.jkiss.dbeaver.ui.*;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceInvalidateHandler;
@@ -82,7 +82,7 @@ import java.util.concurrent.Future;
 import java.util.function.Predicate;
 
 /**
- * DBeaver UI core
+ * BoberKurwa UI core
  */
 public class DesktopUI extends ConsoleUserInterface {
 
@@ -235,7 +235,7 @@ public class DesktopUI extends ConsoleUserInterface {
     @Override
     public void showNotification(@NotNull String title, String message, boolean error, @Nullable Runnable feedback) {
         NotificationUtils.sendNotification(
-            DBeaverNotifications.NT_GENERIC,
+            BoberKurwaNotifications.NT_GENERIC,
             title,
             message,
             error ? DBPMessageType.ERROR : DBPMessageType.INFORMATION,
@@ -246,7 +246,7 @@ public class DesktopUI extends ConsoleUserInterface {
     @Override
     public void showWarningNotification(@NotNull String title, String message) {
         NotificationUtils.sendNotification(
-            DBeaverNotifications.NT_GENERIC,
+            BoberKurwaNotifications.NT_GENERIC,
             title,
             message,
             DBPMessageType.WARNING,

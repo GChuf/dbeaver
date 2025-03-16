@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.connection.DBPConnectionConfiguration;
 import org.jkiss.dbeaver.model.connection.DBPConnectionType;
 import org.jkiss.dbeaver.registry.DataSourceProviderRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.ShellUtils;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -107,9 +107,9 @@ public class PrefPageConnectionTypes extends AbstractPrefPage implements IWorkbe
 
             ToolBar toolbar = new ToolBar(composite, SWT.FLAT | SWT.HORIZONTAL);
             final ToolItem newButton = new ToolItem(toolbar, SWT.NONE);
-            newButton.setImage(DBeaverIcons.getImage(UIIcon.ROW_ADD));
+            newButton.setImage(BoberKurwaIcons.getImage(UIIcon.ROW_ADD));
             deleteButton = new ToolItem(toolbar, SWT.NONE);
-            deleteButton.setImage(DBeaverIcons.getImage(UIIcon.ROW_DELETE));
+            deleteButton.setImage(BoberKurwaIcons.getImage(UIIcon.ROW_DELETE));
 
             newButton.addSelectionListener(new SelectionAdapter() {
                 @Override

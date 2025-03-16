@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1140,7 +1140,7 @@ public abstract class ObjectListControl<OBJECT_TYPE> extends ProgressPageControl
             final ObjectPropertyDescriptor prop = getPropertyByObject(objectColumn, objectValue);
             if (prop != null && prop.isNameProperty()) {
                 DBPImage objectImage = getObjectImage(object);
-                return objectImage == null ? null : DBeaverIcons.getImage(objectImage);
+                return objectImage == null ? null : BoberKurwaIcons.getImage(objectImage);
             }
             return null;
         }
@@ -1396,7 +1396,7 @@ public abstract class ObjectListControl<OBJECT_TYPE> extends ProgressPageControl
         // Create lazy action here because columnController might be not instantiated yet
         Action configColumnsAction = new Action(
             UINavigatorMessages.obj_editor_properties_control_action_configure_columns,
-            DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
+            BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
             @Override
             public void run() {
                 columnController.configureColumns();

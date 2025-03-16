@@ -5,7 +5,7 @@
          <meta.schema plugin="org.jkiss.dbeaver.registry" id="org.jkiss.dbeaver.dataSourceAuth" name="Datasource authentication model"/>
       </appInfo>
       <documentation>
-         DBeaver data source provider
+         BoberKurwa data source provider
       </documentation>
    </annotation>
 

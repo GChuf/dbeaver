@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: DBeaver Generic Plug-in
+Bundle-Name: BoberKurwa Generic Plug-in
 Bundle-SymbolicName: org.jkiss.dbeaver.ext.generic;singleton:=true
 Bundle-Version: 2.3.237.qualifier
 Bundle-Release-Date: 20250325
@@ -14,7 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  slf4j.api;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Bundle-Vendor: DBeaver Corp
+Bundle-Vendor: BoberKurwa Corp
 Export-Package: org.jkiss.dbeaver.ext.generic,
  org.jkiss.dbeaver.ext.generic.edit,
  org.jkiss.dbeaver.ext.generic.model,

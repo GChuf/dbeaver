@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.data.IValueController;
 import org.jkiss.dbeaver.ui.data.editors.BaseValueEditor;
 import org.jkiss.dbeaver.ui.gis.IGeometryViewer;
@@ -107,7 +107,7 @@ public class GISPanelEditor extends BaseValueEditor<Control> {
 
         ViewerSwitchAction() {
             super(null, Action.AS_DROP_DOWN_MENU);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_SCRIPT_FOLDER));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_SCRIPT_FOLDER));
             setToolTipText(GISMessages.panel_gis_panel_editor_viewer_action_tool_tip_text_settings);
         }
 
@@ -213,7 +213,7 @@ public class GISPanelEditor extends BaseValueEditor<Control> {
             viewerDescriptor = vd;
             setToolTipText(viewerDescriptor.getDescription());
             if (viewerDescriptor.getIcon() != null) {
-                setImageDescriptor(DBeaverIcons.getImageDescriptor(viewerDescriptor.getIcon()));
+                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(viewerDescriptor.getIcon()));
             }
 
         }

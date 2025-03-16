@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import org.eclipse.swt.widgets.*;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.contentassist.ContentAssistUtils;
@@ -96,7 +96,7 @@ public class StringEditorTable {
                 tableItem.setText(valuesManager.getString(value));
                 setCustomValue(tableItem, value);
                 DBPImage icon = valuesManager.getIcon(value);
-                tableItem.setImage(icon == null ? null : DBeaverIcons.getImage(icon));
+                tableItem.setImage(icon == null ? null : BoberKurwaIcons.getImage(icon));
             }
         }
 
@@ -137,7 +137,7 @@ public class StringEditorTable {
                     setCustomValue(item, value);
                     item.setText(valuesManager.getString(value));
                     DBPImage icon = valuesManager.getIcon(value);
-                    item.setImage(icon == null ? null : DBeaverIcons.getImage(icon));
+                    item.setImage(icon == null ? null : BoberKurwaIcons.getImage(icon));
                 }
             }
         };
@@ -158,7 +158,7 @@ public class StringEditorTable {
             public void widgetSelected(SelectionEvent e) {
                 TableItem newItem = new TableItem(valueTable, SWT.LEFT);
                 DBPImage icon = valuesManager.getIcon(null);
-                newItem.setImage(icon == null ? null : DBeaverIcons.getImage(icon));
+                newItem.setImage(icon == null ? null : BoberKurwaIcons.getImage(icon));
                 valueTable.setSelection(newItem);
                 tableEditor.closeEditor();
                 tableEditor.showEditor(newItem);
@@ -198,7 +198,7 @@ public class StringEditorTable {
         bottomButtonsGroup.setLayoutData(new GridData(GridData.CENTER, GridData.CENTER, true, true));
 
         final Button upButton = new Button(bottomButtonsGroup, SWT.PUSH);
-        upButton.setImage(DBeaverIcons.getImage(UIIcon.ARROW_UP));
+        upButton.setImage(BoberKurwaIcons.getImage(UIIcon.ARROW_UP));
         upButton.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
         upButton.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -211,7 +211,7 @@ public class StringEditorTable {
                     tableItem.setText(valuesManager.getString(value));
                     setCustomValue(tableItem, value);
                     DBPImage icon = valuesManager.getIcon(value);
-                    tableItem.setImage(icon == null ? null : DBeaverIcons.getImage(icon));
+                    tableItem.setImage(icon == null ? null : BoberKurwaIcons.getImage(icon));
                     valueTable.setSelection(selectionIndex - 1);
                     buttonsRefresher.refreshButtons.run();
                 }
@@ -220,7 +220,7 @@ public class StringEditorTable {
         upButton.setVisible(withReordering);
 
         final Button downButton = new Button(bottomButtonsGroup, SWT.PUSH);
-        downButton.setImage(DBeaverIcons.getImage(UIIcon.ARROW_DOWN));
+        downButton.setImage(BoberKurwaIcons.getImage(UIIcon.ARROW_DOWN));
         downButton.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
         downButton.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -233,7 +233,7 @@ public class StringEditorTable {
                     tableItem.setText(valuesManager.getString(value));
                     setCustomValue(tableItem, value);
                     DBPImage icon = valuesManager.getIcon(value);
-                    tableItem.setImage(icon == null ? null : DBeaverIcons.getImage(icon));
+                    tableItem.setImage(icon == null ? null : BoberKurwaIcons.getImage(icon));
                     valueTable.setSelection(selectionIndex + 1);
                     buttonsRefresher.refreshButtons.run();
                 }
@@ -276,7 +276,7 @@ public class StringEditorTable {
                 tableItem.setText(value);
                 setCustomValue(tableItem, value);
                 if (icon != null) {
-                    tableItem.setImage(DBeaverIcons.getImage(icon));
+                    tableItem.setImage(BoberKurwaIcons.getImage(icon));
                 }
             }
         }

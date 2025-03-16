@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,11 @@
  */
 package org.jkiss.utils;
 
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ByteNumberFormatTest extends DBeaverUnitTest {
+public class ByteNumberFormatTest extends BoberKurwaUnitTest {
 
     private static final long KB = 1024;
     private static final long MB = 1024 * KB;

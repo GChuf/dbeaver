@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Vendor: DBeaver Corp
-Bundle-Name: DBeaver Data GIS UI
+Bundle-Vendor: BoberKurwa Corp
+Bundle-Name: BoberKurwa Data GIS UI
 Bundle-SymbolicName: org.jkiss.dbeaver.data.gis.view;singleton:=true
 Bundle-Version: 1.0.146.qualifier
 Bundle-Release-Date: 20250325

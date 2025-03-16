@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.jobs.DataSourceJob;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -139,7 +139,7 @@ public abstract class GenerateMultiSQLDialog<T extends DBSObject> extends Genera
         for (T table : selectedObjects) {
             TableItem item = new TableItem(objectsTable, SWT.NONE);
             item.setText(DBUtils.getObjectFullName(table, DBPEvaluationContext.UI));
-            item.setImage(DBeaverIcons.getImage(DBIcon.TREE_TABLE));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_TABLE));
             item.setChecked(true);
             item.setData(table);
         }

@@ -13,7 +13,7 @@ package org.jkiss.dbeaver.ui.notifications;
 import org.eclipse.jface.notifications.AbstractNotificationPopup;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Display;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 /**
@@ -33,7 +33,7 @@ public class AbstractWorkbenchNotificationPopup extends AbstractNotificationPopu
 
 	@Override
 	protected Image getPopupShellImage(int maximumHeight) {
-		return DBeaverIcons.getImage(UIIcon.DBEAVER_LOGO_SMALL);
+		return BoberKurwaIcons.getImage(UIIcon.DBEAVER_LOGO_SMALL);
 	}
 
 }

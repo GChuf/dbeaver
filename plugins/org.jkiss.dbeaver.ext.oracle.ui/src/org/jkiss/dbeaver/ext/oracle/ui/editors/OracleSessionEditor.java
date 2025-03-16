@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.admin.sessions.DBAServerSession;
 import org.jkiss.dbeaver.model.admin.sessions.DBAServerSessionManager;
 import org.jkiss.dbeaver.model.exec.DBCExecutionContext;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.dialogs.ConfirmationDialog;
 import org.jkiss.dbeaver.ui.views.session.AbstractSessionEditor;
@@ -77,7 +77,7 @@ public class OracleSessionEditor extends AbstractSessionEditor
                 contributionManager.add(ActionUtils.makeActionContribution(
                     new Action(OracleUIMessages.views_session_manager_viewer_show_background, Action.AS_CHECK_BOX) {
                         {
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
                             setToolTipText(OracleUIMessages.views_session_manager_viewer_show_background_tasks_tip);
                             setChecked(showBackground);
                         }
@@ -91,7 +91,7 @@ public class OracleSessionEditor extends AbstractSessionEditor
                 contributionManager.add(ActionUtils.makeActionContribution(
                     new Action(OracleUIMessages.views_session_manager_viewer_show_inactive, Action.AS_CHECK_BOX) {
                         {
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
                             setToolTipText(OracleUIMessages.views_session_manager_viewer_show_inactive_sessions_tip);
                             setChecked(showInactive);
                         }
@@ -146,7 +146,7 @@ public class OracleSessionEditor extends AbstractSessionEditor
         {
             super(
                 kill ? OracleUIMessages.editors_oracle_session_editor_title_kill_session : OracleUIMessages.editors_oracle_session_editor_title_disconnect_session,
-                DBeaverIcons.getImageDescriptor(kill ? UIIcon.REJECT : UIIcon.SQL_DISCONNECT));
+                BoberKurwaIcons.getImageDescriptor(kill ? UIIcon.REJECT : UIIcon.SQL_DISCONNECT));
             this.kill = kill;
         }
 

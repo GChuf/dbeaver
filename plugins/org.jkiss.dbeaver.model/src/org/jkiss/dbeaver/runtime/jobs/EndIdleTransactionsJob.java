@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.model.exec.*;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.ui.UIServiceConnections;
 
 import java.util.Map;
@@ -73,9 +73,9 @@ class EndIdleTransactionsJob extends DataSourceUpdaterJob {
                 }
             }
         }
-        DBeaverNotifications.showNotification(
+        BoberKurwaNotifications.showNotification(
             dataSource,
-            DBeaverNotifications.NT_ROLLBACK_IDLE,
+            BoberKurwaNotifications.NT_ROLLBACK_IDLE,
             "Transactions have been rolled back after long idle period (" + dataSource.getContainer().getName() + ")",
             DBPMessageType.ERROR);
 

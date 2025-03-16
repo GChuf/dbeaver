@@ -20,7 +20,7 @@
     </license>
 
     <url>
-        <update label="DBeaver Universal Database Manager" url="https://dbeaver.io/"/>
+        <update label="BoberKurwa Universal Database Manager" url="https://dbeaver.io/"/>
     </url>
 
     <includes id="org.jkiss.dbeaver.rcp.feature" version="0.0.0"/>

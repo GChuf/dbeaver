@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -437,7 +437,7 @@ public class DatabaseConsumerPageMapping extends DataTransferPageNodeSettings {
         if (container != null) {
             loadMappingsButton = new Button(mappingViewer.getTree(), SWT.PUSH);
             loadMappingsButton.setText(NLS.bind(DTUIMessages.columns_mapping_dialog_composite_button_reconnect, container.getName()));
-            loadMappingsButton.setImage(DBeaverIcons.getImage(UIIcon.SQL_CONNECT));
+            loadMappingsButton.setImage(BoberKurwaIcons.getImage(UIIcon.SQL_CONNECT));
             loadMappingsButton.addSelectionListener(SelectionListener.widgetSelectedAdapter(e -> loadSettings(true)));
 
             final ControlEditor overlay = new ControlEditor(mappingViewer.getTree());
@@ -482,7 +482,7 @@ public class DatabaseConsumerPageMapping extends DataTransferPageNodeSettings {
                     DatabaseMappingObject mapping = (DatabaseMappingObject) cell.getElement();
                     cell.setText(DBUtils.getObjectFullName(mapping.getSource(), DBPEvaluationContext.UI));
                     if (mapping.getIcon() != null) {
-                        cell.setImage(DBeaverIcons.getImage(mapping.getIcon()));
+                        cell.setImage(BoberKurwaIcons.getImage(mapping.getIcon()));
                     }
                     super.update(cell);
                 }

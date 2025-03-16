@@ -201,7 +201,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-DBeaver includes a number of components and libraries with separate
+BoberKurwa includes a number of components and libraries with separate
 copyright notices and license terms. Your use of those components are
 subject to the terms and conditions of the following licenses.
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -88,7 +88,7 @@ public interface DBTScheduler {
 
     /**
      * Opens scheduler settings.
-     * @return settings information to show in DBeaver UI. Null if scheduler uses some proprietary way to show settings.
+     * @return settings information to show in BoberKurwa UI. Null if scheduler uses some proprietary way to show settings.
      */
     @Nullable
     DBTSchedulerExternalSettings openSchedulerSettings() throws DBException;

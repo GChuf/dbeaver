@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -125,7 +125,7 @@ public class ProgressEditorPart extends EditorPart {
     private void createInitializerPlaceholder() {
         final Button button = new Button(progressCanvas, SWT.PUSH);
         button.setText(EditorsMessages.progress_editor_uninitialized_text);
-        button.setImage(DBeaverIcons.getImage(UIIcon.SQL_CONNECT));
+        button.setImage(BoberKurwaIcons.getImage(UIIcon.SQL_CONNECT));
         button.addSelectionListener(SelectionListener.widgetSelectedAdapter(e -> {
             for (Control child : progressCanvas.getChildren()) {
                 child.dispose();

@@ -8,13 +8,13 @@ package org.jkiss.dbeaver.erd.ui.figures;
 import org.eclipse.draw2d.Label;
 import org.eclipse.draw2d.Toggle;
 import org.eclipse.swt.graphics.Image;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 public final class CustomCheckBoxFigure extends Toggle {
     private Label label;
-    private static final Image UNCHECKED = DBeaverIcons.getImage(UIIcon.CHECK_OFF);
-    private static final Image CHECKED = DBeaverIcons.getImage(UIIcon.CHECK_ON);
+    private static final Image UNCHECKED = BoberKurwaIcons.getImage(UIIcon.CHECK_OFF);
+    private static final Image CHECKED = BoberKurwaIcons.getImage(UIIcon.CHECK_ON);
 
     public CustomCheckBoxFigure() {
         this("");

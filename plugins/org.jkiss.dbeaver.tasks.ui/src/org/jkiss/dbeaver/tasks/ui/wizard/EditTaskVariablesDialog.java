@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.impl.sql.BasicSQLDialect;
 import org.jkiss.dbeaver.model.sql.commands.SQLCommandSet;
 import org.jkiss.dbeaver.model.task.DBTTask;
 import org.jkiss.dbeaver.tasks.ui.internal.TaskUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIStyles;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -48,7 +48,7 @@ import java.util.stream.Collectors;
  */
 public class EditTaskVariablesDialog extends StatusDialog {
 
-    private static final String DIALOG_ID = "DBeaver.SQLQueryParameterBindDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.SQLQueryParameterBindDialog";//$NON-NLS-1$
 
     private final List<TaskVariableList> variables;
     private TreeViewer viewer;
@@ -126,7 +126,7 @@ public class EditTaskVariablesDialog extends StatusDialog {
             @Override
             public Image getImage(Object element) {
                 if (element instanceof TaskVariableList list && list.task.getType().getIcon() != null) {
-                    return DBeaverIcons.getImage(list.task.getType().getIcon());
+                    return BoberKurwaIcons.getImage(list.task.getType().getIcon());
                 }
                 return null;
             }

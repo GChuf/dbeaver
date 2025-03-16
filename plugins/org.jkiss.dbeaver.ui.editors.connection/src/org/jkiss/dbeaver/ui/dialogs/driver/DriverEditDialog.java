@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -71,7 +71,7 @@ import java.util.stream.Stream;
 public class DriverEditDialog extends HelpEnabledDialog {
     private static final Log log = Log.getLog(DriverEditDialog.class);
 
-    private static final String DIALOG_ID = "DBeaver.DriverEditDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DriverEditDialog";//$NON-NLS-1$
 
     private static int dialogCount;
 
@@ -183,7 +183,7 @@ public class DriverEditDialog extends HelpEnabledDialog {
             getShell().setText(UIConnectionMessages.dialog_edit_driver_title_create_driver);
         } else {
             getShell().setText(UIConnectionMessages.dialog_edit_driver_title_edit_driver + driver.getName() + "'"); //$NON-NLS-2$
-            getShell().setImage(DBeaverIcons.getImage(driver.getPlainIcon()));
+            getShell().setImage(BoberKurwaIcons.getImage(driver.getPlainIcon()));
         }
 
         final Composite group = super.createDialogArea(parent);
@@ -249,7 +249,7 @@ public class DriverEditDialog extends HelpEnabledDialog {
                 new LabelProvider() {
                     @Override
                     public Image getImage(Object element) {
-                        return DBeaverIcons.getImage(((DataSourceProviderDescriptor) element).getIcon());
+                        return BoberKurwaIcons.getImage(((DataSourceProviderDescriptor) element).getIcon());
                     }
 
                     @Override
@@ -321,7 +321,7 @@ public class DriverEditDialog extends HelpEnabledDialog {
         anonymousDriverCheck = UIUtils.createCheckbox(optionsPanel, UIConnectionMessages.dialog_edit_driver_anonymous_label, UIConnectionMessages.dialog_edit_driver_anonymous_tip, driver.isAnonymousAccess(), 1);
         allowsEmptyPasswordCheck = UIUtils.createCheckbox(optionsPanel, UIConnectionMessages.dialog_edit_driver_allows_empty_password_label, UIConnectionMessages.dialog_edit_driver_allows_empty_password_tip, driver.isAnonymousAccess(), 1);
         nonInstantiableCheck = UIUtils.createCheckbox(optionsPanel, UIConnectionMessages.dialog_edit_driver_use_legacy_instantiation_label, UIConnectionMessages.dialog_edit_driver_use_legacy_instantiation_tip, !driver.isInstantiable(), 1);
-        threadSafeCheck = UIUtils.createCheckbox(optionsPanel, "Thread safe driver", "Driver is thread safe (default). Otherwise DBeaver will lock all driver invocations to protect it from any data corruptions.", driver.isThreadSafeDriver(), 1);
+        threadSafeCheck = UIUtils.createCheckbox(optionsPanel, "Thread safe driver", "Driver is thread safe (default). Otherwise BoberKurwa will lock all driver invocations to protect it from any data corruptions.", driver.isThreadSafeDriver(), 1);
 
         if (isReadOnly) {
             embeddedDriverCheck.setEnabled(false);
@@ -411,17 +411,17 @@ public class DriverEditDialog extends HelpEnabledDialog {
                         } else {
                             cell.setForeground(null);
                         }
-                        cell.setImage(DBeaverIcons.getImage(lib.getIcon()));
+                        cell.setImage(BoberKurwaIcons.getImage(lib.getIcon()));
                     } else {
                         cell.setText(element.toString());
                         if (element instanceof DriverDescriptor.DriverFileInfo) {
                             if (((DriverDescriptor.DriverFileInfo)element).getType() == DBPDriverLibrary.FileType.license) {
-                                cell.setImage(DBeaverIcons.getImage(DBIcon.TYPE_TEXT));
+                                cell.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_TEXT));
                             } else {
-                                cell.setImage(DBeaverIcons.getImage(DBIcon.JAR));
+                                cell.setImage(BoberKurwaIcons.getImage(DBIcon.JAR));
                             }
                         } else {
-                            cell.setImage(DBeaverIcons.getImage(DBIcon.JAR));
+                            cell.setImage(BoberKurwaIcons.getImage(DBIcon.JAR));
                         }
                     }
                 }

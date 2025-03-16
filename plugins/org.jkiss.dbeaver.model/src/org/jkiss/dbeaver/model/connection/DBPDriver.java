@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -131,7 +131,7 @@ public interface DBPDriver extends DBPNamedObject
 
     // Can be created
     boolean isInstantiable();
-    // Driver shipped along with JDK/DBeaver, doesn't need any additional libraries. Basically it is ODBC driver.
+    // Driver shipped along with JDK/BoberKurwa, doesn't need any additional libraries. Basically it is ODBC driver.
     boolean isInternalDriver();
     // Custom driver: created by user
     boolean isCustom();

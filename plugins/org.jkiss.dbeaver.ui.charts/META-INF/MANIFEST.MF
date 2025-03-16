@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Vendor: DBeaver Corp
-Bundle-Name: DBeaver Charts UI
+Bundle-Vendor: BoberKurwa Corp
+Bundle-Name: BoberKurwa Charts UI
 Bundle-SymbolicName: org.jkiss.dbeaver.ui.charts;singleton:=true
 Bundle-Version: 1.0.148.qualifier
 Bundle-Release-Date: 20250325

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.task.DBTTaskEvent;
 import org.jkiss.dbeaver.model.task.DBTTaskExecutionListener;
 import org.jkiss.dbeaver.registry.task.TaskRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSystemAgent;
 import org.jkiss.dbeaver.tasks.nativetool.AbstractNativeToolSettings;
 import org.jkiss.dbeaver.tasks.ui.internal.TaskUIMessages;
@@ -111,14 +111,14 @@ public class TaskProcessorUI implements DBRRunnableContext, DBTTaskExecutionList
             }
 
             if (isShowFinalMessage() && !hasErrors) {
-                DBeaverNotifications.showNotification(
+                BoberKurwaNotifications.showNotification(
                     "task.execute.success",
                     task == null ? this.task.getName() : task.getName(),
                     completeMessage.toString(),
                     DBPMessageType.INFORMATION,
                     () -> TaskRegistry.getInstance().notifyTaskListeners(new DBTTaskEvent(task, DBTTaskEvent.Action.TASK_ACTIVATE)));
             } else if (error != null && !(error instanceof InterruptedException)) { ;
-                DBeaverNotifications.showNotification(
+                BoberKurwaNotifications.showNotification(
                     "task.execute.failure",
                     task == null ? this.task.getName() : task.getName(),
                     error.getMessage(),

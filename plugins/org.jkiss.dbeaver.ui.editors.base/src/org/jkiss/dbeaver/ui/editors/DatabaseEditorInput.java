@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.jkiss.dbeaver.model.preferences.DBPPropertySource;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.properties.PropertySourceEditable;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -90,7 +90,7 @@ public abstract class DatabaseEditorInput<NODE extends DBNDatabaseNode> implemen
     @Override
     public ImageDescriptor getImageDescriptor()
     {
-        return DBeaverIcons.getImageDescriptor(node.getNodeIconDefault());
+        return BoberKurwaIcons.getImageDescriptor(node.getNodeIconDefault());
     }
 
     @Override
@@ -133,7 +133,7 @@ public abstract class DatabaseEditorInput<NODE extends DBNDatabaseNode> implemen
             return adapter.cast(new WorkbenchAdapter() {
                 @Override
                 public ImageDescriptor getImageDescriptor(Object object) {
-                    return DBeaverIcons.getImageDescriptor(node.getNodeIconDefault());
+                    return BoberKurwaIcons.getImageDescriptor(node.getNodeIconDefault());
                 }
                 @Override
                 public String getLabel(Object o) {

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.ObjectPropertyTester;
@@ -195,13 +195,13 @@ public class NavigatorHandlerObjectCreateNew extends NavigatorHandlerObjectCreat
             element.setText(NLS.bind(UINavigatorMessages.actions_navigator_create_new, getObjectTypeName(element)));
         }
         if (objectIcon != null) {
-            element.setIcon(DBeaverIcons.getImageDescriptor(new DBIcon(objectIcon.toString())));
+            element.setIcon(BoberKurwaIcons.getImageDescriptor(new DBIcon(objectIcon.toString())));
         } else {
             DBPImage image = getObjectTypeIcon(selectionProvider);
             if (image == null) {
                 image = DBIcon.TYPE_OBJECT;
             }
-            element.setIcon(DBeaverIcons.getImageDescriptor(image));
+            element.setIcon(BoberKurwaIcons.getImageDescriptor(image));
         }
     }
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.data.DBDDisplayFormat;
 import org.jkiss.dbeaver.model.exec.DBCLogicalOperator;
 import org.jkiss.dbeaver.model.virtual.DBVColorOverride;
 import org.jkiss.dbeaver.model.virtual.DBVEntity;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.*;
@@ -63,7 +63,7 @@ public class ColorSettingsDialog extends BaseDialog {
 
     private static final Log log = Log.getLog(ColorSettingsDialog.class);
 
-    private static final String DIALOG_ID = "DBeaver.ColorSettingsDialog2";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.ColorSettingsDialog2";//$NON-NLS-1$
 
     /** List of supported <b>binary</b> operators the user can pick from. */
     private static final DBCLogicalOperator[] SUPPORTED_OPERATORS = {
@@ -177,7 +177,7 @@ public class ColorSettingsDialog extends BaseDialog {
             TableItem attrItem = new TableItem(attributeTable, SWT.NONE);
             attrItem.setData(attr);
             attrItem.setText(0, attr.getName());
-            attrItem.setImage(0, DBeaverIcons.getImage(DBValueFormatting.getObjectImage(attr, true)));
+            attrItem.setImage(0, BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(attr, true)));
 
             if (this.attribute == attr) {
                 attributeTable.setSelection(attrItem);

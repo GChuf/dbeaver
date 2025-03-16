@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.eclipse.jface.dialogs.IDialogConstants;
 import org.jkiss.dbeaver.model.gis.DBGeometry;
 import org.jkiss.dbeaver.model.gis.GisConstants;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.MenuCreator;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -41,7 +41,7 @@ class SelectCRSAction extends Action {
 
     SelectCRSAction(IGeometryValueEditor valueEditor) {
         super(valueEditor.getValueSRID() == GisConstants.SRID_SIMPLE ? GisConstants.LL_CRS_SIMPLE : "EPSG:" + valueEditor.getValueSRID(), Action.AS_DROP_DOWN_MENU);
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.CHART_LINE));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.CHART_LINE));
         this.valueEditor = valueEditor;
     }
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -263,13 +263,13 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
             filterToolbar.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING | GridData.VERTICAL_ALIGN_BEGINNING));
 
             filtersClearButton = new ToolItem(filterToolbar, SWT.NO_FOCUS | SWT.DROP_DOWN);
-            filtersClearButton.setImage(DBeaverIcons.getImage(UIIcon.ERASE));
+            filtersClearButton.setImage(BoberKurwaIcons.getImage(UIIcon.ERASE));
             filtersClearButton.setToolTipText(ActionUtils.findCommandDescription(ResultSetHandlerMain.CMD_FILTER_CLEAR_SETTING, viewer.getSite(), false));
             filtersClearButton.addSelectionListener(new EraseItemListener());
             filtersClearButton.setEnabled(false);
 
             ToolItem filtersCustomButton = new ToolItem(filterToolbar, SWT.NO_FOCUS | SWT.DROP_DOWN);
-            filtersCustomButton.setImage(DBeaverIcons.getImage(UIIcon.FILTER));
+            filtersCustomButton.setImage(BoberKurwaIcons.getImage(UIIcon.FILTER));
             filtersCustomButton.setToolTipText(ActionUtils.findCommandDescription(ResultSetHandlerMain.CMD_FILTER_EDIT_SETTINGS, viewer.getSite(), false));
             filtersCustomButton.setEnabled(true);
             filtersCustomButton.addSelectionListener(new CustomFilterListener());
@@ -277,12 +277,12 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
             //UIUtils.createToolBarSeparator(filterToolbar, SWT.VERTICAL);
 
             historyBackButton = new ToolItem(filterToolbar, SWT.DROP_DOWN | SWT.NO_FOCUS);
-            historyBackButton.setImage(DBeaverIcons.getImage(UIIcon.RS_BACK));
+            historyBackButton.setImage(BoberKurwaIcons.getImage(UIIcon.RS_BACK));
             historyBackButton.setEnabled(false);
             historyBackButton.addSelectionListener(new HistoryMenuListener(historyBackButton, true));
 
             historyForwardButton = new ToolItem(filterToolbar, SWT.DROP_DOWN | SWT.NO_FOCUS);
-            historyForwardButton.setImage(DBeaverIcons.getImage(UIIcon.RS_FORWARD));
+            historyForwardButton.setImage(BoberKurwaIcons.getImage(UIIcon.RS_FORWARD));
             historyForwardButton.setEnabled(false);
             historyForwardButton.addSelectionListener(new HistoryMenuListener(historyForwardButton, false));
         }
@@ -563,7 +563,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
         Label iconLabel = new Label(panel, SWT.NONE);
         DBPImage activeObjectImage = getActiveObjectImage();
         if (activeObjectImage != null) {
-            iconLabel.setImage(DBeaverIcons.getImage(activeObjectImage));
+            iconLabel.setImage(BoberKurwaIcons.getImage(activeObjectImage));
         }
         iconLabel.setToolTipText(ResultSetMessages.sql_editor_resultset_filter_panel_label);
         iconLabel.setLayoutData(new GridData(GridData.VERTICAL_ALIGN_BEGINNING));
@@ -805,7 +805,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
             sizingGC.dispose();
             DBPImage activeObjectImage = getActiveObjectImage();
             if (activeObjectImage != null) {
-                Image image = DBeaverIcons.getImage(activeObjectImage);
+                Image image = BoberKurwaIcons.getImage(activeObjectImage);
                 textSize.x += image.getBounds().width + 4;
             }
             if (textSize.x < maxFilterTextWidth) {
@@ -846,7 +846,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
             int textOffset = 2;
             DBPImage activeObjectImage = getActiveObjectImage();
             if (activeObjectImage != null) {
-                Image icon = DBeaverIcons.getImage(activeObjectImage);
+                Image icon = BoberKurwaIcons.getImage(activeObjectImage);
                 Rectangle iconBounds = icon.getBounds();
                 e.gc.drawImage(icon, 2, 2);
                 textOffset += iconBounds.width + 2;
@@ -866,7 +866,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
         HistoryPanel(Composite addressBar) {
             super(addressBar, SWT.NONE);
             setToolTipText(ResultSetMessages.filter_panel_filters_history_text);
-            dropImageE = DBeaverIcons.getImage(UIIcon.DROP_DOWN);
+            dropImageE = BoberKurwaIcons.getImage(UIIcon.DROP_DOWN);
             dropImageD = new Image(dropImageE.getDevice(), dropImageE, SWT.IMAGE_GRAY);
 
             GridData gd = new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING | GridData.FILL_VERTICAL);
@@ -1051,9 +1051,9 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
         FilterExpandPanel(Composite addressBar) {
             super(addressBar, SWT.NONE);
             setToolTipText(ResultSetMessages.filter_panel_expand_panel_text);
-            enabledImageExpand = DBeaverIcons.getImage(UIIcon.FIT_WINDOW);
+            enabledImageExpand = BoberKurwaIcons.getImage(UIIcon.FIT_WINDOW);
             disabledImageExpand = new Image(enabledImageExpand.getDevice(), enabledImageExpand, SWT.IMAGE_GRAY);
-            enabledImageCollapse = DBeaverIcons.getImage(UIIcon.ORIGINAL_SIZE);
+            enabledImageCollapse = BoberKurwaIcons.getImage(UIIcon.ORIGINAL_SIZE);
             disabledImageCollapse = new Image(enabledImageCollapse.getDevice(), enabledImageCollapse, SWT.IMAGE_GRAY);
             addDisposeListener(e -> {
                 UIUtils.dispose(disabledImageExpand);
@@ -1101,7 +1101,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
             super(addressBar, SWT.NONE);
             this.style = style;
             setToolTipText(toolTip);
-            enabledImage = DBeaverIcons.getImage(image);
+            enabledImage = BoberKurwaIcons.getImage(image);
             disabledImage = new Image(enabledImage.getDevice(), enabledImage, SWT.IMAGE_GRAY);
             addDisposeListener(e -> UIUtils.dispose(disabledImage));
             addMouseListener(new MouseAdapter() {
@@ -1131,7 +1131,7 @@ class ResultSetFilterPanel extends Composite implements IContentProposalProvider
                 x += 6;
             }
             if (viewer.isRefreshInProgress()) {
-                e.gc.drawImage(DBeaverIcons.getImage(UIIcon.CLOSE), x, e.y + 2);
+                e.gc.drawImage(BoberKurwaIcons.getImage(UIIcon.CLOSE), x, e.y + 2);
             } else if (isItemEnabled()) {
                 e.gc.drawImage(enabledImage, x, e.y + 2);
             } else {

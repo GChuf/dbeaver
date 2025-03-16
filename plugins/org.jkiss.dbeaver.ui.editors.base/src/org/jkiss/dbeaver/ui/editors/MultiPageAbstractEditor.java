@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -149,7 +149,7 @@ public abstract class MultiPageAbstractEditor extends MultiPageEditorPart {
                 // Sample toolbar's height as it fits quite nicely.
                 ToolBar toolBar = new ToolBar(tabFolder, SWT.FLAT | SWT.RIGHT);
                 // Add a dummy item as empty toolbars are considered {0, 0} on some platforms
-                new ToolItem(toolBar, SWT.PUSH).setImage(DBeaverIcons.getImage(UIIcon.SEPARATOR_V));
+                new ToolItem(toolBar, SWT.PUSH).setImage(BoberKurwaIcons.getImage(UIIcon.SEPARATOR_V));
                 tabFolder.setTabHeight(toolBar.computeSize(SWT.DEFAULT, SWT.DEFAULT).y);
                 toolBar.dispose();
             }

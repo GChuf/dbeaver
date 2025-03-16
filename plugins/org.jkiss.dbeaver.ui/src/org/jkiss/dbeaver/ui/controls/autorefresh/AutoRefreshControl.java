@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.swt.graphics.Rectangle;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.model.runtime.DBRRunnableWithProgress;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.internal.UIMessages;
 import org.jkiss.utils.CommonUtils;
@@ -143,7 +143,7 @@ public class AutoRefreshControl {
         this.defRefreshText = defTooltip;
         this.defRefreshIcon = defImage;
         autoRefreshButton = new ToolItem(toolbar, SWT.DROP_DOWN | SWT.NO_FOCUS);
-        autoRefreshButton.setImage(DBeaverIcons.getImage(defRefreshIcon));
+        autoRefreshButton.setImage(BoberKurwaIcons.getImage(defRefreshIcon));
         if (itemText != null) {
             autoRefreshButton.setText(itemText);
         }
@@ -169,10 +169,10 @@ public class AutoRefreshControl {
     private void updateAutoRefreshToolbar() {
         if (autoRefreshButton != null && !autoRefreshButton.isDisposed()) {
             if (isAutoRefreshEnabled()) {
-                autoRefreshButton.setImage(DBeaverIcons.getImage(UIIcon.CLOCK_STOP));
+                autoRefreshButton.setImage(BoberKurwaIcons.getImage(UIIcon.CLOCK_STOP));
                 autoRefreshButton.setToolTipText(UIMessages.sql_editor_resultset_filter_panel_btn_stop_refresh);
             } else {
-                autoRefreshButton.setImage(DBeaverIcons.getImage(defRefreshIcon));
+                autoRefreshButton.setImage(BoberKurwaIcons.getImage(defRefreshIcon));
                 autoRefreshButton.setToolTipText(defRefreshText);
             }
         }

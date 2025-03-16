@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.sql.*;
 import org.jkiss.dbeaver.model.sql.parser.rules.ScriptParameterRule;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.jkiss.util.SQLEditorTestUtil;
 import org.junit.Assert;
 import org.junit.Before;
@@ -46,7 +46,7 @@ import java.util.List;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
-public class SQLScriptParserGenericsTest extends DBeaverUnitTest {
+public class SQLScriptParserGenericsTest extends BoberKurwaUnitTest {
     @Mock
     private DBPDriver driver;
     @Mock
@@ -185,10 +185,10 @@ public class SQLScriptParserGenericsTest extends DBeaverUnitTest {
             "SELECT Column1\n" +
             "FROM Elizabeth.Elis;\n",
             null,
-            "use DBeaver;\n",
+            "use BoberKurwa;\n",
             null,
             "SELECT Column1, name\n" +
-            "FROM DBeaver.NewTable;\n",
+            "FROM BoberKurwa.NewTable;\n",
             null,
             "use Yan;\n",
             null,

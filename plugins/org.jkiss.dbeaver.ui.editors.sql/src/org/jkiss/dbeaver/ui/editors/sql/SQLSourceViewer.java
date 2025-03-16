@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.struct.DBSEntity;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.model.struct.DBStructUtils;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.editors.IDatabaseEditorInput;
@@ -56,7 +56,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
     protected Boolean showFullDDL;
     private Boolean showPartitionsDDL;
 
-    private final IAction OPEN_CONSOLE_ACTION = new Action(SQLEditorMessages.source_viewer_open_in_sql_console, DBeaverIcons.getImageDescriptor(UIIcon.SQL_CONSOLE)) {
+    private final IAction OPEN_CONSOLE_ACTION = new Action(SQLEditorMessages.source_viewer_open_in_sql_console, BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_CONSOLE)) {
         @Override
         public void run() 
         {
@@ -174,7 +174,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
                 toolBarManager.add(ActionUtils.makeActionContribution(
                         new Action(SQLEditorMessages.source_viewer_show_ddl_text, Action.AS_CHECK_BOX) {
                             {
-                                setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_TABLE_EXTERNAL));
+                                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_TABLE_EXTERNAL));
                                 setToolTipText(SQLEditorMessages.source_viewer_show_ddl_tip);
                                 setChecked(getShowFullDDL());
                             }
@@ -191,7 +191,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
                 toolBarManager.add(ActionUtils.makeActionContribution(
                         new Action(SQLEditorMessages.source_viewer_show_permissions_text, Action.AS_CHECK_BOX) {
                             {
-                                setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_PERMISSIONS));
+                                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_PERMISSIONS));
                                 setToolTipText(SQLEditorMessages.source_viewer_show_permissions_tip);
                                 setChecked(getShowPermissions());
                             }
@@ -209,7 +209,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
                 toolBarManager.add(ActionUtils.makeActionContribution(
                     new Action(SQLEditorMessages.source_viewer_separate_fk_text, Action.AS_CHECK_BOX) {
                         {
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_FOREIGN_KEY));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_FOREIGN_KEY));
                             setToolTipText(SQLEditorMessages.source_viewer_separate_fk_tip);
                             setChecked(getSeparateFKStmts());
                         }
@@ -226,7 +226,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
                 toolBarManager.add(ActionUtils.makeActionContribution(
                         new Action(SQLEditorMessages.source_viewer_show_comments_text, Action.AS_CHECK_BOX) {
                             {
-                                setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TYPE_TEXT));
+                                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TYPE_TEXT));
                                 setToolTipText(SQLEditorMessages.source_viewer_show_comments_tip);
                                 setChecked(getShowColumnComments());
                             }
@@ -243,7 +243,7 @@ public class SQLSourceViewer<T extends DBPScriptObject & DBSObject> extends SQLE
                 toolBarManager.add(ActionUtils.makeActionContribution(
                     new Action(SQLEditorMessages.source_viewer_show_partitions_ddl_text, Action.AS_CHECK_BOX) {
                         {
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_PARTITION));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_PARTITION));
                             setToolTipText(SQLEditorMessages.source_viewer_show_partitions_ddl_tip);
                             setChecked(getShowPartitionsDDL());
                         }

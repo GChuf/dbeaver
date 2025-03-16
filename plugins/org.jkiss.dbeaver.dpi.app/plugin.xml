@@ -13,8 +13,8 @@
         <application
                 id="dbeaver-dpi-app"
                 family="DB"
-                name="DBeaver DPI Application"
-                description="DBeaver DPI Application"
+                name="BoberKurwa DPI Application"
+                description="BoberKurwa DPI Application"
                 hidden="true"/>
     </extension>
 

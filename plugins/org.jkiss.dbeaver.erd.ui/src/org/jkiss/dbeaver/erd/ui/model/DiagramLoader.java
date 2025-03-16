@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.model.struct.*;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.SharedFonts;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ListContentProvider;
@@ -752,7 +752,7 @@ public class DiagramLoader extends ERDPersistedState {
 
                 @Override
                 public Image getImage(Object element) {
-                    return DBeaverIcons.getImage(DBIcon.DATABASE_DEFAULT);
+                    return BoberKurwaIcons.getImage(DBIcon.DATABASE_DEFAULT);
                 }
             });
             controller.addColumn("New data source", null, SWT.LEFT, true, true, new ColumnLabelProvider() {
@@ -770,9 +770,9 @@ public class DiagramLoader extends ERDPersistedState {
                 public Image getImage(Object element) {
                     final DBPDataSourceContainer container = containers.get((String) element);
                     if (container != null) {
-                        return DBeaverIcons.getImage(container.getDriver().getIcon());
+                        return BoberKurwaIcons.getImage(container.getDriver().getIcon());
                     } else {
-                        return DBeaverIcons.getImage(DBIcon.DATABASE_DEFAULT);
+                        return BoberKurwaIcons.getImage(DBIcon.DATABASE_DEFAULT);
                     }
                 }
             });

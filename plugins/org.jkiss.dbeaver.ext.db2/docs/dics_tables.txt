@@ -6,7 +6,7 @@
 "XML Strings"      since v9.7
 "Stogroups"        since v10.1
 
-Catalog tables used by DBeaver that do not exists in v8.x:
+Catalog tables used by BoberKurwa that do not exists in v8.x:
 -----------------------------------------------------------
 SYSCAT.CONDITIONS
 SYSCAT.DATAPARTITIONS
@@ -22,7 +22,7 @@ SYSCAT.XSROBJECTS
 SYSCAT.XSROBJECTAUTH
 SYSCAT.XSROBJECTDEP
 
-Catalog tables used by DBeaver that do not exists in v9.1:
+Catalog tables used by BoberKurwa that do not exists in v9.1:
 ----------------------------------------------------------
 SYSCAT.CONDITIONS
 SYSCAT.MODULEAUTH

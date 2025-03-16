@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.tasks.ui.nativetool.AbstractNativeToolWizardPage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomSashForm;
 import org.jkiss.utils.CommonUtils;
@@ -208,7 +208,7 @@ class PostgreBackupWizardPageObjects extends AbstractNativeToolWizardPage<Postgr
                         continue;
                     }
                     TableItem item = new TableItem(schemasTable, SWT.NONE);
-                    item.setImage(DBeaverIcons.getImage(DBIcon.TREE_SCHEMA));
+                    item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_SCHEMA));
                     item.setText(0, schema.getName());
                     item.setData(schema);
                     if (activeSchemas.contains(schema)) {
@@ -287,7 +287,7 @@ class PostgreBackupWizardPageObjects extends AbstractNativeToolWizardPage<Postgr
                         tablesTable.removeAll();
                         for (PostgreTableBase table : objects) {
                             TableItem item = new TableItem(tablesTable, SWT.NONE);
-                            item.setImage(DBeaverIcons.getImage(table.isView() ? DBIcon.TREE_VIEW : DBIcon.TREE_TABLE));
+                            item.setImage(BoberKurwaIcons.getImage(table.isView() ? DBIcon.TREE_VIEW : DBIcon.TREE_TABLE));
                             item.setText(0, table.getName());
                             item.setData(table);
                             item.setChecked(isCatalogChecked && (checkedObjects == null || checkedObjects.contains(table)));

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -135,7 +135,7 @@ public class ConnectionPageNetworkHandler extends ConnectionWizardPage implement
         });
         ToolBar editToolbar = new ToolBar(buttonsGroup, SWT.HORIZONTAL);
         ToolItem editItem = new ToolItem(editToolbar, SWT.PUSH);
-        editItem.setImage(DBeaverIcons.getImage(UIIcon.EDIT));
+        editItem.setImage(BoberKurwaIcons.getImage(UIIcon.EDIT));
         editItem.setToolTipText("Edit profiles");
         editItem.addSelectionListener(new SelectionAdapter() {
             @Override

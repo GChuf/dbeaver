@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import org.jkiss.utils.BeanUtils;
 
 public class BrowserClearCookiesHandler implements DBRRunnableWithProgress {
     // BUG: Fragment can't be resolved correctly by our Intellij IDEA workspace generator
-    private static final String BROWSER_HELPER_CLASS_NAME = "org.eclipse.swt.browser.DBeaverBrowserHelper";
+    private static final String BROWSER_HELPER_CLASS_NAME = "org.eclipse.swt.browser.BoberKurwaBrowserHelper";
     private static final String BROWSER_HELPER_CLASS_CLEAR_COOKIES_NAME = "clearCookies";
 
     private static final Log log = Log.getLog(BrowserClearCookiesHandler.class);

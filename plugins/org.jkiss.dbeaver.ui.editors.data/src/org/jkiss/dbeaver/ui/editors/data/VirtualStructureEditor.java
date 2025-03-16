@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.struct.DBSEntityConstraint;
 import org.jkiss.dbeaver.model.struct.DBSEntityConstraintType;
 import org.jkiss.dbeaver.model.virtual.*;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.virtual.EditVirtualColumnsPage;
 import org.jkiss.dbeaver.ui.controls.resultset.virtual.EditVirtualEntityDialog;
@@ -305,7 +305,7 @@ public class VirtualStructureEditor extends AbstractDatabaseObjectEditor<DBSEnti
     private void createUniqueKeyItem(Table ukTable, DBVEntityConstraint uk) {
         TableItem item = new TableItem(ukTable, SWT.NONE);
 
-        item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_UNIQUE_KEY));
+        item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_UNIQUE_KEY));
         item.setText(0, DBUtils.getObjectFullName(uk, DBPEvaluationContext.UI));
         String ownAttrNames = getConstraintAttrNames(uk);
         item.setText(1, ownAttrNames);
@@ -399,7 +399,7 @@ public class VirtualStructureEditor extends AbstractDatabaseObjectEditor<DBSEnti
 
     private void createForeignKeyItem(Table fkTable, DBVEntityForeignKey fk, boolean ref) {
         TableItem item = new TableItem(fkTable, SWT.NONE);
-        //item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
+        //item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
         DBSEntity refEntity;
         if (ref) {
             refEntity = fk.getEntity();
@@ -408,7 +408,7 @@ public class VirtualStructureEditor extends AbstractDatabaseObjectEditor<DBSEnti
             refEntity = refConstraint == null ? null : refConstraint.getParentObject();
         }
 
-        item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
+        item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
         item.setText(0, refEntity == null ? "?" : DBUtils.getObjectFullName(refEntity, DBPEvaluationContext.UI));
 
         String ownAttrNames = fk.getAttributes().stream().map(DBVEntityForeignKeyColumn::getAttributeName)
@@ -417,7 +417,7 @@ public class VirtualStructureEditor extends AbstractDatabaseObjectEditor<DBSEnti
             .collect(Collectors.joining(","));
         item.setText(1, "(" + ownAttrNames + ") -> (" + refAttrNames + ")");
         if (refEntity != null) {
-            item.setImage(2, DBeaverIcons.getImage(refEntity.getDataSource().getContainer().getDriver().getIcon()));
+            item.setImage(2, BoberKurwaIcons.getImage(refEntity.getDataSource().getContainer().getDriver().getIcon()));
             item.setText(2, refEntity.getDataSource().getContainer().getName());
         }
 

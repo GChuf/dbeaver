@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.runtime.IPersistentStorage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.utils.IOUtils;
 
@@ -74,7 +74,7 @@ public abstract class AbstractStorageEditorInput implements IStorageEditorInput,
 
     @Override
     public ImageDescriptor getImageDescriptor() {
-        return DBeaverIcons.getImageDescriptor(DBIcon.TREE_INFO);
+        return BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_INFO);
     }
 
     /* (non-Javadoc)

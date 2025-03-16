@@ -2,7 +2,7 @@
 <html style="height: 100%;">
 
 <head>
-    <title>DBeaver GIS viewer - Leaflet</title>
+    <title>BoberKurwa GIS viewer - Leaflet</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -53,7 +53,7 @@
         }
 
         if (typeof setClipboardContents !== 'undefined') {
-            // This way we can tell whether we're running within DBeaver.
+            // This way we can tell whether we're running within BoberKurwa.
             // If not, just don't bother overriding context menu behavior.
             geoMap.on('contextmenu', function (event) {
                 let actions = [

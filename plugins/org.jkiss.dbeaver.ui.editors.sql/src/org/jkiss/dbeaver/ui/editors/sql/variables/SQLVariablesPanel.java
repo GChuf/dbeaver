@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -329,7 +329,7 @@ public class SQLVariablesPanel extends Composite implements DBCScriptContextList
         }
 
         protected void addSearchAction(IContributionManager contributionManager) {
-            contributionManager.add(new Action("Find variable", DBeaverIcons.getImageDescriptor(UIIcon.SEARCH)) {
+            contributionManager.add(new Action("Find variable", BoberKurwaIcons.getImageDescriptor(UIIcon.SEARCH)) {
                 @Override
                 public void run() {
                     performSearch(SearchType.NONE);
@@ -350,7 +350,7 @@ public class SQLVariablesPanel extends Composite implements DBCScriptContextList
         public void fillCustomActions(IContributionManager contributionManager) {
             super.fillCustomActions(contributionManager);
 
-            addAction = new Action("Add variable", DBeaverIcons.getImageDescriptor(UIIcon.ADD)) {
+            addAction = new Action("Add variable", BoberKurwaIcons.getImageDescriptor(UIIcon.ADD)) {
                 @Override
                 public void run() {
                     AssignVariableAction action = new AssignVariableAction(mainEditor, "");
@@ -359,7 +359,7 @@ public class SQLVariablesPanel extends Composite implements DBCScriptContextList
                 }
             };
             contributionManager.add(addAction);
-            deleteAction = new Action("Delete variable", DBeaverIcons.getImageDescriptor(UIIcon.DELETE)) {
+            deleteAction = new Action("Delete variable", BoberKurwaIcons.getImageDescriptor(UIIcon.DELETE)) {
                 @Override
                 public void run() {
                     if (!varsTable.getSelection().isEmpty()) {
@@ -381,7 +381,7 @@ public class SQLVariablesPanel extends Composite implements DBCScriptContextList
                 }
             };
             showParamsAction.setChecked(showParameters);
-            showParamsAction.setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.SQL_PARAMETER));
+            showParamsAction.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_PARAMETER));
             showParamsAction.setDescription("Show query parameters");
             contributionManager.add(ActionUtils.makeActionContribution(showParamsAction, true));
         }

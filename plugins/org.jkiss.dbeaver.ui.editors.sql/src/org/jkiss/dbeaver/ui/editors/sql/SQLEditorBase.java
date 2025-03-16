@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -1339,7 +1339,7 @@ public abstract class SQLEditorBase extends BaseTextEditor implements
 
     protected class ShowPreferencesAction extends Action {
         ShowPreferencesAction() {
-            super(SQLEditorMessages.editor_sql_preference, DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+            super(SQLEditorMessages.editor_sql_preference, BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
         }  //$NON-NLS-1$
 
         public void run() {

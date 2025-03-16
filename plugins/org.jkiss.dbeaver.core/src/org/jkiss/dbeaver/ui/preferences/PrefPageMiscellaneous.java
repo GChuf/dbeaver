@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.eclipse.ui.IWorkbench;
 import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
@@ -156,7 +156,7 @@ public class PrefPageMiscellaneous extends PrefPageMiscellaneousAbstract impleme
 
             holidayDecorationsCheck = UIUtils.createCheckbox(group, "Show holiday decorations", false);
             holidayDecorationsCheck.setLayoutData(new GridData());
-            holidayDecorationsCheck.setSelection(store.getBoolean(DBeaverPreferences.UI_SHOW_HOLIDAY_DECORATIONS));
+            holidayDecorationsCheck.setSelection(store.getBoolean(BoberKurwaPreferences.UI_SHOW_HOLIDAY_DECORATIONS));
             UIUtils.createInfoLabel(group, CoreMessages.pref_page_ui_general_label_options_take_effect_after_restart);
         }
 
@@ -169,7 +169,7 @@ public class PrefPageMiscellaneous extends PrefPageMiscellaneousAbstract impleme
     protected void performDefaults() {
         final DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
 
-        holidayDecorationsCheck.setSelection(store.getDefaultBoolean(DBeaverPreferences.UI_SHOW_HOLIDAY_DECORATIONS));
+        holidayDecorationsCheck.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.UI_SHOW_HOLIDAY_DECORATIONS));
 
         notifyBooleanStylesChanged(BooleanStyleSet.getDefaultStyleSet());
 
@@ -180,7 +180,7 @@ public class PrefPageMiscellaneous extends PrefPageMiscellaneousAbstract impleme
     public boolean performOk() {
         final DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
 
-        store.setValue(DBeaverPreferences.UI_SHOW_HOLIDAY_DECORATIONS, holidayDecorationsCheck.getSelection());
+        store.setValue(BoberKurwaPreferences.UI_SHOW_HOLIDAY_DECORATIONS, holidayDecorationsCheck.getSelection());
 
         BooleanStyleSet.setDefaultStyles(store, new BooleanStyleSet(
             booleanCheckedPanel.saveStyle(),
@@ -375,7 +375,7 @@ public class PrefPageMiscellaneous extends PrefPageMiscellaneousAbstract impleme
 
                 for (final UIElementAlignment alignment : UIElementAlignment.values()) {
                     final ToolItem item = new ToolItem(alignToolBar, SWT.RADIO);
-                    item.setImage(DBeaverIcons.getImage(alignment.getIcon()));
+                    item.setImage(BoberKurwaIcons.getImage(alignment.getIcon()));
                     item.setToolTipText(alignment.getLabel());
                     item.addSelectionListener(selectionListener);
                     item.setData(alignment);

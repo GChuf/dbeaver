@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.model.connection.DBPDriverLibrary;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
 import org.jkiss.dbeaver.registry.driver.DriverLibraryMavenArtifact;
 import org.jkiss.dbeaver.registry.maven.MavenArtifactReference;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
@@ -180,7 +180,7 @@ public class EditMavenArtifactDialog extends BaseDialog {
         getButton(IDialogConstants.OK_ID).setEnabled(!error);
         errorLabel.setVisible(!message.isEmpty());
         if (!message.isEmpty()) {
-            errorLabel.setImage(DBeaverIcons.getImage(error ? DBIcon.SMALL_ERROR : DBIcon.SMALL_INFO));
+            errorLabel.setImage(BoberKurwaIcons.getImage(error ? DBIcon.SMALL_ERROR : DBIcon.SMALL_INFO));
             errorLabel.setText(message);
         }
     }

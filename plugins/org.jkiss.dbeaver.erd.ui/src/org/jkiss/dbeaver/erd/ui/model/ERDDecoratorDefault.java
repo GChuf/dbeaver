@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import org.jkiss.dbeaver.erd.ui.router.ERDConnectionRouterDescriptor;
 import org.jkiss.dbeaver.erd.ui.router.ERDConnectionRouterRegistry;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 /**
@@ -47,9 +47,9 @@ import org.jkiss.dbeaver.ui.UIIcon;
  */
 public class ERDDecoratorDefault implements ERDDecorator {
 
-    public static final ImageDescriptor CONNECT_IMAGE = DBeaverIcons.getImageDescriptor(DBIcon.TREE_ASSOCIATION);
-    public static final ImageDescriptor FOREIGN_KEY_IMAGE = DBeaverIcons.getImageDescriptor(DBIcon.TREE_FOREIGN_KEY);
-    public static final ImageDescriptor NOTE_IMAGE = DBeaverIcons.getImageDescriptor(ERDIcon.NOTE);
+    public static final ImageDescriptor CONNECT_IMAGE = BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_ASSOCIATION);
+    public static final ImageDescriptor FOREIGN_KEY_IMAGE = BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_FOREIGN_KEY);
+    public static final ImageDescriptor NOTE_IMAGE = BoberKurwaIcons.getImageDescriptor(ERDIcon.NOTE);
     private DBPPreferenceStore store = ERDUIActivator.getDefault().getPreferences();
     private ERDConnectionRouterRegistry connectionRouterRegistry = ERDConnectionRouterRegistry.getInstance();
 
@@ -155,7 +155,7 @@ public class ERDDecoratorDefault implements ERDDecorator {
     }
 
     protected PaletteDrawer createToolsDrawer(PaletteRoot paletteRoot) {
-        PaletteDrawer controls = new PaletteDrawer("Tools", DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+        PaletteDrawer controls = new PaletteDrawer("Tools", BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
 
         paletteRoot.add(controls);
 

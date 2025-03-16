@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import org.eclipse.ui.IWorkbenchPreferencePage;
 import org.eclipse.ui.IWorkbenchPropertyPage;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
@@ -75,14 +75,14 @@ public class PrefPageDatabaseEditors extends AbstractPrefPage implements IWorkbe
             keepEditorsOnRestart = UIUtils.createCheckbox(
                 groupEditors,
                 CoreMessages.pref_page_ui_general_keep_database_editors,
-                store.getBoolean(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS));
+                store.getBoolean(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS));
             keepEditorsOnRestart.setToolTipText(CoreMessages.pref_page_ui_general_keep_database_editors_tip);
 
             keepEditorsOnDisconnect = UIUtils.createCheckbox(
                 groupEditors,
                 CoreMessages.pref_page_ui_general_keep_database_editors_on_disconnect,
                 CoreMessages.pref_page_ui_general_keep_database_editors_on_disconnect_tip,
-                store.getBoolean(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT),
+                store.getBoolean(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT),
                 1
             );
 
@@ -90,7 +90,7 @@ public class PrefPageDatabaseEditors extends AbstractPrefPage implements IWorkbe
                 groupEditors,
                 CoreMessages.pref_page_ui_general_disconnect_on_editors_close,
                 CoreMessages.pref_page_ui_general_disconnect_on_editors_close_tip,
-                store.getBoolean(DBeaverPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE),
+                store.getBoolean(BoberKurwaPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE),
                 1
             );
 
@@ -103,7 +103,7 @@ public class PrefPageDatabaseEditors extends AbstractPrefPage implements IWorkbe
             editorFullName = UIUtils.createCheckbox(
                 groupEditors,
                 CoreMessages.pref_page_ui_general_show_full_name_in_editor,
-                store.getBoolean(DBeaverPreferences.NAVIGATOR_EDITOR_FULL_NAME));
+                store.getBoolean(BoberKurwaPreferences.NAVIGATOR_EDITOR_FULL_NAME));
             showTableGrid = UIUtils.createCheckbox(
                 groupEditors,
                 CoreMessages.pref_page_ui_general_show_table_grid,
@@ -127,11 +127,11 @@ public class PrefPageDatabaseEditors extends AbstractPrefPage implements IWorkbe
     @Override
     protected void performDefaults() {
         DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
-        keepEditorsOnRestart.setSelection(store.getDefaultBoolean(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS));
-        keepEditorsOnDisconnect.setSelection(store.getDefaultBoolean(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT));
-        disconnectOnEditorsClose.setSelection(store.getDefaultBoolean(DBeaverPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE));
+        keepEditorsOnRestart.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS));
+        keepEditorsOnDisconnect.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT));
+        disconnectOnEditorsClose.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE));
         refreshEditorOnOpen.setSelection(store.getDefaultBoolean(NavigatorPreferences.NAVIGATOR_REFRESH_EDITORS_ON_OPEN));
-        editorFullName.setSelection(store.getDefaultBoolean(DBeaverPreferences.NAVIGATOR_EDITOR_FULL_NAME));
+        editorFullName.setSelection(store.getDefaultBoolean(BoberKurwaPreferences.NAVIGATOR_EDITOR_FULL_NAME));
         showTableGrid.setSelection(store.getDefaultBoolean(NavigatorPreferences.NAVIGATOR_EDITOR_SHOW_TABLE_GRID));
         showPreviewOnSave.setSelection(store.getDefaultBoolean(NavigatorPreferences.NAVIGATOR_SHOW_SQL_PREVIEW));
         syncEditorDataSourceWithNavigator.setSelection(store.getDefaultBoolean(NavigatorPreferences.NAVIGATOR_SYNC_EDITOR_DATASOURCE));
@@ -142,11 +142,11 @@ public class PrefPageDatabaseEditors extends AbstractPrefPage implements IWorkbe
     {
         DBPPreferenceStore store = DBWorkbench.getPlatform().getPreferenceStore();
 
-        store.setValue(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS, keepEditorsOnRestart.getSelection());
-        store.setValue(DBeaverPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT, keepEditorsOnDisconnect.getSelection());
-        store.setValue(DBeaverPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE, disconnectOnEditorsClose.getSelection());
+        store.setValue(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS, keepEditorsOnRestart.getSelection());
+        store.setValue(BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT, keepEditorsOnDisconnect.getSelection());
+        store.setValue(BoberKurwaPreferences.UI_DISCONNECT_ON_EDITORS_CLOSE, disconnectOnEditorsClose.getSelection());
         store.setValue(NavigatorPreferences.NAVIGATOR_REFRESH_EDITORS_ON_OPEN, refreshEditorOnOpen.getSelection());
-        store.setValue(DBeaverPreferences.NAVIGATOR_EDITOR_FULL_NAME, editorFullName.getSelection());
+        store.setValue(BoberKurwaPreferences.NAVIGATOR_EDITOR_FULL_NAME, editorFullName.getSelection());
         store.setValue(NavigatorPreferences.NAVIGATOR_EDITOR_SHOW_TABLE_GRID, showTableGrid.getSelection());
         store.setValue(NavigatorPreferences.NAVIGATOR_SHOW_SQL_PREVIEW, showPreviewOnSave.getSelection());
         store.setValue(NavigatorPreferences.NAVIGATOR_SYNC_EDITOR_DATASOURCE, syncEditorDataSourceWithNavigator.getSelection());

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.eclipse.swt.graphics.ImageLoader;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.ui.DBIconBinary;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.utils.Base64;
 import org.jkiss.utils.xml.XMLBuilder;
@@ -152,7 +152,7 @@ public class BookmarkStorage {
         {
             xml.startElement(TAG_IMAGE);
 
-            Image realImage = DBeaverIcons.getImage(this.image);
+            Image realImage = BoberKurwaIcons.getImage(this.image);
             ImageLoader loader = new ImageLoader();
             loader.data = new ImageData[]{realImage.getImageData()};
             ByteArrayOutputStream imageBuffer = new ByteArrayOutputStream(5000);

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.eclipse.swt.widgets.*;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 import org.jkiss.utils.CommonUtils;
@@ -41,7 +41,7 @@ import org.jkiss.utils.CommonUtils;
  */
 public class StandardErrorDialog extends ErrorDialog implements BlockingPopupDialog {
 
-    private static final String DIALOG_ID = "DBeaver.StandardErrorDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.StandardErrorDialog";//$NON-NLS-1$
     private Text messageText;
     private boolean detailsVisible = false;
 
@@ -166,15 +166,15 @@ public class StandardErrorDialog extends ErrorDialog implements BlockingPopupDia
     }
 
     public Image getErrorImage() {
-        return DBeaverIcons.getImage(DBIcon.STATUS_ERROR);
+        return BoberKurwaIcons.getImage(DBIcon.STATUS_ERROR);
     }
 
     public Image getWarningImage() {
-        return DBeaverIcons.getImage(DBIcon.STATUS_WARNING);
+        return BoberKurwaIcons.getImage(DBIcon.STATUS_WARNING);
     }
 
     public Image getInfoImage() {
-        return DBeaverIcons.getImage(DBIcon.STATUS_INFO);
+        return BoberKurwaIcons.getImage(DBIcon.STATUS_INFO);
     }
 
     @Override

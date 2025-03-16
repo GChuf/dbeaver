@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.jkiss.dbeaver.erd.ui.model.EntityDiagram;
 import org.jkiss.dbeaver.erd.ui.part.AttributePart;
 import org.jkiss.dbeaver.erd.ui.part.DiagramPart;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 import java.util.List;
 
@@ -83,7 +83,7 @@ public class AttributeItemFigure extends Figure
         if (diagram.hasAttributeStyle(ERDViewStyle.ICONS)) {
             DBPImage labelImage = attribute.getLabelImage();
             if (labelImage != null) {
-                attrNameLabel.setIcon(DBeaverIcons.getImage(labelImage));
+                attrNameLabel.setIcon(BoberKurwaIcons.getImage(labelImage));
             }
         }
         add(attrNameLabel);
@@ -143,7 +143,7 @@ public class AttributeItemFigure extends Figure
         if (decorator.supportsAttributeStyle(ERDViewStyle.ICONS) && diagram.hasAttributeStyle(ERDViewStyle.ICONS)) {
             DBPImage labelImage = part.getAttribute().getLabelImage();
             if (labelImage != null) {
-                getLabel().setIcon(DBeaverIcons.getImage(labelImage));
+                getLabel().setIcon(BoberKurwaIcons.getImage(labelImage));
             }
         }
 

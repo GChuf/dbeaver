@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.jkiss.dbeaver.tools.registry.ToolDescriptor;
 import org.jkiss.dbeaver.tools.registry.ToolGroupDescriptor;
 import org.jkiss.dbeaver.tools.registry.ToolsRegistry;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.EmptyListAction;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceMenuContributor;
@@ -177,7 +177,7 @@ public class DataSourceToolsContributor extends DataSourceMenuContributor
                             selection,
                             "execute-tool",
                             tool.getLabel(),
-                            tool.getIcon() == null ? null : DBeaverIcons.getImageDescriptor(tool.getIcon()),
+                            tool.getIcon() == null ? null : BoberKurwaIcons.getImageDescriptor(tool.getIcon()),
                             tool.getDescription());
                         if (parentMenu == null) {
                             menuItems.add(new ActionContributionItem(action));
@@ -213,7 +213,7 @@ public class DataSourceToolsContributor extends DataSourceMenuContributor
         private final DBPDataSource dataSource;
         private final DBPEditorContribution editor;
         public OpenToolsEditorAction(IWorkbenchPage workbenchPage, DBPDataSource dataSource, DBPEditorContribution editor) {
-            super(editor.getLabel(), DBeaverIcons.getImageDescriptor(editor.getIcon()));
+            super(editor.getLabel(), BoberKurwaIcons.getImageDescriptor(editor.getIcon()));
             this.workbenchPage = workbenchPage;
             this.dataSource = dataSource;
             this.editor = editor;
@@ -248,7 +248,7 @@ public class DataSourceToolsContributor extends DataSourceMenuContributor
 
         @Override
         public ImageDescriptor getImageDescriptor() {
-            return DBeaverIcons.getImageDescriptor(editor.getIcon());
+            return BoberKurwaIcons.getImageDescriptor(editor.getIcon());
         }
 
         @Override

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.antlr.v4.runtime.misc.Interval;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.sql.semantics.OffsetKeyedTreeMap;
 import org.jkiss.dbeaver.model.stm.STMUtils;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -56,7 +56,7 @@ import java.util.stream.*;
  * <p>
  *
  */
-public class OffsetKeyedTreeMapTest extends DBeaverUnitTest {
+public class OffsetKeyedTreeMapTest extends BoberKurwaUnitTest {
 
     private static final Supplier<IntStream> SERIES = () -> Stream.of(
         IntStream.range(0, 26),

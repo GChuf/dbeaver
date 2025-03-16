@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.properties.PropertySourceCustom;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferProcessorDescriptor;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.IResultSetController;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetDataContainer;
@@ -132,7 +132,7 @@ class CopyAsConfigurationDialog extends BaseDialog {
                 }
 
                 if (cell.getColumnIndex() == 0) {
-                    cell.setImage(DBeaverIcons.getImage(processorDescriptor.getIcon()));
+                    cell.setImage(BoberKurwaIcons.getImage(processorDescriptor.getIcon()));
                     cell.setText(processorDescriptor.getName());
                 } else {
                     cell.setText(processorDescriptor.getDescription());

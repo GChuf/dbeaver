@@ -12,7 +12,7 @@
     <version>1.0.0-SNAPSHOT</version>
     <artifactId>repositories</artifactId>
     <packaging>pom</packaging>
-    <name>DBeaver P2 Repositories</name>
+    <name>BoberKurwa P2 Repositories</name>
 
     <modules>
         <module>org.jkiss.dbeaver.ce.repository</module>

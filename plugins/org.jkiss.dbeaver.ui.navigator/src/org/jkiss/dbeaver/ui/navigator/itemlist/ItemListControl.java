@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -211,7 +211,7 @@ public class ItemListControl extends NodeListControl
         if (rootNode instanceof DBNDatabaseNode dbNode && dbNode.getItemsMeta() != null) {
             contributionManager.add(new Action(
                 UINavigatorMessages.obj_editor_properties_control_action_filter_setting,
-                DBeaverIcons.getImageDescriptor(UIIcon.FILTER))
+                BoberKurwaIcons.getImageDescriptor(UIIcon.FILTER))
             {
                 @Override
                 public void run()
@@ -490,7 +490,7 @@ public class ItemListControl extends NodeListControl
 
     private class PackColumnsAction extends Action {
         public PackColumnsAction() {
-            super("Pack columns", DBeaverIcons.getImageDescriptor(UIIcon.TREE_EXPAND));
+            super("Pack columns", BoberKurwaIcons.getImageDescriptor(UIIcon.TREE_EXPAND));
         }
 
         @Override

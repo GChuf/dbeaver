@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ import org.eclipse.ui.commands.ICommandService;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.Log;
-import org.jkiss.dbeaver.core.DBeaverActivator;
+import org.jkiss.dbeaver.core.BoberKurwaActivator;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.ToolBarConfigurationDescriptor;
 import org.jkiss.dbeaver.ui.actions.ToolBarConfigurationPropertyTester;
@@ -357,7 +357,7 @@ public class PrefPageToolbarCustomization extends AbstractPrefPage implements IW
     @Override
     public final boolean performOk() {
         forEachToolItem(ToolItemNode::apply);
-        IPreferenceStore prefs = DBeaverActivator.getInstance().getPreferenceStore();
+        IPreferenceStore prefs = BoberKurwaActivator.getInstance().getPreferenceStore();
         if (prefs.needsSaving() && prefs instanceof IPersistentPreferenceStore) {
             try {
                 ((IPersistentPreferenceStore) prefs).save();

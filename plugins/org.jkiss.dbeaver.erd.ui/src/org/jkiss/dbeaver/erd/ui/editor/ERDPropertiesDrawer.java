@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ package org.jkiss.dbeaver.erd.ui.editor;
 
 import org.eclipse.gef.palette.PaletteDrawer;
 import org.eclipse.gef.palette.SelectionToolEntry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 /**
@@ -32,7 +32,7 @@ public class ERDPropertiesDrawer extends PaletteDrawer
 {
 
 	public ERDPropertiesDrawer() {
-		super("Properties", DBeaverIcons.getImageDescriptor(UIIcon.PROPERTIES));
+		super("Properties", BoberKurwaIcons.getImageDescriptor(UIIcon.PROPERTIES));
 		setDescription("Object properties");
 		setId("erd-properties");
 

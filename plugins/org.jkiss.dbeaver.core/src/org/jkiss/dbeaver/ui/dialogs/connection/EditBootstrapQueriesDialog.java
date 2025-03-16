@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.dbeaver.core.CoreMessages;
-import org.jkiss.dbeaver.core.DBeaverActivator;
+import org.jkiss.dbeaver.core.BoberKurwaActivator;
 import org.jkiss.dbeaver.model.connection.DBPConnectionConfiguration;
 import org.jkiss.dbeaver.model.connection.DataSourceVariableResolver;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
@@ -46,7 +46,7 @@ import java.util.List;
  */
 public class EditBootstrapQueriesDialog extends HelpEnabledDialog {
 
-    private static final String DIALOG_ID = "DBeaver.EditBootstrapQueriesDialog";
+    private static final String DIALOG_ID = "BoberKurwa.EditBootstrapQueriesDialog";
 
     private final DataSourceDescriptor dataSourceDescriptor;
     private List<String> queries;
@@ -178,7 +178,7 @@ public class EditBootstrapQueriesDialog extends HelpEnabledDialog {
 
     @Override
     protected IDialogSettings getDialogBoundsSettings() {
-        return UIUtils.getSettingsSection(DBeaverActivator.getInstance().getDialogSettings(), DIALOG_ID);
+        return UIUtils.getSettingsSection(BoberKurwaActivator.getInstance().getDialogSettings(), DIALOG_ID);
     }
 
     @Override

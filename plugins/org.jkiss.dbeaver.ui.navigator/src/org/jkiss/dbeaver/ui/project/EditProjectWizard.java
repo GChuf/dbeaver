@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.ui.dialogs.PreferencesUtil;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.rcp.RCPProject;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.dialogs.ActiveWizard;
 
 /**
@@ -46,7 +46,7 @@ public class EditProjectWizard extends ActiveWizard {
 
     @Override
     public Image getDefaultPageImage() {
-        return DBeaverIcons.getImage(DBIcon.PROJECT);
+        return BoberKurwaIcons.getImage(DBIcon.PROJECT);
     }
 
     @Override

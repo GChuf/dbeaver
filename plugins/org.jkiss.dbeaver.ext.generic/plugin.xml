@@ -474,7 +474,7 @@
                     sampleURL="jdbc:relique:csv:{folder}"
                     embedded="true"
                     anonymous="true"
-                    description="CsvJdbc driver for handling CSV files. Included in DBeaver Community Edition."
+                    description="CsvJdbc driver for handling CSV files. Included in BoberKurwa Community Edition."
                     supportedConfigurationTypes="MANUAL,URL"
                     supportsDistributedMode="false"
                     webURL="http://csvjdbc.sourceforge.net/"

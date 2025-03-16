@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ public class CheckForUpdateAction extends Action {
 
     @Override
     public void run() {
-        new DBeaverVersionChecker(true).schedule();
+        new BoberKurwaVersionChecker(true).schedule();
     }
 
     public static void deactivateStandardHandler(IWorkbenchWindow window) {

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.model.data.DBDDataReceiver;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.css.CSSUtils;
@@ -72,7 +72,7 @@ class StatusLabel extends Composite {
         final ToolBar tb = new ToolBar(this, SWT.FLAT | SWT.HORIZONTAL);
         CSSUtils.setCSSClass(tb, DBStyles.COLORED_BY_CONNECTION_TYPE);
         detailsIcon = new ToolItem(tb, SWT.NONE);
-        detailsIcon.setImage(DBeaverIcons.getImage(UIIcon.DOTS_BUTTON));
+        detailsIcon.setImage(BoberKurwaIcons.getImage(UIIcon.DOTS_BUTTON));
         tb.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING));
 
         detailsIcon.addSelectionListener(new SelectionAdapter() {
@@ -154,9 +154,9 @@ class StatusLabel extends Composite {
             message = "???"; //$NON-NLS-1$
         }
         if (statusIcon != null) {
-            detailsIcon.setImage(DBeaverIcons.getImage(statusIcon));
+            detailsIcon.setImage(BoberKurwaIcons.getImage(statusIcon));
         } else {
-            detailsIcon.setImage(DBeaverIcons.getImage(UIIcon.DOTS_BUTTON));
+            detailsIcon.setImage(BoberKurwaIcons.getImage(UIIcon.DOTS_BUTTON));
         }
         statusText.setText(CommonUtils.getSingleLineString(message));
         if (messageType != DBPMessageType.INFORMATION) {

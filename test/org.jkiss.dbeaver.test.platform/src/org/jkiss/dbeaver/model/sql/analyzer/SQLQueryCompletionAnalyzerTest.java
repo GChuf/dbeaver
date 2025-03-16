@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.eclipse.core.runtime.Platform;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.sql.analyzer.builder.request.RequestBuilder;
 import org.jkiss.dbeaver.model.sql.analyzer.builder.request.RequestResult;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.jkiss.junit.osgi.annotation.RunnerProxy;
 import org.junit.Assert;
 import org.junit.Before;
@@ -32,7 +32,7 @@ import java.util.Set;
 import static org.jkiss.dbeaver.model.sql.analyzer.builder.Builder.Consumer.empty;
 
 @RunnerProxy(MockitoJUnitRunner.Silent.class)
-public class SQLQueryCompletionAnalyzerTest extends DBeaverUnitTest {
+public class SQLQueryCompletionAnalyzerTest extends BoberKurwaUnitTest {
     private static RequestResult modelDataRequest;
 
     @Before

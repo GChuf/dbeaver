@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,7 @@
 package org.jkiss.dbeaver.core;
 
 import org.eclipse.core.runtime.preferences.AbstractPreferenceInitializer;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.LogOutputStream;
 import org.jkiss.dbeaver.core.ui.services.ApplicationPolicyService;
 import org.jkiss.dbeaver.model.DBConstants;
@@ -42,31 +42,31 @@ public class DesktopPreferencesInitializer extends AbstractPreferenceInitializer
     @Override
     public void initializeDefaultPreferences() {
         // Init default preferences
-        DBPPreferenceStore store = new BundlePreferenceStore(DBeaverActivator.getInstance().getBundle());
+        DBPPreferenceStore store = new BundlePreferenceStore(BoberKurwaActivator.getInstance().getBundle());
 
         // Resources
-        //PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.DEFAULT_RESOURCE_ENCODING, GeneralUtils.UTF8_ENCODING);
+        //PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.DEFAULT_RESOURCE_ENCODING, GeneralUtils.UTF8_ENCODING);
 
         // Agent
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.AGENT_ENABLED, true);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.AGENT_LONG_OPERATION_NOTIFY, RuntimeUtils.isWindows());
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.AGENT_LONG_OPERATION_TIMEOUT, 30);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.SECURITY_USE_BOUNCY_CASTLE, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.AGENT_ENABLED, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.AGENT_LONG_OPERATION_NOTIFY, RuntimeUtils.isWindows());
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.AGENT_LONG_OPERATION_TIMEOUT, 30);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.SECURITY_USE_BOUNCY_CASTLE, true);
 
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.NAVIGATOR_EDITOR_FULL_NAME, false);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.NAVIGATOR_EDITOR_FULL_NAME, false);
 
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.TEXT_EDIT_UNDO_LEVEL, 200);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.TEXT_EDIT_UNDO_LEVEL, 200);
 
         // General UI
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_AUTO_UPDATE_CHECK,
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_AUTO_UPDATE_CHECK,
             !ApplicationPolicyService.getInstance().isInstallUpdateDisabled());
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_USE_EMBEDDED_AUTH, false);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_SHOW_HOLIDAY_DECORATIONS, true);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS, true);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_USE_EMBEDDED_AUTH, false);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_SHOW_HOLIDAY_DECORATIONS, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_STATUS_BAR_SHOW_BREADCRUMBS, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_STATUS_BAR_SHOW_STATUS_LINE, true);
 
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_KEEP_DATABASE_EDITORS, true);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.UI_KEEP_DATABASE_EDITORS_ON_DISCONNECT, true);
         PrefUtils.setDefaultPreferenceValue(store, ScreenReaderPreferences.PREF_SCREEN_READER_ACCESSIBILITY, ScreenReader.DEFAULT);
 
         // QM
@@ -79,8 +79,8 @@ public class DesktopPreferencesInitializer extends AbstractPreferenceInitializer
         PrefUtils.setDefaultPreferenceValue(store, QMConstants.PROP_STORE_LOG_FILE, false);
 
         // Logs
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.LOGS_DEBUG_ENABLED, true);
-        PrefUtils.setDefaultPreferenceValue(store, DBeaverPreferences.LOGS_DEBUG_LOCATION,
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.LOGS_DEBUG_ENABLED, true);
+        PrefUtils.setDefaultPreferenceValue(store, BoberKurwaPreferences.LOGS_DEBUG_LOCATION,
             "${" + SystemVariablesResolver.VAR_WORKSPACE + "}" + File.separator + ".metadata" + File.separator + DBConstants.DEBUG_LOG_FILE_NAME);
 
         PrefUtils.setDefaultPreferenceValue(store, LogOutputStream.LOGS_MAX_FILE_SIZE, LogOutputStream.DEFAULT_MAX_LOG_SIZE);

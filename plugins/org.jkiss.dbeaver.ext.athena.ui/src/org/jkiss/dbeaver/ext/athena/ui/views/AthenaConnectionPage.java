@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -46,7 +46,7 @@ import org.jkiss.dbeaver.model.navigator.fs.DBNFileSystems;
 import org.jkiss.dbeaver.model.navigator.fs.DBNPathBase;
 import org.jkiss.dbeaver.registry.fs.FileSystemProviderRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IDialogPageProvider;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -115,7 +115,7 @@ public class AthenaConnectionPage extends ConnectionPageWithAuth implements IDia
                 UIUtils.createPushButton(
                     s3Group,
                     UIConnectionMessages.controls_client_home_selector_browse,
-                    DBeaverIcons.getImage(UIIcon.OPEN),
+                    BoberKurwaIcons.getImage(UIIcon.OPEN),
                     new SelectionAdapter() {
                         @Override
                         public void widgetSelected(SelectionEvent e) {

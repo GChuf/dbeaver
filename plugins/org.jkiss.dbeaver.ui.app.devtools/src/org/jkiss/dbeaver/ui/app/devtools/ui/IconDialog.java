@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.ShellUtils;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -75,7 +75,7 @@ public class IconDialog extends TrayDialog {
         UIUtils.configureScrolledComposite(viewport, container);
 
         Map<Rectangle, List<DBPImage>> icons = collectIcons().stream()
-            .collect(Collectors.groupingBy(icon -> DBeaverIcons.getImage(icon).getBounds()))
+            .collect(Collectors.groupingBy(icon -> BoberKurwaIcons.getImage(icon).getBounds()))
             .entrySet().stream()
             .sorted(Map.Entry.<Rectangle, List<DBPImage>>comparingByValue(Comparator.comparingInt(List::size)).reversed())
             .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (a, b) -> a, LinkedHashMap::new));
@@ -94,7 +94,7 @@ public class IconDialog extends TrayDialog {
 
             for (DBPImage image : images) {
                 Label label = new Label(group, SWT.NONE);
-                label.setImage(DBeaverIcons.getImage(image));
+                label.setImage(BoberKurwaIcons.getImage(image));
                 label.setToolTipText(image.getLocation());
                 label.addMouseListener(MouseListener.mouseUpAdapter(e -> {
                     try {

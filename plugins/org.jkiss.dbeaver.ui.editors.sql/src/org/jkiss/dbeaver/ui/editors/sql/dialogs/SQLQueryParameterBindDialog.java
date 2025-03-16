@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.model.sql.SQLUtils;
 import org.jkiss.dbeaver.model.sql.registry.SQLQueryParameterRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSQL;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomTableEditor;
@@ -60,7 +60,7 @@ import java.util.Map;
  */
 public class SQLQueryParameterBindDialog extends StatusDialog {
 
-    private static final String DIALOG_ID = "DBeaver.SQLQueryParameterBindDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.SQLQueryParameterBindDialog";//$NON-NLS-1$
     private static final String PARAM_HIDE_IF_SET = "PARAM_HIDE_IF_SET";//$NON-NLS-1$
 
     private static final Log log = Log.getLog(SQLQueryParameterBindDialog.class);
@@ -171,7 +171,7 @@ public class SQLQueryParameterBindDialog extends StatusDialog {
                     composite.setLayoutData(gridData);
                     editor = new Text(composite, SWT.NONE);
                     editor.setLayoutData(gridData);
-                    Button button = UIUtils.createPushButton(composite, null, DBeaverIcons.getImage(UIIcon.DOTS_BUTTON));
+                    Button button = UIUtils.createPushButton(composite, null, BoberKurwaIcons.getImage(UIIcon.DOTS_BUTTON));
                     editor.setText(CommonUtils.notEmpty(param.getValue()));
                     button.addSelectionListener(new SelectionAdapter() {
                         @Override
@@ -291,7 +291,7 @@ public class SQLQueryParameterBindDialog extends StatusDialog {
             }
             TableItem item = new TableItem(paramTable, SWT.NONE);
             item.setData(param);
-            item.setImage(DBeaverIcons.getImage(DBIcon.TREE_ATTRIBUTE));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_ATTRIBUTE));
             item.setText(0, String.valueOf(param.getOrdinalPosition() + 1));
             item.setText(1, param.getOriginalName());
             item.setText(2, CommonUtils.notEmpty(param.getValue()));

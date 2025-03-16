@@ -95,7 +95,7 @@
         <page class="org.jkiss.dbeaver.ui.project.PrefPageProjectResourceSettings" id="org.jkiss.dbeaver.preferences.projectSettings" name="%page.org.jkiss.dbeaver.preferences.projectSettings.name" >
             <enabledWhen>
                 <adapt type="org.eclipse.core.resources.IProject">
-                    <test property="org.eclipse.core.resources.projectNature" value="org.jkiss.dbeaver.DBeaverNature"/>
+                    <test property="org.eclipse.core.resources.projectNature" value="org.jkiss.dbeaver.BoberKurwaNature"/>
                 </adapt>
             </enabledWhen>
         </page>

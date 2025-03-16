@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.model.exec.DBCSession;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.controls.CustomTimeEditor;
 import org.jkiss.dbeaver.ui.controls.resultset.internal.ResultSetMessages;
@@ -69,7 +69,7 @@ public class DateTimeInlineEditor extends BaseValueEditor<Control> {
             this.valueController = valueController;
             this.parent = parent;
             super.setText("Text");
-            super.setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.SQL_TEXT));
+            super.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_TEXT));
         }
 
         @Override
@@ -100,7 +100,7 @@ public class DateTimeInlineEditor extends BaseValueEditor<Control> {
             super("Calendar", Action.AS_RADIO_BUTTON);
             this.editor = editor;
             super.setText("Calendar");
-            super.setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TYPE_DATETIME));
+            super.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TYPE_DATETIME));
             this.parent = parent;
         }
 

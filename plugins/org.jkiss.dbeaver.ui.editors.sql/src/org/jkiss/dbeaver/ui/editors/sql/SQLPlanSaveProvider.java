@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.jkiss.dbeaver.model.exec.plan.DBCQueryPlanner;
 import org.jkiss.dbeaver.model.exec.plan.DBCQueryPlannerSerializable;
 import org.jkiss.dbeaver.model.sql.SQLQuery;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.dialogs.DialogUtils;
 import org.jkiss.dbeaver.utils.GeneralUtils;
@@ -40,7 +40,7 @@ import java.lang.reflect.InvocationTargetException;
 public abstract class SQLPlanSaveProvider implements SQLPlanViewProvider {
 
     public static final String[] EXT = {"*.dbplan", "*"}; //$NON-NLS-1$ //$NON-NLS-2$;
-    private static final String[] NAMES = {"DBeaver Plan File", "All files"}; //$NON-NLS-1$ //$NON-NLS-2$;
+    private static final String[] NAMES = {"BoberKurwa Plan File", "All files"}; //$NON-NLS-1$ //$NON-NLS-2$;
 
     private Viewer viewer;
     private SQLQuery query;
@@ -53,7 +53,7 @@ public abstract class SQLPlanSaveProvider implements SQLPlanViewProvider {
     protected abstract void showPlan(Viewer viewer, SQLQuery query, DBCPlan plan);
     
     public SQLPlanSaveProvider() {
-       saveAction = new SaveAction("Save plan", DBeaverIcons.getImageDescriptor(UIIcon.SAVE_AS), this);
+       saveAction = new SaveAction("Save plan", BoberKurwaIcons.getImageDescriptor(UIIcon.SAVE_AS), this);
     }
 
     protected void doSave() {

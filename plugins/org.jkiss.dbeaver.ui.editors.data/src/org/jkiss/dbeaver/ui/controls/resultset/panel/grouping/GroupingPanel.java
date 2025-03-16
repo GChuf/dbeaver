@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.model.DBPEvaluationContext;
 import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.sql.SQLGroupingAttribute;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.MenuCreator;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -192,7 +192,7 @@ public class GroupingPanel implements IResultSetPanel {
 
     static class EditColumnsAction extends GroupingAction {
         EditColumnsAction(GroupingResultsContainer resultsContainer) {
-            super(resultsContainer, ResultSetMessages.controls_resultset_grouping_edit, DBeaverIcons.getImageDescriptor(UIIcon.EDIT_COLUMN));
+            super(resultsContainer, ResultSetMessages.controls_resultset_grouping_edit, BoberKurwaIcons.getImageDescriptor(UIIcon.EDIT_COLUMN));
         }
 
         @Override
@@ -210,7 +210,7 @@ public class GroupingPanel implements IResultSetPanel {
 
     static class DeleteColumnAction extends GroupingAction {
         DeleteColumnAction(GroupingResultsContainer resultsContainer) {
-            super(resultsContainer, ResultSetMessages.controls_resultset_grouping_remove_column, DBeaverIcons.getImageDescriptor(UIIcon.CLOSE));
+            super(resultsContainer, ResultSetMessages.controls_resultset_grouping_remove_column, BoberKurwaIcons.getImageDescriptor(UIIcon.CLOSE));
         }
 
         @Override
@@ -249,7 +249,7 @@ public class GroupingPanel implements IResultSetPanel {
     static class ClearGroupingAction extends GroupingAction {
         ClearGroupingAction(GroupingResultsContainer resultsContainer) {
             super(resultsContainer, ResultSetMessages.controls_resultset_grouping_clear,
-                DBeaverIcons.getImageDescriptor(UIIcon.CLEAN));
+                BoberKurwaIcons.getImageDescriptor(UIIcon.CLEAN));
         }
 
         @Override
@@ -268,7 +268,7 @@ public class GroupingPanel implements IResultSetPanel {
 
         DefaultSortingAction() {
             super(ResultSetMessages.controls_resultset_grouping_default_sorting, Action.AS_DROP_DOWN_MENU);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.SORT_CONFIG));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.SORT_CONFIG));
         }
 
         @Override
@@ -291,7 +291,7 @@ public class GroupingPanel implements IResultSetPanel {
                 ResultSetMessages.grouping_panel_sorting_action_unsorted :
                 (descending ? ResultSetMessages.grouping_panel_sorting_action_decending : ResultSetMessages.grouping_panel_sorting_action_ascending),
                 Action.AS_CHECK_BOX);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(descending == null ? UIIcon.SORT_UNKNOWN : (descending ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE)));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(descending == null ? UIIcon.SORT_UNKNOWN : (descending ? UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE)));
             this.descending = descending;
         }
 
@@ -335,7 +335,7 @@ public class GroupingPanel implements IResultSetPanel {
         }
 
         private void updateImage() {
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.DUPS_RESTRICTED));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.DUPS_RESTRICTED));
         }
 
         @Override
@@ -366,10 +366,10 @@ public class GroupingPanel implements IResultSetPanel {
         public PresentationToggleAction(ResultSetPresentationDescriptor presentationDescriptor) {
             super(presentationDescriptor.getLabel(), Action.AS_RADIO_BUTTON);
             this.presentationDescriptor = presentationDescriptor;
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(presentationDescriptor.getIcon()));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(presentationDescriptor.getIcon()));
             setToolTipText(presentationDescriptor.getDescription());
             // Icons turns menu into mess - checkboxes are much better
-            //setImageDescriptor(DBeaverIcons.getImageDescriptor(panel.getIcon()));
+            //setImageDescriptor(BoberKurwaIcons.getImageDescriptor(panel.getIcon()));
         }
 
         @Override

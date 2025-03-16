@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.registry.DataSourceUtils;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.BaseThemeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIStyles;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.registry.NavigatorExtensionsRegistry;
@@ -143,7 +143,7 @@ public class StatisticsNavigatorNodeRenderer extends DefaultNavigatorNodeRendere
         // Compute width required to draw all actions
         int width = (actions.size() - 1) * ELEMENT_MARGIN;
         for (INavigatorNodeActionHandler action : actions) {
-            Image image = DBeaverIcons.getImage(action.getNodeActionIcon(getView(), node));
+            Image image = BoberKurwaIcons.getImage(action.getNodeActionIcon(getView(), node));
             Rectangle size = image.getBounds();
             width += size.width;
         }
@@ -158,7 +158,7 @@ public class StatisticsNavigatorNodeRenderer extends DefaultNavigatorNodeRendere
         // Draw actions
         for (int i = actions.size() - 1; i >= 0; i--) {
             INavigatorNodeActionHandler action = actions.get(i);
-            Image image = DBeaverIcons.getImage(action.getNodeActionIcon(getView(), node));
+            Image image = BoberKurwaIcons.getImage(action.getNodeActionIcon(getView(), node));
             Rectangle size = image.getBounds();
 
             if (bounds.width < size.width) {
@@ -403,7 +403,7 @@ public class StatisticsNavigatorNodeRenderer extends DefaultNavigatorNodeRendere
 
         for (int i = actions.size() - 1; i >= 0; i--) {
             INavigatorNodeActionHandler action = actions.get(i);
-            Image image = DBeaverIcons.getImage(action.getNodeActionIcon(getView(), node));
+            Image image = BoberKurwaIcons.getImage(action.getNodeActionIcon(getView(), node));
             Rectangle size = image.getBounds();
 
             if (client.width < size.width || event.y < client.y || event.y >= client.y + client.height) {

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -111,7 +111,7 @@ public class ActionUtils {
             null,
             commandId,
             style);
-        parameters.icon = DBeaverIcons.getImageDescriptor(icon);
+        parameters.icon = BoberKurwaIcons.getImageDescriptor(icon);
         return new CommandContributionItem(parameters);
     }
 
@@ -134,7 +134,7 @@ public class ActionUtils {
         DBPImage image) {
         ActionContributionItem item = new ActionContributionItem(action);
         if (image != null) {
-            action.setImageDescriptor(DBeaverIcons.getImageDescriptor(image));
+            action.setImageDescriptor(BoberKurwaIcons.getImageDescriptor(image));
         }
         return item;
     }
@@ -163,7 +163,7 @@ public class ActionUtils {
             null,
             commandId,
             null,
-            image == null ? null : DBeaverIcons.getImageDescriptor(image),
+            image == null ? null : BoberKurwaIcons.getImageDescriptor(image),
             null,
             null,
             name,

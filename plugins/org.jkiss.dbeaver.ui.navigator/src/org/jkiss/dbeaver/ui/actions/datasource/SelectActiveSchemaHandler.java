@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ import org.jkiss.dbeaver.model.struct.DBSObjectContainer;
 import org.jkiss.dbeaver.model.struct.rdb.DBSCatalog;
 import org.jkiss.dbeaver.model.struct.rdb.DBSSchema;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.AbstractDataSourceHandler;
 import org.jkiss.dbeaver.ui.editors.DatabaseLazyEditorInput;
@@ -197,7 +197,7 @@ public class SelectActiveSchemaHandler extends AbstractDataSourceHandler impleme
             }
         }
         element.setText(schemaName);
-        element.setIcon(DBeaverIcons.getImageDescriptor(schemaIcon));
+        element.setIcon(BoberKurwaIcons.getImageDescriptor(schemaIcon));
         element.setTooltip(schemaTooltip);
     }
 
@@ -261,7 +261,7 @@ public class SelectActiveSchemaHandler extends AbstractDataSourceHandler impleme
                     new ActionContributionItem(new Action(node.getName(), Action.AS_CHECK_BOX) {
                         private final DBSObject object = node.getObject();
                         {
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(node.getNodeIcon()));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(node.getNodeIcon()));
                         }
                         @Override
                         public boolean isChecked() {

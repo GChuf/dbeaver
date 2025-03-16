@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.data.aggregate.IAggregateFunction;
 import org.jkiss.dbeaver.registry.functions.AggregateFunctionDescriptor;
 import org.jkiss.dbeaver.registry.functions.FunctionsRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.DataEditorFeatures;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -245,7 +245,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
             for (Map.Entry<DBDAttributeBinding, List<Object>> entry : attrValues.entrySet()) {
                 TreeItem attrItem = new TreeItem(aggregateTable, SWT.NONE);
                 attrItem.setText(entry.getKey().getName());
-                attrItem.setImage(DBeaverIcons.getImage(DBValueFormatting.getObjectImage(entry.getKey())));
+                attrItem.setImage(BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(entry.getKey())));
                 aggregateValues(attrItem, entry.getValue());
                 attrItem.setExpanded(true);
             }
@@ -274,7 +274,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
             funcItem.setText(0, funcDesc.getLabel());
             DBPImage icon = funcDesc.getIcon();
             if (icon != null) {
-                funcItem.setImage(0, DBeaverIcons.getImage(icon));
+                funcItem.setImage(0, BoberKurwaIcons.getImage(icon));
             }
             try {
                 IAggregateFunction func = funcDesc.createFunction();
@@ -334,7 +334,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
     private class GroupByColumnsAction extends Action {
         public GroupByColumnsAction() {
             super(ResultSetMessages.aggreagate_columns_group_by_column_text, IAction.AS_CHECK_BOX);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.GROUP_BY_ATTR));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.GROUP_BY_ATTR));
             setChecked(groupByColumns);
         }
 
@@ -349,7 +349,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
     private class ValueTypeToggleAction extends Action {
         public ValueTypeToggleAction() {
             super(ResultSetMessages.aggreagate_columns_toggle_aggregation_text, IAction.AS_CHECK_BOX);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(
                 aggregateAsStrings ? DBIcon.TYPE_STRING : DBIcon.TYPE_NUMBER));
             setChecked(aggregateAsStrings);
         }
@@ -365,7 +365,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
 
     private class AddFunctionAction extends Action {
         public AddFunctionAction() {
-            super(ResultSetMessages.aggregate_columns_add_function_text, DBeaverIcons.getImageDescriptor(UIIcon.ADD));
+            super(ResultSetMessages.aggregate_columns_add_function_text, BoberKurwaIcons.getImageDescriptor(UIIcon.ADD));
         }
 
         @Override
@@ -397,7 +397,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
         private final AggregateFunctionDescriptor func;
 
         public AddFunctionItemAction(AggregateFunctionDescriptor func) {
-            super(func.getLabel(), func.getIcon() == null ? null : DBeaverIcons.getImageDescriptor(func.getIcon()));
+            super(func.getLabel(), func.getIcon() == null ? null : BoberKurwaIcons.getImageDescriptor(func.getIcon()));
             this.func = func;
         }
 
@@ -410,7 +410,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
 
     private class RemoveFunctionAction extends Action {
         public RemoveFunctionAction() {
-            super(ResultSetMessages.aggregate_columns_remove_function_text, DBeaverIcons.getImageDescriptor(UIIcon.DELETE));
+            super(ResultSetMessages.aggregate_columns_remove_function_text, BoberKurwaIcons.getImageDescriptor(UIIcon.DELETE));
         }
 
         @Override
@@ -430,7 +430,7 @@ public class AggregateColumnsPanel implements IResultSetPanel {
 
     private class ResetFunctionsAction extends Action {
         public ResetFunctionsAction() {
-            super(ResultSetMessages.aggregate_columns_reset_text, DBeaverIcons.getImageDescriptor(UIIcon.CANCEL));
+            super(ResultSetMessages.aggregate_columns_reset_text, BoberKurwaIcons.getImageDescriptor(UIIcon.CANCEL));
         }
 
         @Override

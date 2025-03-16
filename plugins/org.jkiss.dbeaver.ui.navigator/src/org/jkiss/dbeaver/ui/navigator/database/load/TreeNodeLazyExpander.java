@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Tree;
 import org.jkiss.dbeaver.model.navigator.DBNNode;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.navigator.NavigatorPreferences;
 import org.jkiss.dbeaver.ui.navigator.database.DatabaseNavigatorTree;
@@ -28,7 +28,7 @@ import org.jkiss.dbeaver.ui.navigator.database.DatabaseNavigatorTree;
 
 public class TreeNodeLazyExpander extends TreeNodeSpecial {
 
-    private static Image IMG_MORE = DBeaverIcons.getImage(UIIcon.REFRESH);
+    private static Image IMG_MORE = BoberKurwaIcons.getImage(UIIcon.REFRESH);
 
     private DBNNode[] allChildren;
     private int visibleChildren;

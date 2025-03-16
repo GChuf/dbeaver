@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -97,7 +97,7 @@ public class QueryLogViewer extends Viewer implements QMMetaListener, DBPPrefere
     private static final Log log = Log.getLog(QueryLogViewer.class);
 
     private static final String QUERY_LOG_CONTROL_ID = "org.jkiss.dbeaver.ui.qm.log"; //$NON-NLS-1$
-    private static final String VIEWER_ID = "DBeaver.QM.LogViewer"; //$NON-NLS-1$
+    private static final String VIEWER_ID = "BoberKurwa.QM.LogViewer"; //$NON-NLS-1$
     private static final String CMD_FILTER_ID = "org.jkiss.dbeaver.core.qm.filter";
     private static final int MIN_ENTRIES_PER_PAGE = 1;
 
@@ -739,7 +739,7 @@ public class QueryLogViewer extends Viewer implements QMMetaListener, DBPPrefere
         MenuManager menuMgr = new MenuManager();
         Menu menu = menuMgr.createContextMenu(logTable);
         menuMgr.addMenuListener(manager -> {
-            IAction editorAction = new Action("Open in SQL console", DBeaverIcons.getImageDescriptor(UIIcon.SQL_CONSOLE)) { //$NON-NLS-1$
+            IAction editorAction = new Action("Open in SQL console", BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_CONSOLE)) { //$NON-NLS-1$
                 @Override
                 public void run() {
                     openSelectionInEditor();
@@ -1025,7 +1025,7 @@ public class QueryLogViewer extends Viewer implements QMMetaListener, DBPPrefere
 
     private class EventViewDialog extends BaseSQLDialog {
 
-        private static final String DIALOG_ID = "DBeaver.QM.EventViewDialog";//$NON-NLS-1$
+        private static final String DIALOG_ID = "BoberKurwa.QM.EventViewDialog";//$NON-NLS-1$
 
         private final QMEvent object;
 

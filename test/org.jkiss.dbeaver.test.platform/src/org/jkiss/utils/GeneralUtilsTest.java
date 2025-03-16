@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package org.jkiss.utils;
 
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.utils.GeneralUtils;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Test;
 
 import java.text.SimpleDateFormat;
@@ -27,7 +27,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 
-public class GeneralUtilsTest extends DBeaverUnitTest {
+public class GeneralUtilsTest extends BoberKurwaUnitTest {
 
     public static final String VARIABLE_YEAR = "year";
     public static final String VARIABLE_MONTH = "month";

@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Vendor: DBeaver Corp
-Bundle-Name: DBeaver AI Model
+Bundle-Vendor: BoberKurwa Corp
+Bundle-Name: BoberKurwa AI Model
 Bundle-SymbolicName: org.jkiss.dbeaver.model.ai;singleton:=true
 Bundle-Version: 1.0.53.qualifier
 Export-Package: org.jkiss.dbeaver.model.ai,

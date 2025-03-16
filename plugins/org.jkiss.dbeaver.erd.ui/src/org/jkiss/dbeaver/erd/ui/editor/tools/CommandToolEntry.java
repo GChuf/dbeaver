@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.gef.palette.ToolEntry;
 import org.eclipse.gef.tools.SelectionTool;
 import org.jkiss.dbeaver.model.DBPImage;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 
 public class CommandToolEntry extends ToolEntry {
@@ -33,7 +33,7 @@ public class CommandToolEntry extends ToolEntry {
         super(
             label,
             ActionUtils.findCommandDescription(commandId, UIUtils.getActiveWorkbenchWindow(), false),
-            DBeaverIcons.getImageDescriptor(image),
+            BoberKurwaIcons.getImageDescriptor(image),
             null);
         this.commandId = commandId;
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -126,7 +126,7 @@ public class DatabaseNavigatorLabelProvider extends ColumnLabelProvider implemen
         if (obj instanceof ILabelProvider labelProvider) {
             image = labelProvider.getImage(obj);
         } else if (obj instanceof DBNNode) {
-            image = DBeaverIcons.getImage(((DBNNode) obj).getNodeIconDefault());
+            image = BoberKurwaIcons.getImage(((DBNNode) obj).getNodeIconDefault());
         }
 
         if (labelDecorator != null && obj instanceof DBNResource) {
@@ -271,7 +271,7 @@ public class DatabaseNavigatorLabelProvider extends ColumnLabelProvider implemen
             return null;
         }
         if (element instanceof DBNNode) {
-            return DBeaverIcons.getImage(((DBNNode) element).getNodeIconDefault());
+            return BoberKurwaIcons.getImage(((DBNNode) element).getNodeIconDefault());
         }
         return null;
     }

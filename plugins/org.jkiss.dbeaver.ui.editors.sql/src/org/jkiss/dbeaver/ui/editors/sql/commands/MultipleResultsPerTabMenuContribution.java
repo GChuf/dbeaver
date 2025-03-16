@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.eclipse.ui.services.IServiceLocator;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.editors.sql.SQLEditor;
 import org.jkiss.dbeaver.ui.editors.sql.SQLEditorCommands;
@@ -45,9 +45,9 @@ import java.util.Collections;
 public class MultipleResultsPerTabMenuContribution extends ActionContributionItem {
 
     private static final ImageDescriptor multipleResultsPerTabImageFalse =
-        DBeaverIcons.getImageDescriptor(UIIcon.SQL_MULTIPLE_RESULTS_PER_TAB_FALSE);
+        BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_MULTIPLE_RESULTS_PER_TAB_FALSE);
     private static final ImageDescriptor multipleResultsPerTabImageTrue =
-        DBeaverIcons.getImageDescriptor(UIIcon.SQL_MULTIPLE_RESULTS_PER_TAB_TRUE);
+        BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_MULTIPLE_RESULTS_PER_TAB_TRUE);
 
     public static Image TRUE_IMAGE = multipleResultsPerTabImageFalse.createImage();
     public static Image FALSE_IMAGE = multipleResultsPerTabImageTrue.createImage();

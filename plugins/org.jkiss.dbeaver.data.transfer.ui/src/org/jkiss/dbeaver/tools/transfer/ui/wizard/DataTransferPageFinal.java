@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferNodeDescriptor;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferProcessorDescriptor;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage;
 import org.jkiss.dbeaver.ui.dialogs.IWizardPageNavigable;
@@ -139,7 +139,7 @@ class DataTransferPageFinal extends ActiveWizardPage<DataTransferWizard> impleme
             if (producer != null) {
                 item.setText(0, producer.getObjectContainerName());
                 if (producer.getObjectContainerIcon() != null) {
-                    item.setImage(0, DBeaverIcons.getImage(producer.getObjectContainerIcon()));
+                    item.setImage(0, BoberKurwaIcons.getImage(producer.getObjectContainerIcon()));
                 }
                 item.setText(1, CommonUtils.notEmpty(producer.getObjectName()));
                 DBPImage producerObjectIcon = producer.getObjectIcon();
@@ -147,7 +147,7 @@ class DataTransferPageFinal extends ActiveWizardPage<DataTransferWizard> impleme
                     producerObjectIcon = settings.getProducer().getIcon();
                 }
                 if (producerObjectIcon != null) {
-                    item.setImage(1, DBeaverIcons.getImage(producerObjectIcon));
+                    item.setImage(1, BoberKurwaIcons.getImage(producerObjectIcon));
                 }
                 Color producerColor = getNodeColor(producer);
                 if (producerColor != null) {
@@ -158,7 +158,7 @@ class DataTransferPageFinal extends ActiveWizardPage<DataTransferWizard> impleme
             if (consumer != null) {
                 item.setText(2, consumer.getObjectContainerName());
                 if (consumer.getObjectContainerIcon() != null) {
-                    item.setImage(2, DBeaverIcons.getImage(consumer.getObjectContainerIcon()));
+                    item.setImage(2, BoberKurwaIcons.getImage(consumer.getObjectContainerIcon()));
                 }
                 item.setText(3, consumer.getObjectName());
                 DBPImage consumerObjectIcon = consumer.getObjectIcon();
@@ -169,7 +169,7 @@ class DataTransferPageFinal extends ActiveWizardPage<DataTransferWizard> impleme
                     consumerObjectIcon = settings.getConsumer().getIcon();
                 }
                 if (consumerObjectIcon != null) {
-                    item.setImage(3, DBeaverIcons.getImage(consumerObjectIcon));
+                    item.setImage(3, BoberKurwaIcons.getImage(consumerObjectIcon));
                 }
                 Color consumerColor = getNodeColor(consumer);
                 if (consumerColor != null) {

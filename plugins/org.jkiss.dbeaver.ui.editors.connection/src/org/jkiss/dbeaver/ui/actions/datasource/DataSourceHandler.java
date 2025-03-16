@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -266,7 +266,7 @@ public class DataSourceHandler {
         if (isContextTransactionAffected(context)) {
             // Ask for confirmation
             TransactionCloseConfirmer closeConfirmer = new TransactionCloseConfirmer(context.getDataSource().getContainer().getName());
-            DBeaverUI.syncExec(closeConfirmer);
+            BoberKurwaUI.syncExec(closeConfirmer);
             switch (closeConfirmer.result) {
                 case IDialogConstants.YES_ID:
                     return ISaveablePart2.YES;
@@ -371,7 +371,7 @@ public class DataSourceHandler {
         public TransactionEndConfirmDialog(DBPDataSource dataSource) {
             super(UIUtils.getActiveShell(),
                 "End transaction",
-                DBeaverIcons.getImage(UIIcon.TXN_ROLLBACK),
+                BoberKurwaIcons.getImage(UIIcon.TXN_ROLLBACK),
                 "Transactions in database '" + dataSource.getName() + "' will be ended because of the long idle period." +
                     "\nPress '" + IDialogConstants.CANCEL_LABEL + "' to prevent this.",
                 MessageDialog.WARNING,

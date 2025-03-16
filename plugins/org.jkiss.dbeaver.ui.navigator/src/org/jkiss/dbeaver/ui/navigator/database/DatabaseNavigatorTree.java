@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -585,14 +585,14 @@ public class DatabaseNavigatorTree extends Composite implements INavigatorListen
     }
 
     public static final Image[] IMG_LOADING = new Image[]{
-        DBeaverIcons.getImage(UIIcon.LOADING0),
-        DBeaverIcons.getImage(UIIcon.LOADING1),
-        DBeaverIcons.getImage(UIIcon.LOADING2),
-        DBeaverIcons.getImage(UIIcon.LOADING3),
-        DBeaverIcons.getImage(UIIcon.LOADING4),
-        DBeaverIcons.getImage(UIIcon.LOADING5),
-        DBeaverIcons.getImage(UIIcon.LOADING6),
-        DBeaverIcons.getImage(UIIcon.LOADING7)
+        BoberKurwaIcons.getImage(UIIcon.LOADING0),
+        BoberKurwaIcons.getImage(UIIcon.LOADING1),
+        BoberKurwaIcons.getImage(UIIcon.LOADING2),
+        BoberKurwaIcons.getImage(UIIcon.LOADING3),
+        BoberKurwaIcons.getImage(UIIcon.LOADING4),
+        BoberKurwaIcons.getImage(UIIcon.LOADING5),
+        BoberKurwaIcons.getImage(UIIcon.LOADING6),
+        BoberKurwaIcons.getImage(UIIcon.LOADING7)
     };
 
     private class NodeLoadersPainter extends UIJob {

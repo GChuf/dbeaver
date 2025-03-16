@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferNodeDescriptor;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferRegistry;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.BaseProgressDialog;
 import org.jkiss.utils.CommonUtils;
@@ -55,7 +55,7 @@ import java.util.List;
 class PreviewMappingDialog extends BaseProgressDialog {
 
     private static final int previewRowCount = 100;
-    private static final String DIALOG_ID = "DBeaver.DataTransfer.PreviewMappingDialog";
+    private static final String DIALOG_ID = "BoberKurwa.DataTransfer.PreviewMappingDialog";
 
     private final DataTransferPipe pipe;
     private final DatabaseMappingContainer mappingContainer;
@@ -221,7 +221,7 @@ class PreviewMappingDialog extends BaseProgressDialog {
                         // We can use icon from source attribute
                         attr = columnMapping.sourceAttr;
                     }
-                    column.setImage(DBeaverIcons.getImage(DBValueFormatting.getObjectImage(attr)));
+                    column.setImage(BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(attr)));
                     column.setData(columnMapping);
                 }
 

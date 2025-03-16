@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -328,7 +328,7 @@ public abstract class ConnectionPageAbstract extends DialogPage implements IData
             userManagementToolbar = new ToolBar(panel, SWT.HORIZONTAL);
             ToolItem showPasswordLabel = new ToolItem(userManagementToolbar, SWT.NONE);
             showPasswordLabel.setToolTipText("Show password on screen");
-            showPasswordLabel.setImage(DBeaverIcons.getImage(UIIcon.SHOW_ALL_DETAILS));
+            showPasswordLabel.setImage(BoberKurwaIcons.getImage(UIIcon.SHOW_ALL_DETAILS));
             showPasswordLabel.addSelectionListener(SelectionListener.widgetSelectedAdapter(e -> showPasswordText(serviceSecurity)));
         }
 

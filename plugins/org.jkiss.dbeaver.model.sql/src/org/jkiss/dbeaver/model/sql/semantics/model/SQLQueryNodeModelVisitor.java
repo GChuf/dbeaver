@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -228,13 +228,13 @@ public interface SQLQueryNodeModelVisitor<T, R> {
     R visitCallStatement(@NotNull SQLQueryCallModel callStatement, T arg);
 
     /**
-     * Visit DBeaver control command (like @echo, @set, @export and so on)
+     * Visit BoberKurwa control command (like @echo, @set, @export and so on)
      */
     @Nullable
     R visitCommand(@NotNull SQLCommandModel command, T arg);
 
     /**
-     * Visit DBeaver variable used in the DBeaver control command
+     * Visit BoberKurwa variable used in the BoberKurwa control command
      */
     @Nullable
     R visitCommandVariable(@NotNull SQLCommandModel.VariableNode variable, T arg);

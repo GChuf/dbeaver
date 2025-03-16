@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ package org.jkiss.dbeaver.ui.controls.resultset.actions;
 import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.data.DBDAttributeConstraint;
 import org.jkiss.dbeaver.model.data.DBDDataFilter;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.controls.resultset.IResultSetController;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer;
@@ -37,7 +37,7 @@ public class OrderByAttributeAction extends AbstractResultSetViewerAction {
         this.attribute = attribute;
         this.order = order;
         if (order != IResultSetController.ColumnOrder.NONE) {
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(order != IResultSetController.ColumnOrder.ASC ?
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(order != IResultSetController.ColumnOrder.ASC ?
                 UIIcon.SORT_INCREASE : UIIcon.SORT_DECREASE));
         }
     }

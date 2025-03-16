@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ public class RegistryConstants {
     public static final String TAG_TAGS = "tags"; //$NON-NLS-1$
     public static final String TAG_FILE = "file"; //$NON-NLS-1$
     public static final String TAG_FILE_SOURCE = "fileSource"; //$NON-NLS-1$
-    public static final String TAG_LIBRARY = "library"; // [LEGACY: from DBeaver 1.1.0]  //$NON-NLS-1$
+    public static final String TAG_LIBRARY = "library"; // [LEGACY: from BoberKurwa 1.1.0]  //$NON-NLS-1$
     public static final String TAG_PATH = "path"; //$NON-NLS-1$
     public static final String TAG_REPLACE = "replace"; //$NON-NLS-1$
     public static final String TAG_CLIENT_HOME = "clientHome"; //$NON-NLS-1$

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.model.rm.RMConstants;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
@@ -66,7 +66,7 @@ public class ProjectSelectorPanel {
             Composite projectGroup = UIUtils.createComposite(parent, showIcon ? 3 : 2);
             projectGroup.setLayoutData(new GridData(alignRight ? GridData.HORIZONTAL_ALIGN_END : GridData.HORIZONTAL_ALIGN_BEGINNING));
             if (showIcon) {
-                new Label(projectGroup, SWT.NONE).setImage(DBeaverIcons.getImage(DBIcon.PROJECT));
+                new Label(projectGroup, SWT.NONE).setImage(BoberKurwaIcons.getImage(DBIcon.PROJECT));
             }
             this.headerLabel = UIUtils.createControlLabel(projectGroup, UIConnectionMessages.dialog_connection_driver_project);
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.registry.DataSourceProviderDescriptor;
 import org.jkiss.dbeaver.registry.DataSourceProviderRegistry;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.config.migration.ImportConfigMessages;
 import org.jkiss.dbeaver.ui.controls.ConnectionFolderSelector;
@@ -183,7 +183,7 @@ public abstract class ConfigImportWizardPage extends ActiveWizardPage<ConfigImpo
     private void setConnectionInfoForItem(ImportConnectionInfo connectionInfo,
         TableItem item) {
         if (connectionInfo.getDriverInfo() != null) {
-            item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_DATABASE));
+            item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_DATABASE));
             item.setText(0, connectionInfo.getAlias());
             item.setText(1, connectionInfo.getDriverInfo().getName());
             String url = connectionInfo.getUrl();
@@ -196,7 +196,7 @@ public abstract class ConfigImportWizardPage extends ActiveWizardPage<ConfigImpo
             item.setText(2, url);
             item.setData(connectionInfo);
         } else {
-            item.setImage(0, DBeaverIcons.getImage(DBIcon.DATABASE_DEFAULT));
+            item.setImage(0, BoberKurwaIcons.getImage(DBIcon.DATABASE_DEFAULT));
             item.setText(0, connectionInfo.getAlias());
             item.setText(1, ImportConfigMessages.config_import_wizard_page_driver_unknown);
             item.setText(2, ImportConfigMessages.config_import_wizard_page_driver_unknown); 

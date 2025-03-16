@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.eclipse.swt.graphics.Image;
 import org.eclipse.ui.INewWizard;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.ModelPreferences.SeparateConnectionBehavior;
 import org.jkiss.dbeaver.core.CoreMessages;
@@ -72,7 +72,7 @@ public abstract class ConnectionWizard extends ActiveWizard implements IConnecti
 
     protected ConnectionWizard() {
         setNeedsProgressMonitor(true);
-        //setDefaultPageImageDescriptor(DBeaverActivator.getImageDescriptor("icons/driver-logo.png"));
+        //setDefaultPageImageDescriptor(BoberKurwaActivator.getImageDescriptor("icons/driver-logo.png"));
     }
 
     @Override
@@ -89,7 +89,7 @@ public abstract class ConnectionWizard extends ActiveWizard implements IConnecti
     public Image getDefaultPageImage() {
         return super.getDefaultPageImage();
 //        DBPDriver selectedDriver = getSelectedDriver();
-//        return DBeaverIcons.getImage(selectedDriver == null ? DBIcon.DATABASE_DEFAULT : selectedDriver.getIcon());
+//        return BoberKurwaIcons.getImage(selectedDriver == null ? DBIcon.DATABASE_DEFAULT : selectedDriver.getIcon());
     }
 
     @Override
@@ -173,7 +173,7 @@ public abstract class ConnectionWizard extends ActiveWizard implements IConnecti
             int decision = ConfirmationDialog.confirmAction(
                 getShell(),
                 ConfirmationDialog.WARNING,
-                DBeaverPreferences.CONFIRM_TEST_CONNECTION_PERSIST,
+                BoberKurwaPreferences.CONFIRM_TEST_CONNECTION_PERSIST,
                 ConfirmationDialog.CONFIRM
             );
             if (decision != IDialogConstants.OK_ID) {

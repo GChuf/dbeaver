@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.DBUtils;
 import org.jkiss.dbeaver.model.connection.DBPDataSourceProviderDescriptor;
 import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.NamedObjectPatternFilter;
 import org.jkiss.dbeaver.ui.controls.TreeContentProvider;
@@ -47,7 +47,7 @@ import java.util.List;
  */
 public class DashboardDatabaseSelectDialog extends BaseDialog {
 
-    private static final String DIALOG_ID = "DBeaver.DashboardDatabaseSelectDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DashboardDatabaseSelectDialog";//$NON-NLS-1$
 
     private DBPNamedObject target;
     private TreeViewer treeViewer;
@@ -115,7 +115,7 @@ public class DashboardDatabaseSelectDialog extends BaseDialog {
                             icon = ((DBPDataSourceProviderDescriptor) element).getIcon();
                         }
                         if (icon != null) {
-                            cell.setImage(DBeaverIcons.getImage(icon));
+                            cell.setImage(BoberKurwaIcons.getImage(icon));
                         }
                     } else {
                         if (element instanceof DBPDriver) {

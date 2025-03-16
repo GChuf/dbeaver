@@ -60,7 +60,7 @@
                         iconBig="icons/libsql_icon_big.png"
                         sampleURL="jdbc:dbeaver:libsql:{server}"
                         defaultDatabase="http://localhost"
-                        description="LibSQL DBeaver JDBC driver. Works with standalone LibSQL server and with Turso."
+                        description="LibSQL BoberKurwa JDBC driver. Works with standalone LibSQL server and with Turso."
                         webURL="https://github.com/tursodatabase/libsql"
                         databaseDocumentationSuffixURL="Database-driver-LibSQL"
                         singleConnection="true"

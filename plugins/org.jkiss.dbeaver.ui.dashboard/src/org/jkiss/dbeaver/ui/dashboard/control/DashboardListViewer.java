@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -173,7 +173,7 @@ public class DashboardListViewer extends StructuredViewer implements DBPDataSour
 
     private void updateStatus() {
 //        String status = dataSourceContainer.isConnected() ? "connected (" + dataSourceContainer.getConnectTime() + ")" : "disconnected";
-//        statusLabel.setImage(DBeaverIcons.getImage(dataSourceContainer.getDriver().getIcon()));
+//        statusLabel.setImage(BoberKurwaIcons.getImage(dataSourceContainer.getDriver().getIcon()));
 //        statusLabel.setText(this.dataSourceContainer.getName() + ": " + status);
     }
 

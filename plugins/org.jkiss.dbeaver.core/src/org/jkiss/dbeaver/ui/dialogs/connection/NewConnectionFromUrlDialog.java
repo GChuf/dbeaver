@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.model.runtime.AbstractJob;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.registry.DataSourceProviderRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.TreeContentProvider;
 import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
@@ -94,7 +94,7 @@ public class NewConnectionFromUrlDialog extends BaseDialog {
 
             errorLabel = new CLabel(composite, SWT.NONE);
             errorLabel.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-            errorLabel.setImage(DBeaverIcons.getImage(DBIcon.SMALL_ERROR));
+            errorLabel.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_ERROR));
             errorLabel.setVisible(false);
 
             final AbstractJob refreshJob = new AbstractJob("Refresh suitable drivers timeout") {
@@ -238,14 +238,14 @@ public class NewConnectionFromUrlDialog extends BaseDialog {
         public Image getImage(Object element) {
             if (element instanceof Map.Entry) {
                 final var entry = (Map.Entry<DBPDataSourceProviderDescriptor, List<DriverInfo>>) element;
-                return DBeaverIcons.getImage(entry.getKey().getIcon());
+                return BoberKurwaIcons.getImage(entry.getKey().getIcon());
             }
             if (element instanceof DriverInfo) {
                 final DriverInfo info = (DriverInfo) element;
                 final DBPImage icon = info.driver.getIcon();
                 return info.genuineUrl
-                    ? DBeaverIcons.getImage(icon)
-                    : DBeaverIcons.getImage(new DBIconComposite(icon, false, null, null, null, DBIcon.OVER_LAMP));
+                    ? BoberKurwaIcons.getImage(icon)
+                    : BoberKurwaIcons.getImage(new DBIconComposite(icon, false, null, null, null, DBIcon.OVER_LAMP));
             }
             return null;
         }

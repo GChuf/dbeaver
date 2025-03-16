@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import java.util.List;
  * Grouping configuration dialog
  */
 class GroupingConfigDialog extends BaseDialog {
-    private static final String DIALOG_ID = "DBeaver.GroupingConfigDialog"; //$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.GroupingConfigDialog"; //$NON-NLS-1$
 
     private final GroupingResultsContainer resultsContainer;
     private Table columnsTable;

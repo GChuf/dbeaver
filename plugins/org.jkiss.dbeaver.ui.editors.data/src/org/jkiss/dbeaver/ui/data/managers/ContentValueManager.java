@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -41,7 +41,7 @@ import org.jkiss.dbeaver.model.data.storage.ExternalContentStorage;
 import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.model.preferences.DBPPropertyManager;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.ShellUtils;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -84,14 +84,14 @@ public class ContentValueManager extends BaseValueManager {
     {
         if (controller.getValue() instanceof DBDContent) {
             if (!((DBDContent) controller.getValue()).isNull()) {
-                manager.add(new Action(ResultSetMessages.model_jdbc_save_to_file_, DBeaverIcons.getImageDescriptor(UIIcon.SAVE_AS)) {
+                manager.add(new Action(ResultSetMessages.model_jdbc_save_to_file_, BoberKurwaIcons.getImageDescriptor(UIIcon.SAVE_AS)) {
                     @Override
                     public void run() {
                         saveToFile(controller);
                     }
                 });
             }
-            manager.add(new Action("Open in external editor", DBeaverIcons.getImageDescriptor(UIIcon.FILE)) {
+            manager.add(new Action("Open in external editor", BoberKurwaIcons.getImageDescriptor(UIIcon.FILE)) {
                 @Override
                 public void run() {
                     try {
@@ -130,7 +130,7 @@ public class ContentValueManager extends BaseValueManager {
                     }
                 }
             });
-            manager.add(new Action(ResultSetMessages.model_jdbc_load_from_file_, DBeaverIcons.getImageDescriptor(UIIcon.LOAD)) {
+            manager.add(new Action(ResultSetMessages.model_jdbc_load_from_file_, BoberKurwaIcons.getImageDescriptor(UIIcon.LOAD)) {
                 @Override
                 public void run() {
                     if (loadFromFile(controller)) {
@@ -212,7 +212,7 @@ public class ContentValueManager extends BaseValueManager {
             }
 
 
-            // delete the file when the user closes the DBeaver application
+            // delete the file when the user closes the BoberKurwa application
             tmpFile.deleteOnExit();
         }
     }

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.*;
 import org.eclipse.ui.part.ViewPart;
 import org.jkiss.dbeaver.Log;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 
@@ -45,28 +45,28 @@ public class BaseBrowserView extends ViewPart {
     private Browser browser;
     private String initialUrl;
 
-    private Action backAction = new Action("Back", DBeaverIcons.getImageDescriptor(UIIcon.RS_BACK)) {
+    private Action backAction = new Action("Back", BoberKurwaIcons.getImageDescriptor(UIIcon.RS_BACK)) {
         @Override
         public void run() {
             browser.back();
         }
     };
 
-    private Action forwardAction = new Action("Forward", DBeaverIcons.getImageDescriptor(UIIcon.RS_FORWARD)) {
+    private Action forwardAction = new Action("Forward", BoberKurwaIcons.getImageDescriptor(UIIcon.RS_FORWARD)) {
         @Override
         public void run() {
             browser.forward();
         }
     };
 
-    private Action stopAction = new Action("Stop", DBeaverIcons.getImageDescriptor(UIIcon.REJECT)) {
+    private Action stopAction = new Action("Stop", BoberKurwaIcons.getImageDescriptor(UIIcon.REJECT)) {
         @Override
         public void run() {
             browser.stop();
         }
     };
 
-    private Action refreshAction = new Action("Refresh", DBeaverIcons.getImageDescriptor(UIIcon.REFRESH)) {
+    private Action refreshAction = new Action("Refresh", BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH)) {
         @Override
         public void run() {
             browser.refresh();

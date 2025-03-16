@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.jkiss.dbeaver.model.runtime.features.DBRFeatureRegistry;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceToolbarHandler;
 import org.jkiss.dbeaver.ui.editors.EditorUtils;
 import org.jkiss.dbeaver.ui.editors.sql.SQLEditor;
-import org.jkiss.dbeaver.ui.perspective.DBeaverPerspective;
+import org.jkiss.dbeaver.ui.perspective.BoberKurwaPerspective;
 
 import java.util.HashSet;
 import java.util.Map;
@@ -111,7 +111,7 @@ public class WorkbenchContextListener implements IWindowListener, IPageListener,
                 if (contextService == null) {
                     return;
                 }
-                if (perspective.getId().equals(DBeaverPerspective.PERSPECTIVE_ID)) {
+                if (perspective.getId().equals(BoberKurwaPerspective.PERSPECTIVE_ID)) {
                     perspectiveActivation = contextService.activateContext(PERSPECTIVE_CONTEXT_ID);
                 } else if (perspectiveActivation != null) {
                     contextService.deactivateContext(perspectiveActivation);

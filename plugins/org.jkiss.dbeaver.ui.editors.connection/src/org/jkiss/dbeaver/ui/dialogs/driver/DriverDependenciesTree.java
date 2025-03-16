@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.registry.DBConnectionConstants;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.WebUtils;
 import org.jkiss.dbeaver.ui.BaseThemeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
 import org.jkiss.dbeaver.utils.GeneralUtils;
@@ -154,7 +154,7 @@ class DriverDependenciesTree {
             TreeItem item = new TreeItem(filesTree, SWT.NONE);
             grayOutInstalledArtifact(node, item);
             item.setData(node);
-            item.setImage(DBeaverIcons.getImage(library.getIcon()));
+            item.setImage(BoberKurwaIcons.getImage(library.getIcon()));
             item.setText(0, library.getDisplayName());
             item.setText(1, CommonUtils.notEmpty(library.getVersion()));
             item.setText(2, CommonUtils.notEmpty(library.getDescription()));
@@ -257,7 +257,7 @@ class DriverDependenciesTree {
 
                 TreeItem item = new TreeItem(parent, SWT.NONE);
                 //item.setData(dep);
-                item.setImage(DBeaverIcons.getImage(dep.library.getIcon()));
+                item.setImage(BoberKurwaIcons.getImage(dep.library.getIcon()));
                 item.setText(0, dep.library.getDisplayName());
                 item.setText(1, CommonUtils.notEmpty(dep.library.getVersion()));
                 item.setText(2, CommonUtils.notEmpty(dep.library.getDescription()));

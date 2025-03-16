@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,7 +57,7 @@ import org.jkiss.dbeaver.model.struct.DBSEntityAssociation;
 import org.jkiss.dbeaver.model.struct.DBSEntityAttribute;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 
 import java.util.*;
@@ -287,7 +287,7 @@ public class ERDGraphicalViewer extends ScrollingGraphicalViewer implements DBPE
 
         PaletteDrawer dsDrawer = new PaletteDrawer(
             container.getName(),
-            DBeaverIcons.getImageDescriptor(container.getDriver().getIcon()));
+            BoberKurwaIcons.getImageDescriptor(container.getDriver().getIcon()));
         dsDrawer.setDescription(container.getDescription());
         dsDrawer.setId(container.getId());
 
@@ -533,8 +533,8 @@ public class ERDGraphicalViewer extends ScrollingGraphicalViewer implements DBPE
         ToolEntryTable(DBSEntity table)
         {
             super(table.getName(), table.getDescription(),
-                DBeaverIcons.getImageDescriptor(DBIcon.TREE_TABLE),
-                DBeaverIcons.getImageDescriptor(DBIcon.TREE_TABLE));
+                BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_TABLE),
+                BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_TABLE));
             this.setUserModificationPermission(PERMISSION_NO_MODIFICATION);
             setDescription(DBUtils.getObjectFullName(table, DBPEvaluationContext.UI));
             this.table = table;

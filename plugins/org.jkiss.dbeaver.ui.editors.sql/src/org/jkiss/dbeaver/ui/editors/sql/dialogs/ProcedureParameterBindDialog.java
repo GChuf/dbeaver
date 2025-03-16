@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.model.struct.rdb.DBSProcedure;
 import org.jkiss.dbeaver.model.struct.rdb.DBSProcedureParameter;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomTableEditor;
 import org.jkiss.dbeaver.utils.GeneralUtils;
@@ -43,7 +43,7 @@ import java.util.Map;
  */
 public class ProcedureParameterBindDialog extends StatusDialog {
 
-    private static final String DIALOG_ID = "DBeaver.ProcedureParameterBindDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.ProcedureParameterBindDialog";//$NON-NLS-1$
 
     private DBSProcedure procedure;
     private List<DBSProcedureParameter> parameters;
@@ -103,7 +103,7 @@ public class ProcedureParameterBindDialog extends StatusDialog {
         for (DBSProcedureParameter param : parameters) {
             TableItem item = new TableItem(paramTable, SWT.NONE);
             item.setData(param);
-            item.setImage(DBeaverIcons.getImage(DBIcon.TREE_ATTRIBUTE));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_ATTRIBUTE));
             item.setText(0, param.getName());
             Object value = values.get(param);
             item.setText(1, CommonUtils.toString(value, ""));

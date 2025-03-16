@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.jkiss.dbeaver.model.data.DBDDisplayFormat;
 import org.jkiss.dbeaver.model.data.DBDLabelValuePair;
 import org.jkiss.dbeaver.model.exec.DBCLogicalOperator;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ViewerColumnController;
@@ -46,7 +46,7 @@ import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
 
 public class FilterValueEditDialog extends BaseDialog{
 	
-	private static final String DIALOG_ID = "DBeaver.FilterValueEditDialog";//$NON-NLS-1$
+	private static final String DIALOG_ID = "BoberKurwa.FilterValueEditDialog";//$NON-NLS-1$
     private GenericFilterValueEdit handler;
     private Object value;
     private static final Log log = Log.getLog(FilterValueEditDialog.class);
@@ -177,7 +177,7 @@ public class FilterValueEditDialog extends BaseDialog{
     {
         if (handler.getOperator().getArgumentCount() == 1) {
             Button copyButton = createButton(parent, IDialogConstants.DETAILS_ID, "Clipboard", false);
-            copyButton.setImage(DBeaverIcons.getImage(UIIcon.FILTER_CLIPBOARD));
+            copyButton.setImage(BoberKurwaIcons.getImage(UIIcon.FILTER_CLIPBOARD));
         }
 
         createButton(parent, IDialogConstants.OK_ID, IDialogConstants.OK_LABEL, true);

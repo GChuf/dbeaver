@@ -227,7 +227,7 @@
                 <visibleWhen>
                     <and>
                         <test property="org.jkiss.dbeaver.core.global.hasPermission" value="database-developer"/>
-                        <reference definitionId="DBeaverPerspectiveActive"/>
+                        <reference definitionId="BoberKurwaPerspectiveActive"/>
                     </and>
                 </visibleWhen>
             </command>

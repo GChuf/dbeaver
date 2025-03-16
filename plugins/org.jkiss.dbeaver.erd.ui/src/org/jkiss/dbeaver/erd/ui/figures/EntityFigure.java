@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.DBPEvaluationContext;
 import org.jkiss.dbeaver.model.DBUtils;
 import org.jkiss.dbeaver.model.struct.DBSEntityType;
 import org.jkiss.dbeaver.model.struct.DBSObjectContainer;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIStyles;
 import org.jkiss.utils.CommonUtils;
 
@@ -60,7 +60,7 @@ public class EntityFigure extends Figure {
         boolean useFQN = part.getDiagram().hasAttributeStyle(ERDViewStyle.ENTITY_FQN);
         boolean showComments = part.getDiagram().hasAttributeStyle(ERDViewStyle.COMMENTS);
 
-        Image tableImage = DBeaverIcons.getImage(entity.getObject().getEntityType().getIcon());
+        Image tableImage = BoberKurwaIcons.getImage(entity.getObject().getEntityType().getIcon());
 
         keyFigure = new AttributeListFigure(entity, true);
         attributeFigure = new AttributeListFigure(entity, false);
@@ -129,13 +129,13 @@ public class EntityFigure extends Figure {
 
         {
             Label dsLabel = new Label(dataSource.getName());
-            dsLabel.setIcon(DBeaverIcons.getImage(dataSource.getDriver().getIcon()));
+            dsLabel.setIcon(BoberKurwaIcons.getImage(dataSource.getDriver().getIcon()));
             dsLabel.setBorder(new MarginBorder(2));
             toolTip.add(dsLabel);
         }
         {
             Label entityLabel = new Label(DBUtils.getObjectFullName(entity.getObject(), DBPEvaluationContext.UI));
-            entityLabel.setIcon(DBeaverIcons.getImage(entity.getObject().getEntityType().getIcon()));
+            entityLabel.setIcon(BoberKurwaIcons.getImage(entity.getObject().getEntityType().getIcon()));
             entityLabel.setBorder(new MarginBorder(2));
             toolTip.add(entityLabel);
         }

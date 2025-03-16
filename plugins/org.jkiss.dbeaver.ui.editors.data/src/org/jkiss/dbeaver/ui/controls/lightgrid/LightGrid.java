@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIElementFontStyle;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomToolTipHandler;
@@ -4914,7 +4914,7 @@ public abstract class LightGrid extends Canvas {
             for (IGridStatusColumn gsc : statusColumns) {
                 DBPImage statusIcon = gsc.getStatusIcon();
                 if (statusIcon != null) {
-                    Image statusImage = DBeaverIcons.getImage(statusIcon);
+                    Image statusImage = BoberKurwaIcons.getImage(statusIcon);
                     Rectangle iconBounds = statusImage.getBounds();
                     xPos -= iconBounds.width;
                     gc.drawImage(statusImage, xPos, y + (height - iconBounds.height) / 2);

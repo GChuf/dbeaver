@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.ui.services.IDisposable;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 import java.util.List;
 import java.util.Random;
@@ -81,7 +81,7 @@ record SnowflakeAtlas(
 
             for (int i = 0; i < images.size(); i++) {
                 for (int j = 0; j < mips; j++) {
-                    var sprite = DBeaverIcons.getImage(images.get(i));
+                    var sprite = BoberKurwaIcons.getImage(images.get(i));
                     var bounds = sprite.getBounds();
 
                     int scale = size - j * step;

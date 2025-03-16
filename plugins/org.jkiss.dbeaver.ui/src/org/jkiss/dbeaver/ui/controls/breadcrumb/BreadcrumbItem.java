@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.DoubleClickMouseAdapter;
@@ -71,7 +71,7 @@ final class BreadcrumbItem extends Item {
 
         elementArrow = new Label(container, SWT.NONE);
         elementArrow.setLayoutData(new GridData(SWT.END, SWT.CENTER, false, false));
-        elementArrow.setImage(DBeaverIcons.getImage(UIIcon.TREE_EXPAND));
+        elementArrow.setImage(BoberKurwaIcons.getImage(UIIcon.TREE_EXPAND));
 
         detailComposite = new Composite(container, SWT.NONE);
         detailComposite.setLayoutData(new GridData(SWT.BEGINNING, SWT.CENTER, false, false));

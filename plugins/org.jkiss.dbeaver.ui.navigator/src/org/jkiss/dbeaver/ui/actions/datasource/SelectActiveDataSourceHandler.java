@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
 import org.jkiss.dbeaver.model.navigator.DBNUtils;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IDataSourceContainerUpdate;
 import org.jkiss.dbeaver.ui.UITextUtils;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -148,7 +148,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
             }
         }
         element.setText(connectionName);
-        element.setIcon(DBeaverIcons.getImageDescriptor(connectionIcon));
+        element.setIcon(BoberKurwaIcons.getImageDescriptor(connectionIcon));
         element.setTooltip(UINavigatorMessages.toolbar_datasource_selector_combo_datasource_tooltip);
     }
 
@@ -227,7 +227,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
                     DBPDriver driver = de.getKey();
                     MenuManager driverMenu = new MenuManager(
                         driver.getName(),
-                        DBeaverIcons.getImageDescriptor(driver.getIcon()),
+                        BoberKurwaIcons.getImageDescriptor(driver.getIcon()),
                         driver.getId());
                     for (DBPDataSourceContainer ds : de.getValue()) {
                         driverMenu.add(
@@ -264,7 +264,7 @@ public class SelectActiveDataSourceHandler extends AbstractDataSourceHandler imp
             return new Action(newDataSource.getName(), Action.AS_CHECK_BOX) {
                 {
                     if (dsNode != null) {
-                        setImageDescriptor(DBeaverIcons.getImageDescriptor(dsNode.getNodeIcon()));
+                        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(dsNode.getNodeIcon()));
                     }
                 }
                 @Override

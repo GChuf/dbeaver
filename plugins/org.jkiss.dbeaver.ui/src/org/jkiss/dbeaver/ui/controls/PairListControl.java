@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
 import org.jkiss.dbeaver.Log;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 
@@ -95,33 +95,33 @@ public class PairListControl<ELEMENT> extends Composite
             GridLayout gl = new GridLayout(1, false);
             buttonsPane.setLayout(gl);
 
-            final Button btnMoveRight = createButton(buttonsPane, DBeaverIcons.getImage(UIIcon.ARROW_RIGHT), new SelectionAdapter() {
+            final Button btnMoveRight = createButton(buttonsPane, BoberKurwaIcons.getImage(UIIcon.ARROW_RIGHT), new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
                     moveElements(true);
                 }
             });
-            final Button btnMoveRightAll = createButton(buttonsPane, DBeaverIcons.getImage(UIIcon.ARROW_RIGHT_ALL), new SelectionAdapter() {
+            final Button btnMoveRightAll = createButton(buttonsPane, BoberKurwaIcons.getImage(UIIcon.ARROW_RIGHT_ALL), new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
                     leftList.selectAll();
                     moveElements(true);
                 }
             });
-            final Button btnMoveLeft = createButton(buttonsPane, DBeaverIcons.getImage(UIIcon.ARROW_LEFT), new SelectionAdapter() {
+            final Button btnMoveLeft = createButton(buttonsPane, BoberKurwaIcons.getImage(UIIcon.ARROW_LEFT), new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
                     moveElements(false);
                 }
             });
-            final Button btnMoveLeftAll = createButton(buttonsPane, DBeaverIcons.getImage(UIIcon.ARROW_LEFT_ALL), new SelectionAdapter() {
+            final Button btnMoveLeftAll = createButton(buttonsPane, BoberKurwaIcons.getImage(UIIcon.ARROW_LEFT_ALL), new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
                     rightList.selectAll();
                     moveElements(false);
                 }
             });
-            createButton(buttonsPane, DBeaverIcons.getImage(UIIcon.ARROW_RESET), new SelectionAdapter() {
+            createButton(buttonsPane, BoberKurwaIcons.getImage(UIIcon.ARROW_RESET), new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
                     setListData(leftList, leftElements);

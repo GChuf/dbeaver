@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.swt.graphics.*;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UITextUtils;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -46,8 +46,8 @@ public class GridCellRenderer extends AbstractRenderer {
     private static final int TEXT_TOP_MARGIN = 1;
     private static final int INSIDE_MARGIN = 3;
 
-    static final Image LINK_IMAGE = DBeaverIcons.getImage(UIIcon.LINK);
-    static final Image LINK2_IMAGE = DBeaverIcons.getImage(UIIcon.LINK2);
+    static final Image LINK_IMAGE = BoberKurwaIcons.getImage(UIIcon.LINK);
+    static final Image LINK2_IMAGE = BoberKurwaIcons.getImage(UIIcon.LINK2);
     static final Rectangle LINK_IMAGE_BOUNDS = new Rectangle(0, 0, 13, 13);
 
     // Mapping table for special characters. The replacement string is painted with a tinted color.
@@ -131,7 +131,7 @@ public class GridCellRenderer extends AbstractRenderer {
         {
             DBPImage cellImage = cellInfo.image;
             if (cellImage != null) {
-                image = DBeaverIcons.getImage(cellImage);
+                image = BoberKurwaIcons.getImage(cellImage);
                 imageBounds = image.getBounds();
             } else {
                 image = null;
@@ -327,7 +327,7 @@ public class GridCellRenderer extends AbstractRenderer {
             for (IGridHint hint : cellHints) {
                 DBPImage hintIcon = hint.getIcon();
                 if (hintIcon != null) {
-                    Image hintImage = DBeaverIcons.getImage(hintIcon);
+                    Image hintImage = BoberKurwaIcons.getImage(hintIcon);
                     Rectangle iconSize = hintImage.getBounds();
                     iconsWidth += iconSize.width + 1;
                     if (iconList == null) {
@@ -397,7 +397,7 @@ public class GridCellRenderer extends AbstractRenderer {
         for (IGridHint hint : cellHints) {
             DBPImage hintIcon = hint.getIcon();
             if (hintIcon != null) {
-                Image hintImage = DBeaverIcons.getImage(hintIcon);
+                Image hintImage = BoberKurwaIcons.getImage(hintIcon);
                 Rectangle iconSize = hintImage.getBounds();
                 if (y >= cellOrigin.y + 4 &&
                     y <= cellOrigin.y + grid.getItemHeight() - 4 &&
@@ -432,7 +432,7 @@ public class GridCellRenderer extends AbstractRenderer {
         for (IGridHint hint : cellHints) {
             DBPImage hintIcon = hint.getIcon();
             if (hintIcon != null) {
-                Image hintImage = DBeaverIcons.getImage(hintIcon);
+                Image hintImage = BoberKurwaIcons.getImage(hintIcon);
                 Rectangle iconSize = hintImage.getBounds();
                 if (x >= cellOrigin.x + column.getWidth() - 4 - iconsWidth - iconSize.width) {
                     hint.performAction(gridController, state);
@@ -482,7 +482,7 @@ public class GridCellRenderer extends AbstractRenderer {
                 if (cellImage == null) {
                     image = ((state & IGridContentProvider.STATE_LINK) != 0) ? LINK_IMAGE : LINK2_IMAGE;
                 } else {
-                    image = DBeaverIcons.getImage(cellImage);
+                    image = BoberKurwaIcons.getImage(cellImage);
                 }
                 imageBounds = image.getBounds();
             }

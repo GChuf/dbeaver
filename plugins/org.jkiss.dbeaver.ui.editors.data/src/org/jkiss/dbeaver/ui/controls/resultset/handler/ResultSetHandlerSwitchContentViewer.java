@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.eclipse.ui.menus.UIElement;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer;
 import org.jkiss.dbeaver.ui.controls.resultset.panel.valueviewer.ValueViewerPanel;
 import org.jkiss.dbeaver.ui.data.editors.ContentPanelEditor;
@@ -63,7 +63,7 @@ public class ResultSetHandlerSwitchContentViewer extends AbstractHandler impleme
         if (manager != null) {
             element.setText(manager.getLabel());
             element.setTooltip(manager.getDescription());
-            element.setIcon(DBeaverIcons.getImageDescriptor(manager.getIcon()));
+            element.setIcon(BoberKurwaIcons.getImageDescriptor(manager.getIcon()));
             element.setChecked(editor != null && editor.getCurrentStreamManager() == manager);
         }
     }

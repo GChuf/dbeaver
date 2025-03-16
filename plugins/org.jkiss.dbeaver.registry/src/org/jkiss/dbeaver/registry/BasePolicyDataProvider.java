@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.utils.CommonUtils;
 public class BasePolicyDataProvider {
     private static final Log log = Log.getLog(BasePolicyDataProvider.class);
 
-    private static final String DBEAVER_REGISTRY_POLICY_NODE = "Software\\DBeaver Corp\\DBeaver\\policy"; //$NON-NLS-1$
+    private static final String DBEAVER_REGISTRY_POLICY_NODE = "Software\\BoberKurwa Corp\\BoberKurwa\\policy"; //$NON-NLS-1$
     private static final BasePolicyDataProvider INSTANCE = new BasePolicyDataProvider();
 
     @NotNull

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.exec.DBCSession;
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.model.struct.DBSTypedObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.StyledTextUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.internal.ResultSetMessages;
@@ -146,7 +146,7 @@ public class TextViewDialog extends ValueViewDialog {
             if (hexEditorService != null) {
                 CTabItem item = new CTabItem(editorContainer, SWT.NO_FOCUS);
                 item.setText("Text");
-                item.setImage(DBeaverIcons.getImage(DBIcon.TYPE_TEXT));
+                item.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_TEXT));
                 item.setControl(textEdit);
                 editorContainer.setSelection(item);
             }
@@ -160,7 +160,7 @@ public class TextViewDialog extends ValueViewDialog {
             minSize.y += 50;
             CTabItem item = new CTabItem(editorContainer, SWT.NO_FOCUS);
             item.setText("Hex");
-            item.setImage(DBeaverIcons.getImage(DBIcon.TYPE_BINARY));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_BINARY));
             item.setControl(hexEditControl);
 
             if (selectedType >= editorContainer.getItemCount()) {

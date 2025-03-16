@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -26,7 +26,7 @@ import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.ui.texteditor.MarkerAnnotation;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 public class SQLProblemAnnotation extends MarkerAnnotation implements IAnnotationPresentation {
     public static final String MARKER_TYPE = "org.jkiss.dbeaver.ui.editors.sql.databaseScriptProblemMarker";
@@ -39,7 +39,7 @@ public class SQLProblemAnnotation extends MarkerAnnotation implements IAnnotatio
     @SuppressWarnings("deprecation")
     @Override
     public void paint(GC gc, Canvas canvas, Rectangle r) {
-        ImageUtilities.drawImage(DBeaverIcons.getImage(DBIcon.TINY_ERROR), gc, canvas, r, SWT.CENTER, SWT.TOP);
+        ImageUtilities.drawImage(BoberKurwaIcons.getImage(DBIcon.TINY_ERROR), gc, canvas, r, SWT.CENTER, SWT.TOP);
     }
 
 }

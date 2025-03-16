@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.erd.ui.ERDIcon;
 import org.jkiss.dbeaver.erd.ui.editor.ERDEditorEmbedded;
 import org.jkiss.dbeaver.erd.ui.internal.ERDUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 
 /**
@@ -35,7 +35,7 @@ public class DiagramTogglePersistAction extends Action {
 
     public DiagramTogglePersistAction(ERDEditorEmbedded editor) {
         super(ERDUIMessages.erd_action_diagram_toggle_persist_text, AS_CHECK_BOX);
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(ERDIcon.LAYOUT_SAVE));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(ERDIcon.LAYOUT_SAVE));
         setDescription(ERDUIMessages.erd_action_diagram_toggle_persist_description);
         setToolTipText(getDescription());
         this.editor = editor;

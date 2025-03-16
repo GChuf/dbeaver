@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.model.qm.QMUtils;
 import org.jkiss.dbeaver.model.struct.DBSInstance;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.actions.datasource.DataSourceCommitHandler;
@@ -42,7 +42,7 @@ import java.util.List;
 
 public class PendingTransactionsDialog extends TransactionInfoDialog {
 
-    private static final String DIALOG_ID = "DBeaver.PendingTransactionsDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.PendingTransactionsDialog";//$NON-NLS-1$
     private Tree contextTree;
     private DBCExecutionContext selectedContext;
     private Button commitButton;
@@ -113,7 +113,7 @@ public class PendingTransactionsDialog extends TransactionInfoDialog {
             gd = new GridData(GridData.FILL_HORIZONTAL);
             gd.grabExcessHorizontalSpace = true;
             showAllCheck.setLayoutData(gd);
-            commitButton = UIUtils.createPushButton(controlPanel, "Commit", DBeaverIcons.getImage(UIIcon.TXN_COMMIT));
+            commitButton = UIUtils.createPushButton(controlPanel, "Commit", BoberKurwaIcons.getImage(UIIcon.TXN_COMMIT));
             commitButton.setEnabled(false);
             commitButton.addSelectionListener(new SelectionAdapter() {
                 @Override
@@ -121,7 +121,7 @@ public class PendingTransactionsDialog extends TransactionInfoDialog {
                     endTransaction(true);
                 }
             });
-            rollbackButton = UIUtils.createPushButton(controlPanel, "Rollback", DBeaverIcons.getImage(UIIcon.TXN_ROLLBACK));
+            rollbackButton = UIUtils.createPushButton(controlPanel, "Rollback", BoberKurwaIcons.getImage(UIIcon.TXN_ROLLBACK));
             rollbackButton.setEnabled(false);
             rollbackButton.addSelectionListener(new SelectionAdapter() {
                 @Override
@@ -177,7 +177,7 @@ public class PendingTransactionsDialog extends TransactionInfoDialog {
                 }
                 TreeItem dsItem = new TreeItem(contextTree, SWT.NONE);
                 dsItem.setText(dataSource.getName());
-                dsItem.setImage(DBeaverIcons.getImage(dataSource.getDriver().getIcon()));
+                dsItem.setImage(BoberKurwaIcons.getImage(dataSource.getDriver().getIcon()));
                 dsItem.setData(dataSource);
 
                 for (DBCExecutionContext context : txnContexts) {

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.jkiss.dbeaver.model.data.DBDAttributeBinding;
 import org.jkiss.dbeaver.model.exec.DBCSession;
 import org.jkiss.dbeaver.tools.transfer.stream.IStreamDataExporterSite;
 import org.jkiss.dbeaver.tools.transfer.stream.exporter.DataExporterCSV;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.jkiss.junit.osgi.annotation.RunnerProxy;
 import org.junit.Assert;
 import org.junit.Before;
@@ -33,7 +33,7 @@ import java.io.StringWriter;
 import java.util.HashMap;
 
 @RunnerProxy(MockitoJUnitRunner.Silent.class)
-public class DataExporterCSVTest extends DBeaverUnitTest {
+public class DataExporterCSVTest extends BoberKurwaUnitTest {
 
     private DataExporterCSV dataExporterCSV;
     private StringWriter stringWriter;

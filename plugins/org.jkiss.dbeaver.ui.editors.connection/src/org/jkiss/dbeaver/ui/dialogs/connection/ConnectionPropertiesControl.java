@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -38,7 +38,7 @@ import org.jkiss.dbeaver.model.impl.PropertyDescriptor;
 import org.jkiss.dbeaver.model.preferences.DBPPropertyDescriptor;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.runtime.properties.PropertySourceCustom;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.dialogs.EnterNameDialog;
 import org.jkiss.dbeaver.ui.internal.UIConnectionMessages;
@@ -212,7 +212,7 @@ public class ConnectionPropertiesControl extends PropertyTreeViewer {
         toolBar.setLayoutData(gd);
 
         ToolItem addItem = new ToolItem(toolBar, SWT.NONE);
-        addItem.setImage(DBeaverIcons.getImage(UIIcon.ROW_ADD));
+        addItem.setImage(BoberKurwaIcons.getImage(UIIcon.ROW_ADD));
         addItem.setToolTipText("Add user property");
         addItem.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -222,7 +222,7 @@ public class ConnectionPropertiesControl extends PropertyTreeViewer {
         });
 
         ToolItem removeItem = new ToolItem(toolBar, SWT.NONE);
-        removeItem.setImage(DBeaverIcons.getImage(UIIcon.ROW_DELETE));
+        removeItem.setImage(BoberKurwaIcons.getImage(UIIcon.ROW_DELETE));
         removeItem.setToolTipText("Remove user property");
         removeItem.addSelectionListener(new SelectionAdapter() {
             @Override

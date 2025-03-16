@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.part.EditorPart;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 
 import java.io.PrintWriter;
@@ -124,13 +124,13 @@ public class ErrorEditorPartEx extends EditorPart {
         Image image;
         switch (error.getSeverity()) {
             case IStatus.ERROR:
-                image = DBeaverIcons.getImage(DBIcon.STATUS_ERROR);
+                image = BoberKurwaIcons.getImage(DBIcon.STATUS_ERROR);
                 break;
             case IStatus.WARNING:
-                image = DBeaverIcons.getImage(DBIcon.STATUS_WARNING);
+                image = BoberKurwaIcons.getImage(DBIcon.STATUS_WARNING);
                 break;
             default:
-                image = DBeaverIcons.getImage(DBIcon.STATUS_INFO);
+                image = BoberKurwaIcons.getImage(DBIcon.STATUS_INFO);
                 break;
         }
 

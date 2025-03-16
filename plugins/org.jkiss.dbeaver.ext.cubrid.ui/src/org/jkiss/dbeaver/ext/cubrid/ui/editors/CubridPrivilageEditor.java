@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ import org.jkiss.dbeaver.model.edit.DBECommandReflector;
 import org.jkiss.dbeaver.model.edit.prop.DBECommandProperty;
 import org.jkiss.dbeaver.model.runtime.AbstractJob;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ObjectEditorPageControl;
 import org.jkiss.dbeaver.ui.editors.AbstractDatabaseObjectEditor;
@@ -136,7 +136,7 @@ public class CubridPrivilageEditor extends AbstractDatabaseObjectEditor<CubridPr
                                 for (CubridPrivilage privilage : cubridUsers) {
                                     if (!privilage.getName().equals(user.getName())) {
                                         TableItem item = new TableItem(table, SWT.BREAK);
-                                        item.setImage(DBeaverIcons.getImage(DBIcon.TREE_USER_GROUP));
+                                        item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_USER_GROUP));
                                         item.setText(0, privilage.getName());
 
                                         if (user.getRoles().contains(privilage.getName())) {

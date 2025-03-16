@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
 
 public class AutoRefreshConfigDialog extends BaseDialog {
 
-    private static final String DIALOG_ID = "DBeaver.AutoRefreshConfigDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.AutoRefreshConfigDialog";//$NON-NLS-1$
 
     private RefreshSettings refreshSettings;
 

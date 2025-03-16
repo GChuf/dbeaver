@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,11 +17,11 @@
 package org.jkiss.dbeaver.model;
 
 import org.jkiss.dbeaver.model.sql.SQLUtils;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class SQLUtilsTest extends DBeaverUnitTest {
+public class SQLUtilsTest extends BoberKurwaUnitTest {
     @Test
     public void makeRegexFromLikeTest() {
         Assert.assertEquals("^ABC$", SQLUtils.makeRegexFromLike("ABC"));

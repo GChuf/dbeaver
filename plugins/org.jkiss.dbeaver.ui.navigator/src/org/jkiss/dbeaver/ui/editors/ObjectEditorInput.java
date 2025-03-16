@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseNode;
 import org.jkiss.dbeaver.model.navigator.DBNDatabaseObject;
 import org.jkiss.dbeaver.model.navigator.meta.DBXTreeObject;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 /**
  * ObjectEditorInput
@@ -58,7 +58,7 @@ public class ObjectEditorInput extends DatabaseEditorInput<DBNDatabaseNode>
 //        if (editorDescriptor != null) {
 //            return editorDescriptor.getImageDescriptor();
 //        } else {
-            return DBeaverIcons.getImageDescriptor(getEditorMeta().getDefaultIcon());
+            return BoberKurwaIcons.getImageDescriptor(getEditorMeta().getDefaultIcon());
 //        }
     }
 

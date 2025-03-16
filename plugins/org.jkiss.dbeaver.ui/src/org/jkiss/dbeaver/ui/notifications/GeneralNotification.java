@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,7 +21,7 @@ import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.DBPMessageType;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 import java.util.Date;
 
@@ -81,11 +81,11 @@ public class GeneralNotification extends AbstractUiNotification {
         }
         switch (messageType) {
             case ERROR:
-                return DBeaverIcons.getImage(DBIcon.STATUS_ERROR);
+                return BoberKurwaIcons.getImage(DBIcon.STATUS_ERROR);
             case WARNING:
-                return DBeaverIcons.getImage(DBIcon.STATUS_WARNING);
+                return BoberKurwaIcons.getImage(DBIcon.STATUS_WARNING);
             default:
-                return DBeaverIcons.getImage(DBIcon.STATUS_INFO);
+                return BoberKurwaIcons.getImage(DBIcon.STATUS_INFO);
         }
     }
 

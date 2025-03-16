@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.model.connection.DBPDriverLibrary;
 import org.jkiss.dbeaver.registry.driver.DriverDependencies;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IHelpContextIds;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.HelpEnabledDialog;
@@ -47,7 +47,7 @@ import java.util.Set;
  * DriverEditDialog
  */
 public class DriverLibraryDetailsDialog extends HelpEnabledDialog {
-    private static final String DIALOG_ID = "DBeaver.DriverLibraryDetailsDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DriverLibraryDetailsDialog";//$NON-NLS-1$
 
     private final DBPDriver driver;
     private final DBPDriverLibrary library;
@@ -66,7 +66,7 @@ public class DriverLibraryDetailsDialog extends HelpEnabledDialog {
     @Override
     protected Composite createDialogArea(Composite parent) {
         getShell().setText(NLS.bind(UIConnectionMessages.dialog_edit_driver_text_driver_library, driver.getName(), library.getDisplayName())); //$NON-NLS-2$
-        getShell().setImage(DBeaverIcons.getImage(library.getIcon()));
+        getShell().setImage(BoberKurwaIcons.getImage(library.getIcon()));
 
         Composite group = super.createDialogArea(parent);
         GridData gd = new GridData(GridData.FILL_BOTH);

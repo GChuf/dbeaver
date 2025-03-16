@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -105,10 +105,10 @@ public class ERDHandlerDelete extends AbstractHandler implements IElementUpdater
         if (editor != null) {
             if (editor.getDiagram().isEditEnabled()) {
                 element.setText(ERDUIMessages.erd_action_delete_text);
-                element.setIcon(DBeaverIcons.getImageDescriptor(UIIcon.DELETE));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(UIIcon.DELETE));
             } else {
                 element.setText(ERDUIMessages.erd_action_remove_text);
-                element.setIcon(DBeaverIcons.getImageDescriptor(UIIcon.OBJ_REMOVE));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(UIIcon.OBJ_REMOVE));
             }
         }*/
 

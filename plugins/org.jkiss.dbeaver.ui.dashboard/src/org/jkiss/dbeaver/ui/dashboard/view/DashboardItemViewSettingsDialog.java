@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.jkiss.dbeaver.model.DBUtils;
 import org.jkiss.dbeaver.model.dashboard.registry.DashboardItemConfiguration;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSQL;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IObjectPropertyConfigurator;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dashboard.internal.UIDashboardMessages;
@@ -90,7 +90,7 @@ public class DashboardItemViewSettingsDialog extends BaseDialog {
                 btnGroup.setLayoutData(new GridData(GridData.FILL, GridData.BEGINNING, true, false, 4, 1));
                 Button queriesButton = new Button(btnGroup, SWT.PUSH);
                 queriesButton.setText(UIDashboardMessages.dialog_dashboard_item_config_buttons_sqlqueries);
-                queriesButton.setImage(DBeaverIcons.getImage(DBIcon.TREE_SCRIPT));
+                queriesButton.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_SCRIPT));
                 queriesButton.setLayoutData(new GridData(GridData.END, GridData.BEGINNING, true, false));
                 queriesButton.addSelectionListener(new SelectionAdapter() {
                     @Override

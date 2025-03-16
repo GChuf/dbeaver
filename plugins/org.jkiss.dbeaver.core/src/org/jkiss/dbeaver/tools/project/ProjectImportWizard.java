@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,7 +30,7 @@ import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.app.DBPPlatformDesktop;
 import org.jkiss.dbeaver.model.app.DBPWorkspace;
 import org.jkiss.dbeaver.model.connection.DBPDriverLibrary;
-import org.jkiss.dbeaver.model.rcp.DBeaverNature;
+import org.jkiss.dbeaver.model.rcp.BoberKurwaNature;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.DBRRunnableWithProgress;
 import org.jkiss.dbeaver.registry.DataSourceProviderDescriptor;
@@ -352,7 +352,7 @@ public class ProjectImportWizard extends Wizard implements IImportWizard {
 
         final IProjectDescription description = eclipseWorkspace.newProjectDescription(project.getName());
         
-        description.setNatureIds(new String[] {DBeaverNature.NATURE_ID});
+        description.setNatureIds(new String[] {BoberKurwaNature.NATURE_ID});
         
         if (!CommonUtils.isEmpty(projectDescription)) {
             description.setComment(projectDescription);

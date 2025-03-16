@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -91,7 +91,7 @@ public class SnowflakeDataSource extends GenericDataSource {
     ) throws DBCException {
         Properties props = super.getAllConnectionProperties(monitor, context, purpose, connectionInfo);
         final String clientAppName = DBUtils.getClientApplicationName(container, context, null, false);
-        final String appName = "DBeaver_" + clientAppName.replace(" ", "");
+        final String appName = "BoberKurwa_" + clientAppName.replace(" ", "");
         props.put(APPLICATION_PROPERTY, appName);
         return props;
     }

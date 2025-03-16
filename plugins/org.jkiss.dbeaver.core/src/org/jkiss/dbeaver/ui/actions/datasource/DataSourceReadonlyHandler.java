@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.jkiss.dbeaver.model.DBPDataSourceContainer;
 import org.jkiss.dbeaver.model.rm.RMConstants;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.actions.AbstractDataSourceHandler;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
@@ -76,16 +76,16 @@ public class DataSourceReadonlyHandler extends AbstractDataSourceHandler impleme
             boolean isReadonly = currentDescriptor.isConnectionReadOnly();
             if (isReadonly) {
                 element.setTooltip(NLS.bind(CoreMessages.toolbar_checkbox_connection_not_readonly_tooltip, currentDescriptor.getName()));
-                element.setIcon(DBeaverIcons.getImageDescriptor(UIIcon.SQL_READONLY));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_READONLY));
             } else {
                 element.setTooltip(NLS.bind(CoreMessages.toolbar_checkbox_connection_readonly_tooltip, currentDescriptor.getName()));
-                element.setIcon(DBeaverIcons.getImageDescriptor(DBIcon.TREE_UNLOCKED));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_UNLOCKED));
             }
             element.setChecked(isReadonly);
         } else {
             element.setChecked(false);
             element.setTooltip(CoreMessages.dialog_connection_wizard_final_checkbox_connection_readonly);
-            element.setIcon(DBeaverIcons.getImageDescriptor(DBIcon.TREE_UNLOCKED));
+            element.setIcon(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_UNLOCKED));
         }
     }
 

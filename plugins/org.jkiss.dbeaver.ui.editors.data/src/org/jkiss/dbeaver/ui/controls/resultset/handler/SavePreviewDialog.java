@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.model.edit.DBEPersistAction;
 import org.jkiss.dbeaver.model.sql.SQLUtils;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.runtime.ui.UIServiceSQL;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetSaveReport;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetSaveSettings;
@@ -45,7 +45,7 @@ import java.util.List;
 
 public class SavePreviewDialog extends DetailsViewDialog {
 
-    private static final String DIALOG_ID = "DBeaver.RSV.SavePreviewDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.RSV.SavePreviewDialog";//$NON-NLS-1$
 
     private ResultSetViewer viewer;
     private boolean showCascadeSettings;
@@ -92,7 +92,7 @@ public class SavePreviewDialog extends DetailsViewDialog {
         {
             Composite msgComposite = UIUtils.createComposite(messageGroup, 2);
             Label imgLabel = new Label(msgComposite, SWT.NONE);
-            imgLabel.setImage(DBeaverIcons.getImage(DBIcon.STATUS_WARNING));
+            imgLabel.setImage(BoberKurwaIcons.getImage(DBIcon.STATUS_WARNING));
             Label msgText = new Label(msgComposite, SWT.NONE);
             msgText.setText("You are about to save your changes into the database (" + viewer.getDataSource().getContainer().getName() + ").\n" +
                 (CommonUtils.isEmpty(changesReport) ? "" : "\t" + changesReport + ".") + "\nAre you sure you want to proceed?");

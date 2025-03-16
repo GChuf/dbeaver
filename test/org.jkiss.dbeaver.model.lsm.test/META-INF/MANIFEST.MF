@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: DBeaver Test Plug-in
+Bundle-Name: BoberKurwa Test Plug-in
 Bundle-SymbolicName: org.jkiss.dbeaver.model.lsm.test;singleton:=true
 Bundle-Version: 1.0.12.qualifier
 Bundle-Release-Date: 20250325
@@ -15,5 +15,5 @@ Require-Bundle: org.jkiss.dbeaver.model.sql,
  net.bytebuddy.byte-buddy-agent
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
-Bundle-Vendor: DBeaver Corp
+Bundle-Vendor: BoberKurwa Corp
 Automatic-Module-Name: org.jkiss.dbeaver.model.lsm.test

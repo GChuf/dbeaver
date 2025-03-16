@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import org.jkiss.dbeaver.registry.task.TaskRegistry;
 import org.jkiss.dbeaver.tasks.ui.DBTTaskConfigurator;
 import org.jkiss.dbeaver.tasks.ui.internal.TaskUIMessages;
 import org.jkiss.dbeaver.tasks.ui.registry.TaskUIRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.ActiveWizardPage;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
@@ -336,7 +336,7 @@ class TaskConfigurationWizardPageTask extends ActiveWizardPage<TaskConfiguration
             }
             TreeItem item = parentItem == null ? new TreeItem(taskCategoryTree, SWT.NONE) : new TreeItem(parentItem, SWT.NONE);
             item.setText(0, cat.getName());
-            item.setImage(0, DBeaverIcons.getImage(cat.getIcon() == null ? DBIcon.TREE_TASK : cat.getIcon()));
+            item.setImage(0, BoberKurwaIcons.getImage(cat.getIcon() == null ? DBIcon.TREE_TASK : cat.getIcon()));
             item.setText(1, CommonUtils.notEmpty(cat.getDescription()));
             item.setData(cat);
             addTaskCategories(item, cat.getChildren());
@@ -357,7 +357,7 @@ class TaskConfigurationWizardPageTask extends ActiveWizardPage<TaskConfiguration
             item.setText(0, type.getName());
             item.setText(1, CommonUtils.notEmpty(type.getDescription()));
             if (type.getIcon() != null) {
-                item.setImage(0, DBeaverIcons.getImage(type.getIcon()));
+                item.setImage(0, BoberKurwaIcons.getImage(type.getIcon()));
             }
             item.setData(type);
         }

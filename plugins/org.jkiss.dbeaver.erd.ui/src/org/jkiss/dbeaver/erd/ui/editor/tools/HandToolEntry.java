@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -27,13 +27,13 @@ import org.eclipse.swt.widgets.Control;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.erd.ui.ERDIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 public class HandToolEntry extends ToolEntry {
     public static final String ID = "hand-tool";
 
     public HandToolEntry() {
-        super("Pan Diagram", "Pan diagram view", DBeaverIcons.getImageDescriptor(ERDIcon.MOVE), DBeaverIcons.getImageDescriptor(ERDIcon.MOVE), ToolHand.class);
+        super("Pan Diagram", "Pan diagram view", BoberKurwaIcons.getImageDescriptor(ERDIcon.MOVE), BoberKurwaIcons.getImageDescriptor(ERDIcon.MOVE), ToolHand.class);
         setUserModificationPermission(PERMISSION_NO_MODIFICATION);
         setId(ID);
     }

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,12 +19,12 @@ package org.jkiss.dbeaver.test.platform;
 
 import org.jkiss.dbeaver.model.runtime.VoidProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.junit.DBeaverUnitTest;
+import org.jkiss.junit.BoberKurwaUnitTest;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-public class PlatformTest extends DBeaverUnitTest {
+public class PlatformTest extends BoberKurwaUnitTest {
     @Before
     public void setUp() throws Exception {
     }
@@ -37,7 +37,7 @@ public class PlatformTest extends DBeaverUnitTest {
     public void testPlatformPresence() {
         try {
             String infoDetails = DBWorkbench.getPlatform().getApplication().getInfoDetails(new VoidProgressMonitor());
-            System.out.println("DBeaver application: " + infoDetails);
+            System.out.println("BoberKurwa application: " + infoDetails);
         } catch (Exception e) {
             e.printStackTrace();
         }

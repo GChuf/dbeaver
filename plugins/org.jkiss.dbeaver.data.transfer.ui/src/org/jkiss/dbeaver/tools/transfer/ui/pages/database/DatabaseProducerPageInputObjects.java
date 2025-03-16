@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ import org.jkiss.dbeaver.tools.transfer.database.DatabaseTransferProducer;
 import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
 import org.jkiss.dbeaver.tools.transfer.ui.pages.DataTransferPageNodeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.utils.CommonUtils;
@@ -111,7 +111,7 @@ public class DatabaseProducerPageInputObjects extends DataTransferPageNodeSettin
         {
             Composite controlGroup = UIUtils.createComposite(composite, 1);
             Button autoAssignButton = new Button(controlGroup, SWT.PUSH);
-            autoAssignButton.setImage(DBeaverIcons.getImage(UIIcon.ASTERISK));
+            autoAssignButton.setImage(BoberKurwaIcons.getImage(UIIcon.ASTERISK));
             autoAssignButton.setText(DTMessages.data_transfer_db_consumer_auto_assign);
             autoAssignButton.addSelectionListener(new SelectionAdapter() {
                 @Override
@@ -202,7 +202,7 @@ public class DatabaseProducerPageInputObjects extends DataTransferPageNodeSettin
             item.setImage(0, null);
             item.setText(0, DTUIMessages.database_producer_page_input_objects_item_text_none);
         } else {
-            item.setImage(0, DBeaverIcons.getImage(settings.getProducer().getIcon()));
+            item.setImage(0, BoberKurwaIcons.getImage(settings.getProducer().getIcon()));
             item.setText(0, DBUtils.getObjectFullName(pipe.getProducer().getDatabaseObject(), DBPEvaluationContext.DML));
         }
         if (pipe.getConsumer() == null || pipe.getConsumer().getObjectName() == null) {
@@ -210,7 +210,7 @@ public class DatabaseProducerPageInputObjects extends DataTransferPageNodeSettin
             item.setText(1, DTUIMessages.database_producer_page_input_objects_item_text_none);
         } else {
             updateConsumerContainer(pipe);
-            item.setImage(1, DBeaverIcons.getImage(settings.getConsumer().getIcon()));
+            item.setImage(1, BoberKurwaIcons.getImage(settings.getConsumer().getIcon()));
             item.setText(1, pipe.getConsumer().getObjectName());
         }
     }

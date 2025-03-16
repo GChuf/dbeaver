@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferNodeDescriptor;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferProcessorDescriptor;
 import org.jkiss.dbeaver.tools.transfer.registry.DataTransferRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.UIWidgets;
 import org.jkiss.dbeaver.ui.controls.ListContentProvider;
@@ -122,10 +122,10 @@ class DataTransferPagePipes extends ActiveWizardPage<DataTransferWizard> {
                 String label;
                 if (cell.getColumnIndex() == 0) {
                     if (element.processor != null) {
-                        cell.setImage(DBeaverIcons.getImage(element.processor.getIcon()));
+                        cell.setImage(BoberKurwaIcons.getImage(element.processor.getIcon()));
                         label = element.processor.getName();
                     } else {
-                        cell.setImage(DBeaverIcons.getImage(element.node.getIcon()));
+                        cell.setImage(BoberKurwaIcons.getImage(element.node.getIcon()));
                         label = element.node.getName();
                     }
                 } else {
@@ -211,7 +211,7 @@ class DataTransferPagePipes extends ActiveWizardPage<DataTransferWizard> {
                 if (cell.getColumnIndex() == 0) {
                     DBNDatabaseNode objectNode = nModel.getNodeByObject(element);
                     DBPImage icon = objectNode != null ? objectNode.getNodeIconDefault() : DBValueFormatting.getObjectImage(element);
-                    cell.setImage(DBeaverIcons.getImage(icon));
+                    cell.setImage(BoberKurwaIcons.getImage(icon));
                     final SQLQueryContainer queryContainer = DBUtils.getAdapter(SQLQueryContainer.class, element);
                     if (queryContainer != null) {
                         cell.setText(

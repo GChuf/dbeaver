@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -62,7 +62,7 @@ public abstract class AbstractApplication implements IApplication, DBPApplicatio
                 log.error(e);
             }
             if (instance == null) {
-                throw new IllegalStateException("No DBeaver application found");
+                throw new IllegalStateException("No BoberKurwa application found");
             }
             INSTANCE = instance;
         }

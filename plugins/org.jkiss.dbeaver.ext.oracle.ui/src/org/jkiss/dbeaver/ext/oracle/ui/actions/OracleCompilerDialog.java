@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.model.navigator.DBNUtils;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.struct.DBSObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.ListContentProvider;
 import org.jkiss.dbeaver.ui.controls.ObjectCompilerLogViewer;
@@ -113,7 +113,7 @@ public class OracleCompilerDialog extends BaseDialog
                     final DBNDatabaseNode node = DBNUtils.getNodeByObject(unit);
                     if (node != null) {
                         cell.setText(node.getNodeDisplayName());
-                        cell.setImage(DBeaverIcons.getImage(node.getNodeIconDefault()));
+                        cell.setImage(BoberKurwaIcons.getImage(node.getNodeIconDefault()));
                     } else {
                         cell.setText(unit.toString());
                     }

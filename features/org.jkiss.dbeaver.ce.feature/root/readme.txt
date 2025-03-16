@@ -4,15 +4,15 @@ ${dbeaver-version}
 
 README
 
-Thank you for downloading DBeaver!
+Thank you for downloading BoberKurwa!
 
-Installing DBeaver
+Installing BoberKurwa
 ========================
   Use automatic installer distribution (Windows and Linux versions)
   or just unpack archive and start "dbeaver" executable.
   
   Note: do not extract archive in the same folder where older version
-  of DBeaver is installed.
+  of BoberKurwa is installed.
   Remove previous version or extract archive in another folder.
 
 Command line parameters
@@ -20,16 +20,16 @@ Command line parameters
 
   -f <sql-file1 [sql-file2..]>
     Open specified SQL file(s) in SQL editor.
-    This command can be used to associate SQL files with DBeaver in shell.
+    This command can be used to associate SQL files with BoberKurwa in shell.
 
   -nosplash
     Do not show splash screen
 
   -data <path>
-    Store all projects/configuration in folder <path>. By default DBeaver
-	stores all its data in user's home "DBeaverData" folder.
+    Store all projects/configuration in folder <path>. By default BoberKurwa
+	stores all its data in user's home "BoberKurwaData" folder.
 	<path> can be an absolute or relative directory name.
-	If you want to use DBeaver as redistributable program start it
+	If you want to use BoberKurwa as redistributable program start it
 	with arguments like "dbeaver -data workspace".
 
   -nl locale
@@ -46,7 +46,7 @@ Command line parameters
     3-rd party jdbc drivers.
 
   -clean
-    Clears all Eclipse caches. Use it if DBeaver fails to start after version upgrade.
+    Clears all Eclipse caches. Use it if BoberKurwa fails to start after version upgrade.
 
 Licensing
 ==========================

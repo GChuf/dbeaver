@@ -1,5 +1,5 @@
 /*
- * DBeaver - Universal Database Manager
+ * BoberKurwa - Universal Database Manager
  * Copyright (C) 2019 SergDzh (jurasik@bigmir.net)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");

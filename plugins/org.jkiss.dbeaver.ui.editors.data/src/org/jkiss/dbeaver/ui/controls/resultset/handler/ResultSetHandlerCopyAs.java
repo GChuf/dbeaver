@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ import org.jkiss.dbeaver.tools.transfer.stream.IStreamDataExporter;
 import org.jkiss.dbeaver.tools.transfer.stream.StreamConsumerSettings;
 import org.jkiss.dbeaver.tools.transfer.stream.StreamTransferConsumer;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.*;
 import org.jkiss.dbeaver.ui.controls.resultset.internal.ResultSetMessages;
@@ -209,7 +209,7 @@ public class ResultSetHandlerCopyAs extends AbstractHandler implements IElementU
                 element.setTooltip(processor.getDescription());
             }
             if (processor.getIcon() != null) {
-                element.setIcon(DBeaverIcons.getImageDescriptor(processor.getIcon()));
+                element.setIcon(BoberKurwaIcons.getImageDescriptor(processor.getIcon()));
             }
         }
     }
@@ -283,7 +283,7 @@ public class ResultSetHandlerCopyAs extends AbstractHandler implements IElementU
             );
             params.label = processor.getName();
             if (processor.getIcon() != null) {
-                params.icon = DBeaverIcons.getImageDescriptor(processor.getIcon());
+                params.icon = BoberKurwaIcons.getImageDescriptor(processor.getIcon());
             }
             Map<String, Object> parameters = new HashMap<>();
             parameters.put(ResultSetHandlerCopyAs.PARAM_PROCESSOR_ID, processor.getFullId());

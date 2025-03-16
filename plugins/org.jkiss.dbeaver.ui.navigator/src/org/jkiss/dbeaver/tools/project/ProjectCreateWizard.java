@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.eclipse.ui.wizards.newresource.BasicNewProjectResourceWizard;
 import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.app.DBPPlatformDesktop;
 import org.jkiss.dbeaver.model.app.DBPProject;
-import org.jkiss.dbeaver.model.rcp.DBeaverNature;
+import org.jkiss.dbeaver.model.rcp.BoberKurwaNature;
 import org.jkiss.dbeaver.model.rcp.RCPProject;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.DBRRunnableWithProgress;
@@ -148,7 +148,7 @@ public class ProjectCreateWizard extends BasicNewProjectResourceWizard implement
         if (!CommonUtils.isEmpty(data.getDescription())) {
             description.setComment(data.getDescription());
         }
-        description.setNatureIds(new String[] {DBeaverNature.NATURE_ID});
+        description.setNatureIds(new String[] {BoberKurwaNature.NATURE_ID});
         project.setDescription(description, nestedMonitor);
 
         if (!project.isOpen()) {

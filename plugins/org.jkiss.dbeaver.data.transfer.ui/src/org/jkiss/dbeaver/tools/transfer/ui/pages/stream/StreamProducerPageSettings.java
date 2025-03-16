@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -360,7 +360,7 @@ public class StreamProducerPageSettings extends DataTransferPageNodeSettings {
             item.setImage(0, null);
             item.setText(0, DTUIMessages.stream_consumer_page_settings_item_text_none);
         } else {
-            item.setImage(0, DBeaverIcons.getImage(getProducerProcessor().getIcon()));
+            item.setImage(0, BoberKurwaIcons.getImage(getProducerProcessor().getIcon()));
             if (producer instanceof StreamTransferProducer stp) {
                 Path inputFile = stp.getInputFile();
                 item.setText(0, DBFUtils.convertPathToString(inputFile));
@@ -374,7 +374,7 @@ public class StreamProducerPageSettings extends DataTransferPageNodeSettings {
             item.setImage(1, null);
             item.setText(1, DTUIMessages.stream_consumer_page_settings_item_text_none);
         } else {
-            item.setImage(1, DBeaverIcons.getImage(getWizard().getSettings().getConsumer().getIcon()));
+            item.setImage(1, BoberKurwaIcons.getImage(getWizard().getSettings().getConsumer().getIcon()));
             item.setText(1, String.valueOf(consumer.getObjectName()));
         }
     }

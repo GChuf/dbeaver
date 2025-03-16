@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -768,7 +768,7 @@ public class OracleDataSource extends JDBCDataSource implements DBPObjectStatist
                 if (!DBWorkbench.getPlatformUI().confirmAction(
                     "Oracle PLAN_TABLE missing",
                     "PLAN_TABLE not found in current user's session. " +
-                        "Do you want DBeaver to create new PLAN_TABLE (" + newPlanTableName + ")?")) {
+                        "Do you want BoberKurwa to create new PLAN_TABLE (" + newPlanTableName + ")?")) {
                     return null;
                 }
                 planTableName = createPlanTable(session, newPlanTableName);

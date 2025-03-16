@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -34,7 +34,7 @@ import org.jkiss.dbeaver.model.exec.output.DBCOutputSeverity;
 import org.jkiss.dbeaver.model.exec.output.DBCOutputWriter;
 import org.jkiss.dbeaver.model.exec.output.DBCServerOutputReader;
 import org.jkiss.dbeaver.model.exec.output.DBCServerOutputReaderExt;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.MenuCreator;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -197,7 +197,7 @@ public class SQLEditorOutputViewer extends Composite implements DBCOutputWriter 
                 }
             });
 
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.FILTER));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.FILTER));
             setToolTipText(SQLEditorMessages.sql_editor_panel_output_filter_hint);
             setMenuCreator(new MenuCreator(control -> filterMenu));
         }

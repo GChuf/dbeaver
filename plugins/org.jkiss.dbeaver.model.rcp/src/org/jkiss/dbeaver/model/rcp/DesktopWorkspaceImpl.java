@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -43,7 +43,7 @@ import java.nio.file.Files;
 import java.util.*;
 
 /**
- * DBeaver desktop workspace.
+ * BoberKurwa desktop workspace.
  */
 public class DesktopWorkspaceImpl extends EclipseWorkspaceImpl implements DBPWorkspaceDesktop, DBPExternalFileManager {
 
@@ -303,7 +303,7 @@ public class DesktopWorkspaceImpl extends EclipseWorkspaceImpl implements DBPWor
             if (!CommonUtils.isEmpty(description)) {
                 pDescription.setComment(description);
             }
-            pDescription.setNatureIds(new String[]{DBeaverNature.NATURE_ID});
+            pDescription.setNatureIds(new String[]{BoberKurwaNature.NATURE_ID});
             project.setDescription(pDescription, monitor);
             project.open(monitor);
         } catch (Exception e) {

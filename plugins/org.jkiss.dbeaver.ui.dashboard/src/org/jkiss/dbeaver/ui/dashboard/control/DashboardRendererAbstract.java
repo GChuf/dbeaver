@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.eclipse.jface.action.Separator;
 import org.eclipse.swt.widgets.Composite;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dashboard.DashboardUIConstants;
@@ -45,19 +45,19 @@ public abstract class DashboardRendererAbstract implements DashboardItemRenderer
     ) {
         if (!UIUtils.isInDialog(chartComposite)) {
             manager.add(new Separator());
-            manager.add(new Action("View in popup", DBeaverIcons.getImageDescriptor(UIIcon.FIT_WINDOW)) {
+            manager.add(new Action("View in popup", BoberKurwaIcons.getImageDescriptor(UIIcon.FIT_WINDOW)) {
                 @Override
                 public void run() {
                     HandlerDashboardViewItem.openDashboardViewDialog(itemContainer);
                 }
             });
-            manager.add(new Action("Refresh chart", DBeaverIcons.getImageDescriptor(UIIcon.REFRESH)) {
+            manager.add(new Action("Refresh chart", BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH)) {
                 @Override
                 public void run() {
                     refreshChart(itemContainer, chartComposite, dashboardConfig);
                 }
             });
-            manager.add(new Action("Settings", DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
+            manager.add(new Action("Settings", BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
                 @Override
                 public void run() {
                     DashboardItemViewSettingsDialog dialog = new DashboardItemViewSettingsDialog(
@@ -66,7 +66,7 @@ public abstract class DashboardRendererAbstract implements DashboardItemRenderer
                 }
             });
             manager.add(new Separator());
-            manager.add(new Action("Close", DBeaverIcons.getImageDescriptor(UIIcon.CLOSE)) {
+            manager.add(new Action("Close", BoberKurwaIcons.getImageDescriptor(UIIcon.CLOSE)) {
                 @Override
                 public void run() {
                     itemContainer.getGroup().selectItem(itemContainer);

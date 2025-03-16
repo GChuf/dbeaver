@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.ui.ide.IDE;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.dialogs.EditTextDialog;
@@ -85,7 +85,7 @@ public class TextWithOpen {
         toolbar = new ToolBar(panel, SWT.FLAT);
         if (useTextEditor) {
             final ToolItem toolItem = new ToolItem(toolbar, SWT.NONE);
-            toolItem.setImage(DBeaverIcons.getImage(UIIcon.TEXTFIELD));
+            toolItem.setImage(BoberKurwaIcons.getImage(UIIcon.TEXTFIELD));
             toolItem.setToolTipText(secured ? UIMessages.text_with_open_dialog_set_text : UIMessages.text_with_open_dialog_edit_text);
             toolItem.addSelectionListener(new SelectionAdapter() {
                 @Override
@@ -106,7 +106,7 @@ public class TextWithOpen {
                 // Local FS works only on local machine. Will not work for TE remote tasks.
                 // Do we need to do anything about it in UI?
                 final ToolItem toolItem = new ToolItem(toolbar, SWT.NONE);
-                toolItem.setImage(DBeaverIcons.getImage(UIIcon.OPEN));
+                toolItem.setImage(BoberKurwaIcons.getImage(UIIcon.OPEN));
                 toolItem.setToolTipText(UIMessages.text_with_open_dialog_browse);
                 toolItem.addSelectionListener(new SelectionAdapter() {
                     @Override
@@ -117,7 +117,7 @@ public class TextWithOpen {
             }
             if (isMultiFileSystem()) {
                 final ToolItem remoteFsItem = new ToolItem(toolbar, SWT.NONE);
-                remoteFsItem.setImage(DBeaverIcons.getImage(
+                remoteFsItem.setImage(BoberKurwaIcons.getImage(
                     (getPanelStyle() & SWT.OPEN) != 0 ? UIIcon.OPEN_EXTERNAL : UIIcon.SAVE_EXTERNAL));
                 remoteFsItem.setToolTipText(UIMessages.text_with_open_dialog_browse_remote);
                 remoteFsItem.addSelectionListener(new SelectionAdapter() {
@@ -132,7 +132,7 @@ public class TextWithOpen {
         if (!useTextEditor && !isBinaryContents() && !isFolderContents()) {
             // Open file text in embedded editor
             final ToolItem editItem = new ToolItem(toolbar, SWT.NONE);
-            editItem.setImage(DBeaverIcons.getImage(UIIcon.EDIT));
+            editItem.setImage(BoberKurwaIcons.getImage(UIIcon.EDIT));
             editItem.setToolTipText(UIMessages.text_with_open_dialog_edit_file);
             editItem.addSelectionListener(new SelectionAdapter() {
                 @Override

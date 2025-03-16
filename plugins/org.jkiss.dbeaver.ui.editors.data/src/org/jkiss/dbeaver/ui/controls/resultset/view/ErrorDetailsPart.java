@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.eclipse.ui.views.IViewDescriptor;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IActionConstants;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -145,9 +145,9 @@ class ErrorDetailsPart {
      */
     private Image getImage() {
         return switch (reason.getSeverity()) {
-            case IStatus.ERROR -> DBeaverIcons.getImage(DBIcon.STATUS_ERROR);
-            case IStatus.WARNING -> DBeaverIcons.getImage(DBIcon.STATUS_WARNING);
-            default -> DBeaverIcons.getImage(DBIcon.STATUS_INFO);
+            case IStatus.ERROR -> BoberKurwaIcons.getImage(DBIcon.STATUS_ERROR);
+            case IStatus.WARNING -> BoberKurwaIcons.getImage(DBIcon.STATUS_WARNING);
+            default -> BoberKurwaIcons.getImage(DBIcon.STATUS_INFO);
         };
     }
 
@@ -207,7 +207,7 @@ class ErrorDetailsPart {
                 resultSetContainer.showCurrentError();
             }
         }));
-        button.setImage(DBeaverIcons.getImage(UIIcon.BUTTON_GO_TO_ERROR));
+        button.setImage(BoberKurwaIcons.getImage(UIIcon.BUTTON_GO_TO_ERROR));
         button.setToolTipText(ResultSetMessages.error_part_button_go_to_error);
         button.setVisible(reason.getException() != null && resultSetContainer != null);
         button.setText("Go to Error");

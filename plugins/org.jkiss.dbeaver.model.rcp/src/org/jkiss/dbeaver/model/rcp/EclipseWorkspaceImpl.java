@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ import java.nio.file.Path;
 import java.util.*;
 
 /**
- * DBeaver workspace.
+ * BoberKurwa workspace.
  *
  * Basically just a wrapper around Eclipse workspace.
  * Additionally, holds information about remote workspace.
@@ -248,7 +248,7 @@ public abstract class EclipseWorkspaceImpl extends BaseWorkspaceImpl implements 
             project.open(monitor);
             final IProjectDescription description = getEclipseWorkspace().newProjectDescription(project.getName());
             description.setComment(RegistryMessages.project_description_comment);
-            description.setNatureIds(new String[]{DBeaverNature.NATURE_ID});
+            description.setNatureIds(new String[]{BoberKurwaNature.NATURE_ID});
             project.setDescription(description, monitor);
 
             return project;

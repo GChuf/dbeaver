@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,7 +24,7 @@ import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.model.app.DBPPlatformDesktop;
 import org.jkiss.dbeaver.model.runtime.DefaultProgressMonitor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.utils.CommonUtils;
 
 import java.lang.reflect.InvocationTargetException;
@@ -48,8 +48,8 @@ public class NavigatorHandlerProjectRefresh extends NavigatorHandlerObjectBase {
                 } catch (Exception e) {
                     throw new InvocationTargetException(e);
                 }
-                DBeaverNotifications.showNotification(
-                    DBeaverNotifications.NT_GENERIC,
+                BoberKurwaNotifications.showNotification(
+                    BoberKurwaNotifications.NT_GENERIC,
                     "Projects refresh",
                     "Project list was synchronized with local file system",
                     DBPMessageType.INFORMATION,

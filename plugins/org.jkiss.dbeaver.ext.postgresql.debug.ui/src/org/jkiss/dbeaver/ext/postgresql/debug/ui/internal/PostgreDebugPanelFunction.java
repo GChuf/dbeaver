@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  * Copyright (C) 2017-2018 Alexander Fedorov (alexander.fedorov@jkiss.org)
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -43,7 +43,7 @@ import org.jkiss.dbeaver.model.struct.DBSInstance;
 import org.jkiss.dbeaver.model.struct.DBSObjectContainer;
 import org.jkiss.dbeaver.model.struct.rdb.DBSProcedureParameter;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CSmartCombo;
 import org.jkiss.dbeaver.ui.controls.CSmartSelector;
@@ -104,7 +104,7 @@ public class PostgreDebugPanelFunction implements DBGConfigurationPanel {
         functionCombo = new CSmartSelector<PostgreProcedure>(functionGroup, SWT.BORDER | SWT.DROP_DOWN | SWT.READ_ONLY, new LabelProvider() {
             @Override
             public Image getImage(Object element) {
-                return DBeaverIcons.getImage(DBIcon.TREE_PROCEDURE);
+                return BoberKurwaIcons.getImage(DBIcon.TREE_PROCEDURE);
             }
 
             @Override
@@ -268,7 +268,7 @@ public class PostgreDebugPanelFunction implements DBGConfigurationPanel {
         for (DBSProcedureParameter param : selectedFunction.getInputParameters()) {
             TableItem item = new TableItem(parametersTable, SWT.NONE);
             item.setData(param);
-            item.setImage(DBeaverIcons.getImage(DBIcon.TREE_ATTRIBUTE));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_ATTRIBUTE));
             item.setText(0, param.getName());
             Object value = parameterValues.get(param);
             item.setText(1, CommonUtils.toString(value, ""));

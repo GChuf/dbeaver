@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -615,7 +615,7 @@ public class EntityEditor extends MultiPageDatabaseEditor
                 int propEditorIndex = getPageCount() - 1;
                 setPageText(propEditorIndex, UINavigatorMessages.editors_entity_properties_text);
                 setPageToolTip(propEditorIndex, node.getNodeTypeLabel() + UINavigatorMessages.editors_entity_properties_tooltip_suffix);
-                setPageImage(propEditorIndex, DBeaverIcons.getImage(node.getNodeIconDefault()));
+                setPageImage(propEditorIndex, BoberKurwaIcons.getImage(node.getNodeIconDefault()));
             }
         }
 
@@ -671,7 +671,7 @@ public class EntityEditor extends MultiPageDatabaseEditor
                 setPageText(0, input.canLoadImmediately()
                     ? UINavigatorMessages.editors_entity_title_initializing
                     : UINavigatorMessages.editors_entity_title_uninitialized);
-                setPageImage(0, DBeaverIcons.getImage(UIIcon.REFRESH));
+                setPageImage(0, BoberKurwaIcons.getImage(UIIcon.REFRESH));
                 setActivePage(0);
             } catch (PartInitException e) {
                 log.error(e);
@@ -922,7 +922,7 @@ public class EntityEditor extends MultiPageDatabaseEditor
             int index = addPage(editor, nestedInput);
             setPageText(index, descriptor.getName());
             if (descriptor.getIcon() != null) {
-                setPageImage(index, DBeaverIcons.getImage(descriptor.getIcon()));
+                setPageImage(index, BoberKurwaIcons.getImage(descriptor.getIcon()));
             }
             if (!CommonUtils.isEmpty(descriptor.getDescription())) {
                 setPageToolTip(index, descriptor.getDescription());
@@ -1025,7 +1025,7 @@ public class EntityEditor extends MultiPageDatabaseEditor
             // Update main editor image
             DBNDatabaseNode navigatorNode = getEditorInput().getNavigatorNode();
             if (navigatorNode != null) {
-                setPageImage(0, DBeaverIcons.getImage(navigatorNode.getNodeIconDefault()));
+                setPageImage(0, BoberKurwaIcons.getImage(navigatorNode.getNodeIconDefault()));
             }
         }
 

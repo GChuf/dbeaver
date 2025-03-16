@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -64,7 +64,7 @@ public class FolderEditor extends EditorPart implements INavigatorModelView, IRe
 
         UIExecutionQueue.queueExec(() -> {
             final DBNNode navigatorNode = getEditorInput().getNavigatorNode();
-            setTitleImage(DBeaverIcons.getImage(navigatorNode.getNodeIcon()));
+            setTitleImage(BoberKurwaIcons.getImage(navigatorNode.getNodeIcon()));
             setPartName(navigatorNode.getNodeDisplayName());
 
             itemControl.setRootNode(navigatorNode);
@@ -250,7 +250,7 @@ public class FolderEditor extends EditorPart implements INavigatorModelView, IRe
             setRootNode(node);
             loadData();
             setPartName(node.getNodeDisplayName());
-            setTitleImage(DBeaverIcons.getImage(node.getNodeIcon()));
+            setTitleImage(BoberKurwaIcons.getImage(node.getNodeIcon()));
             updateActions();
 
             // Update editor input

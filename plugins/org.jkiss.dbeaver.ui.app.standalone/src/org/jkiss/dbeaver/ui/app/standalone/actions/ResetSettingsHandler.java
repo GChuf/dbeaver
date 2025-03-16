@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.eclipse.ui.handlers.HandlerUtil;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.ui.UIUtils;
-import org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication;
+import org.jkiss.dbeaver.ui.app.standalone.BoberKurwaApplication;
 import org.jkiss.dbeaver.ui.app.standalone.internal.CoreApplicationMessages;
 import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
 
@@ -68,7 +68,7 @@ public class ResetSettingsHandler extends AbstractHandler {
         final IWorkbench workbench = PlatformUI.getWorkbench();
 
         if (workbench.restart()) {
-            final DBeaverApplication instance = DBeaverApplication.getInstance();
+            final BoberKurwaApplication instance = BoberKurwaApplication.getInstance();
             instance.setResetUserPreferencesOnRestart(options.contains(RESET_USER_PREFERENCES));
             instance.setResetWorkspaceConfigurationOnRestart(options.contains(RESET_WORKSPACE_CONFIGURATION));
         }

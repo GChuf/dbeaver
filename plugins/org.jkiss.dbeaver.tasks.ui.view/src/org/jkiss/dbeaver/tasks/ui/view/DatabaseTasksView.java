@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -602,7 +602,7 @@ public class DatabaseTasksView extends ViewPart implements DBTTaskListener {
     private class DeleteRunLogAction extends Action {
 
         DeleteRunLogAction() {
-            super(TaskUIViewMessages.db_tasks_view_run_log_delete, DBeaverIcons.getImageDescriptor(UIIcon.DELETE));
+            super(TaskUIViewMessages.db_tasks_view_run_log_delete, BoberKurwaIcons.getImageDescriptor(UIIcon.DELETE));
         }
 
         @Override
@@ -622,7 +622,7 @@ public class DatabaseTasksView extends ViewPart implements DBTTaskListener {
     private class ClearRunLogAction extends Action {
 
         ClearRunLogAction() {
-            super(TaskUIViewMessages.db_tasks_view_clear_run_log_clear, DBeaverIcons.getImageDescriptor(UIIcon.ERASE));
+            super(TaskUIViewMessages.db_tasks_view_clear_run_log_clear, BoberKurwaIcons.getImageDescriptor(UIIcon.ERASE));
         }
 
         @Override

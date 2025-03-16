@@ -19,7 +19,7 @@
     </license>
 
     <url>
-        <update label="DBeaver Universal Database Manager" url="https://dbeaver.io/"/>
+        <update label="BoberKurwa Universal Database Manager" url="https://dbeaver.io/"/>
     </url>
     <requires>
         <import plugin="org.eclipse.core.runtime" version="3.7" match="greaterOrEqual"/>

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ import org.jkiss.dbeaver.tools.transfer.registry.DataTransferProcessorDescriptor
 import org.jkiss.dbeaver.tools.transfer.stream.*;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
 import org.jkiss.dbeaver.tools.transfer.ui.pages.DataTransferPageNodeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.SharedTextColors;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomComboBoxCellEditor;
@@ -375,7 +375,7 @@ public class StreamConsumerPageSettings extends DataTransferPageNodeSettings {
                         final Object element = cell.getElement();
                         final DBPNamedObject object = (DBPNamedObject) element;
                         cell.setText(object.getName());
-                        cell.setImage(DBeaverIcons.getImage(DBValueFormatting.getObjectImage(object)));
+                        cell.setImage(BoberKurwaIcons.getImage(DBValueFormatting.getObjectImage(object)));
                     }
                 });
                 column.getColumn().setText(DTUIMessages.stream_consumer_page_mapping_name_column_name);
@@ -450,7 +450,7 @@ public class StreamConsumerPageSettings extends DataTransferPageNodeSettings {
 
             errorLabel = new CLabel(group, SWT.NONE);
             errorLabel.setText(DTUIMessages.stream_consumer_page_mapping_label_error_no_columns_selected_text);
-            errorLabel.setImage(DBeaverIcons.getImage(DBIcon.SMALL_ERROR));
+            errorLabel.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_ERROR));
             errorLabel.setLayoutData(new GridData(SWT.LEFT, SWT.CENTER, true, false));
 
             UIUtils.asyncExec(() -> {

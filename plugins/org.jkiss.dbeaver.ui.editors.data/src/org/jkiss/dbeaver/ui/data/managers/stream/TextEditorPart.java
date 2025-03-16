@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -25,7 +25,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.texteditor.ITextEditorExtension3;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.editors.text.BaseTextEditor;
 import org.jkiss.dbeaver.ui.editors.text.FileRefDocumentProvider;
 
@@ -48,7 +48,7 @@ public class TextEditorPart extends BaseTextEditor implements IEditorPart {
     @Override
     public Image getTitleImage()
     {
-        return DBeaverIcons.getImage(DBIcon.TYPE_TEXT);
+        return BoberKurwaIcons.getImage(DBIcon.TYPE_TEXT);
     }
 
     @Override

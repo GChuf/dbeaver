@@ -6,7 +6,7 @@
          <meta.schema plugin="org.jkiss.dbeaver.registry" id="org.jkiss.dbeaver.dataSourcehandler" name="Datasource handler"/>
       </appInfo>
       <documentation>
-         DBeaver data source handler
+         BoberKurwa data source handler
       </documentation>
    </annotation>
 

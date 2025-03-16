@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -179,7 +179,7 @@ public class UIUtils {
 
     public static void createToolBarSeparator(Composite toolBar, int style) {
         Label label = new Label(toolBar, SWT.NONE);
-        label.setImage(DBeaverIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
+        label.setImage(BoberKurwaIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
     }
 
     public static void createLabelSeparator(Composite toolBar, int style) {
@@ -189,7 +189,7 @@ public class UIUtils {
 
     public static void createToolBarSeparator(ToolBar toolBar, int style) {
         Label label = new Label(toolBar, SWT.NONE);
-        label.setImage(DBeaverIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
+        label.setImage(BoberKurwaIcons.getImage((style & SWT.HORIZONTAL) == SWT.HORIZONTAL ? UIIcon.SEPARATOR_H : UIIcon.SEPARATOR_V));
         new ToolItem(toolBar, SWT.SEPARATOR).setControl(label);
     }
 
@@ -640,7 +640,7 @@ public class UIUtils {
     public static Label createLabel(Composite parent, @NotNull DBPImage image)
     {
         Label imageLabel = new Label(parent, SWT.NONE);
-        imageLabel.setImage(DBeaverIcons.getImage(image));
+        imageLabel.setImage(BoberKurwaIcons.getImage(image));
 
         return imageLabel;
     }
@@ -667,7 +667,7 @@ public class UIUtils {
         int gridStyle,
         int hSpan
     ) {
-        return createInfoLabel(parent, text, gridStyle, hSpan, null, DBeaverIcons.getImage(DBIcon.SMALL_WARNING));
+        return createInfoLabel(parent, text, gridStyle, hSpan, null, BoberKurwaIcons.getImage(DBIcon.SMALL_WARNING));
     }
 
     @NotNull
@@ -678,7 +678,7 @@ public class UIUtils {
         int hSpan,
         @Nullable Runnable callback
     ) {
-        return createInfoLabel(parent, text, gridStyle, hSpan, callback, DBeaverIcons.getImage(DBIcon.SMALL_INFO));
+        return createInfoLabel(parent, text, gridStyle, hSpan, callback, BoberKurwaIcons.getImage(DBIcon.SMALL_INFO));
     }
 
     @NotNull
@@ -731,7 +731,7 @@ public class UIUtils {
             .hint(widthHint, SWT.DEFAULT)
             .grab(true, false).create());
         final Label imageLabel = new Label(composite, SWT.NONE);
-        imageLabel.setImage(DBeaverIcons.getImage(DBIcon.SMALL_INFO));
+        imageLabel.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_INFO));
         imageLabel.setLayoutData(new GridData(SWT.BEGINNING, SWT.BEGINNING, false, false));
 
         final Link link = new Link(composite, SWT.NONE);
@@ -784,7 +784,7 @@ public class UIUtils {
         //Button editButton = new Button(panel, SWT.DOWN);
         //editButton.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_BEGINNING));
         //editButton.setText("...");
-        editButton.setImage(DBeaverIcons.getImage(UIIcon.EDIT)); //$NON-NLS-1$
+        editButton.setImage(BoberKurwaIcons.getImage(UIIcon.EDIT)); //$NON-NLS-1$
         editButton.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
@@ -936,11 +936,11 @@ public class UIUtils {
     }
 
     public static ToolItem createToolItem(ToolBar parent, String text, DBPImage icon, SelectionListener selectionListener) {
-        return createToolItem(parent, text, icon != null ? DBeaverIcons.getImage(icon) : null, selectionListener);
+        return createToolItem(parent, text, icon != null ? BoberKurwaIcons.getImage(icon) : null, selectionListener);
     }
 
     public static ToolItem createToolItem(ToolBar parent, String title, String text, DBPImage icon, SelectionListener selectionListener) {
-        ToolItem toolItem = createToolItem(parent, text, icon != null ? DBeaverIcons.getImage(icon) : null, selectionListener);
+        ToolItem toolItem = createToolItem(parent, text, icon != null ? BoberKurwaIcons.getImage(icon) : null, selectionListener);
         if (title != null) {
             toolItem.setText(title);
         }
@@ -1255,7 +1255,7 @@ public class UIUtils {
             button.setToolTipText(toolTip);
         }
         if (image != null) {
-            button.setImage(DBeaverIcons.getImage(image));
+            button.setImage(BoberKurwaIcons.getImage(image));
         }
         if (selectionListener != null) {
             button.addSelectionListener(selectionListener);
@@ -1285,7 +1285,7 @@ public class UIUtils {
         button.setText(label);
         button.setFont(JFaceResources.getDialogFont());
         if (icon != null) {
-            button.setImage(DBeaverIcons.getImage(icon));
+            button.setImage(BoberKurwaIcons.getImage(icon));
         }
         if (toolTip != null) {
             button.setToolTipText(toolTip);

@@ -7,27 +7,27 @@
 
     <extension point="org.eclipse.core.runtime.applications" id="standalone" name="%extension.standalone.name">
         <application visible="true">
-            <run class="org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication"/>
+            <run class="org.jkiss.dbeaver.ui.app.standalone.BoberKurwaApplication"/>
         </application>
     </extension>
 
     <extension point="org.eclipse.core.runtime.applications" id="appstore" name="AppStore">
         <application visible="true">
-            <run class="org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication"/>
+            <run class="org.jkiss.dbeaver.ui.app.standalone.BoberKurwaApplication"/>
         </application>
     </extension>
 
     <extension point="org.eclipse.core.runtime.products" id="product">
-        <product application="org.jkiss.dbeaver.ui.app.standalone.standalone" description="%productSubTitle" name="DBeaver">
+        <product application="org.jkiss.dbeaver.ui.app.standalone.standalone" description="%productSubTitle" name="BoberKurwa">
             <property name="aboutText" value="%aboutText"/>
-            <property name="copyright" value="© 2025 DBeaver Corp"/>
+            <property name="copyright" value="© 2025 BoberKurwa Corp"/>
             <property name="subTitle" value="%productSubTitle"/>
             <property name="website" value="%productWebsite"/>
             <property name="email" value="%productEmail"/>
             <property name="versionUpdateURL" value="https://dbeaver.io/product/version.xml"/>
             <property name="earlyAccessURL" value="https://dbeaver.io/files/ea"/>
             <property name="windowImages" value="/icons/dbeaver16.png,/icons/dbeaver32.png,/icons/dbeaver48.png,/icons/dbeaver64.png,/icons/dbeaver256.png"/>
-            <property name="appName" value="DBeaver"/>
+            <property name="appName" value="BoberKurwa"/>
             <property name="appEdition" value="ce"/>
             <property name="versionInfoCoord" value="170,55"/>
             <property name="versionInfoSize" value="8"/>
@@ -36,21 +36,21 @@
             <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default"/>
             <property name="applicationCSSResources" value="platform:/plugin/org.eclipse.ui.themes/images/"/>
             <property name="applicationXMI" value="org.jkiss.dbeaver.ui.app.standalone/dbeaver.e4xmi"/>
-            <property name="rendererFactoryUri" value="bundleclass://org.jkiss.dbeaver.core/org.jkiss.dbeaver.ui.e4.DBeaverRendererFactory"/>
+            <property name="rendererFactoryUri" value="bundleclass://org.jkiss.dbeaver.core/org.jkiss.dbeaver.ui.e4.BoberKurwaRendererFactory"/>
             <property name="preferenceCustomization" value="plugin_customization.ini"/>
             <property name="tipsFile" value="platform:/plugin/org.jkiss.dbeaver.ui.app.standalone/tips.xml"/>
         </product>
     </extension>
 
     <extension point="org.eclipse.core.runtime.products" id="appstore">
-        <product application="org.jkiss.dbeaver.ui.app.standalone.appstore" description="%productSubTitle" name="DBeaver CE">
+        <product application="org.jkiss.dbeaver.ui.app.standalone.appstore" description="%productSubTitle" name="BoberKurwa CE">
             <property name="aboutText" value="%aboutText"/>
-            <property name="copyright" value="© 2025 DBeaver Corp"/>
+            <property name="copyright" value="© 2025 BoberKurwa Corp"/>
             <property name="subTitle" value="%productSubTitle"/>
             <property name="website" value="%productWebsite"/>
             <property name="email" value="%productEmail"/>
             <property name="windowImages" value="/icons/dbeaver16.png,/icons/dbeaver32.png,/icons/dbeaver48.png,/icons/dbeaver64.png,/icons/dbeaver256.png"/>
-            <property name="appName" value="DBeaver CE"/>
+            <property name="appName" value="BoberKurwa CE"/>
             <property name="versionInfoCoord" value="170,55"/>
             <property name="versionInfoSize" value="8"/>
             <property name="startupMessageRect" value="60,273,340,21"/>
@@ -58,7 +58,7 @@
             <property name="cssTheme" value="org.eclipse.e4.ui.css.theme.e4_default"/>
             <property name="applicationCSSResources" value="platform:/plugin/org.eclipse.ui.themes/images/"/>
             <property name="applicationXMI" value="org.jkiss.dbeaver.ui.app.standalone/dbeaver.e4xmi"/>
-            <property name="rendererFactoryUri" value="bundleclass://org.jkiss.dbeaver.core/org.jkiss.dbeaver.ui.e4.DBeaverRendererFactory"/>
+            <property name="rendererFactoryUri" value="bundleclass://org.jkiss.dbeaver.core/org.jkiss.dbeaver.ui.e4.BoberKurwaRendererFactory"/>
             <property name="preferenceCustomization" value="plugin_customization.ini"/>
             <property name="tipsFile" value="platform:/plugin/org.jkiss.dbeaver.ui.app.standalone/tips.xml"/>
         </product>
@@ -446,7 +446,7 @@
     </extension>
 
     <extension point="org.eclipse.ui.splashHandlers">
-        <splashHandler class="org.jkiss.dbeaver.ui.app.standalone.DBeaverSplashHandler" id="org.jkiss.dbeaver.ui.splash.interactive"/>
+        <splashHandler class="org.jkiss.dbeaver.ui.app.standalone.BoberKurwaSplashHandler" id="org.jkiss.dbeaver.ui.splash.interactive"/>
         <splashHandlerProductBinding productId="org.jkiss.dbeaver.ui.app.standalone.product" splashId="org.jkiss.dbeaver.ui.splash.interactive"/>
         <splashHandlerProductBinding productId="org.jkiss.dbeaver.ui.app.standalone.appstore" splashId="org.jkiss.dbeaver.ui.splash.interactive"/>
     </extension>
@@ -461,7 +461,7 @@
     </extension>
 
     <extension point="org.eclipse.core.runtime.preferences">
-        <initializer class="org.jkiss.dbeaver.ui.app.standalone.DBeaverApplicationPreferenceInitializer"/>
+        <initializer class="org.jkiss.dbeaver.ui.app.standalone.BoberKurwaApplicationPreferenceInitializer"/>
     </extension>
 
     <extension point="org.jkiss.dbeaver.commandLine">
@@ -495,8 +495,8 @@
         <activityPatternBinding activityId="hideE4Activity" pattern=".*/org.eclipse.gef.ui.palette_view"/>
         <activityPatternBinding activityId="hideE4Activity" pattern=".*/org.eclipse.graphiti.ui.internal.editor.thumbnailview"/>
 
-        <activity id="dbeaver.app.StandaloneActivity" name="DBeaver standalone application activity"/>
-        <category id="dbeaver.app.StandaloneCategory" name="DBeaver standalone application activity category"/>
+        <activity id="dbeaver.app.StandaloneActivity" name="BoberKurwa standalone application activity"/>
+        <category id="dbeaver.app.StandaloneCategory" name="BoberKurwa standalone application activity category"/>
 
         <!-- put the activity in the category -->
         <categoryActivityBinding activityId="dbeaver.app.StandaloneActivity" categoryId="dbeaver.app.StandaloneCategory"/>

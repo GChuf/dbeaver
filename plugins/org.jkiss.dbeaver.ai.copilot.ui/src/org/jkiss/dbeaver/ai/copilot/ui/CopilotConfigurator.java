@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import org.eclipse.swt.widgets.Text;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.ai.AIEngineSettings;
@@ -144,7 +144,7 @@ public class CopilotConfigurator extends OpenAiConfigurator {
                                     DBIcon.STATUS_INFO
                                 );
                                 copyYourCode.open();
-                                if (ModelPreferences.getPreferences().getBoolean(DBeaverPreferences.UI_USE_EMBEDDED_AUTH)) {
+                                if (ModelPreferences.getPreferences().getBoolean(BoberKurwaPreferences.UI_USE_EMBEDDED_AUTH)) {
                                     try {
                                         popupOauth.set(BrowserPopup.openBrowser("OAuth", new URL(responseData.verification_uri())));
                                     } catch (MalformedURLException ex) {

@@ -2,8 +2,8 @@
 <?eclipse version="3.2"?>
 
 <!--
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -166,7 +166,7 @@
             </with>
         </definition>
         <definition id="org.jkiss.dbeaver.core.ui.toolbar.general.visible">
-            <reference definitionId="DBeaverPerspectiveActive"/>
+            <reference definitionId="BoberKurwaPerspectiveActive"/>
         </definition>
         <definition id="org.jkiss.dbeaver.core.ui.editor.transactional">
             <with variable="activeEditor">
@@ -438,7 +438,7 @@
         <!-- Database menu -->
         <menuContribution allPopups="false" locationURI="menu:org.eclipse.ui.main.menu?before=window">
             <menu id="dataSourceMenu" label="%menu.database">
-                <visibleWhen><reference definitionId="DBeaverPerspectiveActive"/></visibleWhen>
+                <visibleWhen><reference definitionId="BoberKurwaPerspectiveActive"/></visibleWhen>
 
                 <separator name="driverGroup" visible="true"/>
                 <command commandId="org.jkiss.dbeaver.core.new.connection">
@@ -1135,7 +1135,7 @@
 
     </extension>
 
-    <!-- DBeaver extensions -->
+    <!-- BoberKurwa extensions -->
 
     <extension point="org.jkiss.dbeaver.objectManager">
         <manager class="org.jkiss.dbeaver.registry.DataSourceDescriptorManager" objectType="org.jkiss.dbeaver.model.DBPDataSourceContainer"/>
@@ -1177,7 +1177,7 @@
     <!-- Perspective -->
     <extension point="org.eclipse.ui.perspectives">
         <perspective
-                class="org.jkiss.dbeaver.ui.perspective.DBeaverPerspective"
+                class="org.jkiss.dbeaver.ui.perspective.BoberKurwaPerspective"
                 icon="platform:/plugin/org.jkiss.dbeaver.ui/icons/dbeaver_perspective.png"
                 id="org.jkiss.dbeaver.core.perspective"
                 name="%perspective.name">

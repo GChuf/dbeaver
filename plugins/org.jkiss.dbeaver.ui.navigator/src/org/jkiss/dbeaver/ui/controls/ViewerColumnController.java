@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -172,7 +172,7 @@ public class ViewerColumnController<COLUMN, ELEMENT> {
     }
 
     public void fillConfigMenu(IContributionManager menuManager) {
-        menuManager.add(new Action(UINavigatorMessages.obj_editor_properties_control_action_configure_columns, DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
+        menuManager.add(new Action(UINavigatorMessages.obj_editor_properties_control_action_configure_columns, BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
             {
                 setDescription(UINavigatorMessages.obj_editor_properties_control_action_configure_columns_description);
             }
@@ -213,7 +213,7 @@ public class ViewerColumnController<COLUMN, ELEMENT> {
             public void update(ViewerCell cell) {
                 if (cell.getColumnIndex() == 0) {
                     if (defaultIcon != null) {
-                        cell.setImage(DBeaverIcons.getImage(defaultIcon));
+                        cell.setImage(BoberKurwaIcons.getImage(defaultIcon));
                     }
                 }
                 cell.setText(labelProvider.getText((ELEMENT) cell.getElement()));

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.ui.IFileEditorInput;
 import org.eclipse.ui.IPathEditorInput;
 import org.eclipse.ui.part.FileEditorInput;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 
 /**
  * ProjectFileEditorInput
@@ -49,7 +49,7 @@ public class ProjectFileEditorInput extends FileEditorInput implements IFileEdit
 
     @Override
     public ImageDescriptor getImageDescriptor() {
-        return DBeaverIcons.getImageDescriptor(DBIcon.TYPE_UNKNOWN);
+        return BoberKurwaIcons.getImageDescriptor(DBIcon.TYPE_UNKNOWN);
     }
 
     @Override

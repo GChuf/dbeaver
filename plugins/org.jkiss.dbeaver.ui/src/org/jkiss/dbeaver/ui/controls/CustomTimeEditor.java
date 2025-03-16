@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.exec.DBCException;
 import org.jkiss.dbeaver.model.struct.DBSTypedObject;
 import org.jkiss.dbeaver.model.struct.DBSTypedObjectJDBC;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.utils.CommonUtils;
 
@@ -261,7 +261,7 @@ public class CustomTimeEditor {
             }
             warningLabel = new CLabel(mainComposite, style);
             warningLabel.setText("Original value was null, using current time");
-            warningLabel.setImage(DBeaverIcons.getImage(DBIcon.SMALL_INFO));
+            warningLabel.setImage(BoberKurwaIcons.getImage(DBIcon.SMALL_INFO));
             mainComposite.layout();
         } else {
             if (warningLabel != null) {

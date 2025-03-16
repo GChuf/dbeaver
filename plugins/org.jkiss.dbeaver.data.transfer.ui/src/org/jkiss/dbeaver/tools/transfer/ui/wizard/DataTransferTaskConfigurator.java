@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -55,7 +55,7 @@ import org.jkiss.dbeaver.tools.transfer.database.DatabaseTransferProducer;
 import org.jkiss.dbeaver.tools.transfer.internal.DTMessages;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
 import org.jkiss.dbeaver.ui.BaseThemeSettings;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.UIWidgets;
 import org.jkiss.dbeaver.ui.navigator.NavigatorUtils;
@@ -369,14 +369,14 @@ public class DataTransferTaskConfigurator implements DBTTaskConfigurator, DBTTas
             IDataTransferNode node = getTableNode(pipe);
             TableItem item = new TableItem(objectsTable, SWT.NONE);
             item.setData(pipe);
-            item.setImage(0, DBeaverIcons.getImage(node.getObjectIcon()));
+            item.setImage(0, BoberKurwaIcons.getImage(node.getObjectIcon()));
             item.setText(0, CommonUtils.getSingleLineString(CommonUtils.toString(node.getObjectName(), "?")));
 
             if (node.getDataSourceContainer() != null) {
                 item.setText(1, node.getDataSourceContainer().getName());
                 DBPImage dsIcon = node.getObjectContainerIcon();
                 if (dsIcon != null) {
-                    item.setImage(1, DBeaverIcons.getImage(dsIcon));
+                    item.setImage(1, BoberKurwaIcons.getImage(dsIcon));
                 }
             }
             if (node.getDatabaseObject() == null) {

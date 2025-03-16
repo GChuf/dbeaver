@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -59,7 +59,7 @@ import java.util.List;
  */
 public class ObjectListDialog<T extends DBPObject> extends AbstractPopupPanel {
 
-    private static final String DIALOG_ID = "DBeaver.SelectDatabaseObjectDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.SelectDatabaseObjectDialog";//$NON-NLS-1$
 
     private String listId;
     private boolean singleSelection;
@@ -292,7 +292,7 @@ public class ObjectListDialog<T extends DBPObject> extends AbstractPopupPanel {
         }
 
         protected void addSearchAction(IContributionManager contributionManager) {
-            contributionManager.add(new Action("Filter objects", DBeaverIcons.getImageDescriptor(UIIcon.SEARCH)) {
+            contributionManager.add(new Action("Filter objects", BoberKurwaIcons.getImageDescriptor(UIIcon.SEARCH)) {
                 @Override
                 public void run() {
                     performSearch(SearchType.NONE);

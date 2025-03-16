@@ -3,8 +3,8 @@
 
 
 <!--
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,12 +23,12 @@
 
     <extension point="org.eclipse.core.runtime.applications" id="application" name="Test Application">
         <application visible="true">
-            <run class="org.jkiss.dbeaver.headless.DBeaverHeadlessApplication"/>
+            <run class="org.jkiss.dbeaver.headless.BoberKurwaHeadlessApplication"/>
         </application>
     </extension>
 
     <extension point="org.eclipse.core.runtime.products" id="product">
-        <product application="org.jkiss.dbeaver.headless.application" description="Headless product for unit tests" name="DBeaver Test Product">
+        <product application="org.jkiss.dbeaver.headless.application" description="Headless product for unit tests" name="BoberKurwa Test Product">
         </product>
     </extension>
 
@@ -36,9 +36,9 @@
         <application
             id="headless-test-app"
             family="DB"
-            name="DBeaver Console Test Application"
-            description="DBeaver Console Test Application"
-            class="org.jkiss.dbeaver.headless.DBeaverHeadlessApplication"/>
+            name="BoberKurwa Console Test Application"
+            description="BoberKurwa Console Test Application"
+            class="org.jkiss.dbeaver.headless.BoberKurwaHeadlessApplication"/>
     </extension>
 
 </plugin>

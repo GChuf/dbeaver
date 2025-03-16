@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -446,7 +446,7 @@ public final class RuntimeUtils {
     }
 
     public static void setThreadName(String name) {
-        Thread.currentThread().setName("DBeaver: " + name);
+        Thread.currentThread().setName("BoberKurwa: " + name);
     }
 
     public static byte[] getLocalMacAddress() throws IOException {

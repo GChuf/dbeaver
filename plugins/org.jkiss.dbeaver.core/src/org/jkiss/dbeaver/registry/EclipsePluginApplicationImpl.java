@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ package org.jkiss.dbeaver.registry;
 import org.eclipse.equinox.app.IApplicationContext;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
-import org.jkiss.dbeaver.core.DBeaverActivator;
+import org.jkiss.dbeaver.core.BoberKurwaActivator;
 import org.jkiss.dbeaver.core.DesktopPlatform;
 import org.jkiss.dbeaver.core.DesktopUI;
 import org.jkiss.dbeaver.model.app.DBPPlatform;
@@ -61,7 +61,7 @@ public abstract class EclipsePluginApplicationImpl extends DesktopApplicationImp
 
     @Override
     public String getDefaultProjectName() {
-        return "DBeaver";
+        return "BoberKurwa";
     }
 
     @Override
@@ -100,7 +100,7 @@ public abstract class EclipsePluginApplicationImpl extends DesktopApplicationImp
     @NotNull
     @Override
     public DBPPreferenceStore getPreferenceStore() {
-        return DBeaverActivator.getInstance().getPreferences();
+        return BoberKurwaActivator.getInstance().getPreferences();
 
     }
 

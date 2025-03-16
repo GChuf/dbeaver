@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.struct.DBSInstance;
 import org.jkiss.dbeaver.model.struct.DBSObjectContainer;
 import org.jkiss.dbeaver.model.struct.rdb.DBSSchema;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.internal.UIMessages;
@@ -113,7 +113,7 @@ public abstract class ObjectContainerSelectorPanel extends Composite
         UIUtils.createControlLabel(this, containerTitle);
 
         containerIcon = new Label(this, SWT.NONE);
-        containerIcon.setImage(DBeaverIcons.getImage(DBIcon.TYPE_UNKNOWN));
+        containerIcon.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_UNKNOWN));
 
         containerNameCombo = new Combo(this, SWT.BORDER | SWT.DROP_DOWN | SWT.READ_ONLY);
         containerNameCombo.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
@@ -130,7 +130,7 @@ public abstract class ObjectContainerSelectorPanel extends Composite
 
         ToolBar buttonToolbar = new ToolBar(this, SWT.FLAT | SWT.RIGHT);
         browseButton = new ToolItem(buttonToolbar, SWT.NONE);
-        browseButton.setImage(DBeaverIcons.getImage(UIIcon.OPEN));
+        browseButton.setImage(BoberKurwaIcons.getImage(UIIcon.OPEN));
         browseButton.setText(UIMessages.browse_button_choose);
         browseButton.setToolTipText(UIMessages.browse_button_choose_tooltip);
         Runnable containerSelector = () -> {
@@ -318,12 +318,12 @@ public abstract class ObjectContainerSelectorPanel extends Composite
 
     public void setContainerInfo(DBNDatabaseNode node) {
         if (node == null) {
-            containerIcon.setImage(DBeaverIcons.getImage(DBIcon.TYPE_UNKNOWN));
+            containerIcon.setImage(BoberKurwaIcons.getImage(DBIcon.TYPE_UNKNOWN));
             containerNameCombo.select(-1);
             return;
         }
         HistoryItem item = addNodeToHistory(node);
-        containerIcon.setImage(DBeaverIcons.getImage(node.getNodeIconDefault()));
+        containerIcon.setImage(BoberKurwaIcons.getImage(node.getNodeIconDefault()));
 
         moveHistoryItemToBeginning(item);
     }

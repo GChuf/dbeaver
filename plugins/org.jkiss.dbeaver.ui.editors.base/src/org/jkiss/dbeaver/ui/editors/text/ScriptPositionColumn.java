@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -28,7 +28,7 @@ import org.eclipse.ui.texteditor.ITextEditor;
 import org.eclipse.ui.texteditor.rulers.IContributedRulerColumn;
 import org.eclipse.ui.texteditor.rulers.RulerColumnDescriptor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.utils.ArrayUtils;
 
@@ -118,7 +118,7 @@ public class ScriptPositionColumn extends AbstractRulerColumn implements IContri
         gc.setBackground(computeBackground(modelLine));
         gc.fillRectangle(0, linePixel, getWidth(), lineHeight);
         if (ArrayUtils.contains(currentLines, modelLine)) {
-            gc.drawImage(DBeaverIcons.getImage(UIIcon.RULER_POSITION), 0, linePixel);
+            gc.drawImage(BoberKurwaIcons.getImage(UIIcon.RULER_POSITION), 0, linePixel);
         }
     }
 
@@ -140,7 +140,7 @@ public class ScriptPositionColumn extends AbstractRulerColumn implements IContri
             gc.setBackground(computeBackground(modelLine));
             gc.fillRectangle(0, linePixel, getWidth(), lineHeight);
             if (ArrayUtils.contains(currentLines, modelLine)) {
-                gc.drawImage(DBeaverIcons.getImage(UIIcon.RULER_POSITION), 0, linePixel);
+                gc.drawImage(BoberKurwaIcons.getImage(UIIcon.RULER_POSITION), 0, linePixel);
             }
         }
     }

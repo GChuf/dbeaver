@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,14 +18,14 @@ package org.jkiss.dbeaver.ui.actions.common;
 
 import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.model.DBIcon;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 
 public class ExternalPageAction extends Action {
     private final String url;
 
     public ExternalPageAction(String title, DBIcon icon, String url) {
-        super(title, DBeaverIcons.getImageDescriptor(icon));
+        super(title, BoberKurwaIcons.getImageDescriptor(icon));
         this.url = url;
     }
 

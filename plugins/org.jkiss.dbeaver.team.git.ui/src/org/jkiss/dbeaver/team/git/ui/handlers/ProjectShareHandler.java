@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.jkiss.dbeaver.model.DBPMessageType;
 import org.jkiss.dbeaver.model.app.DBPDataSourceRegistry;
 import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.team.git.ui.internal.GITMessages;
 import org.jkiss.dbeaver.team.git.ui.utils.GitUIUtils;
 import org.jkiss.dbeaver.ui.ActionUtils;
@@ -71,7 +71,7 @@ public class ProjectShareHandler extends AbstractHandler implements IElementUpda
             // Add content
             addProjectContentsToRepository(event, project);
 
-            DBeaverNotifications.showNotification(
+            BoberKurwaNotifications.showNotification(
                 "git.project.added",
                 GITMessages.project_share_handler_notifications_title_project_added,
                 NLS.bind(GITMessages.project_share_handler_notifications_text_project_added, project.getName()),

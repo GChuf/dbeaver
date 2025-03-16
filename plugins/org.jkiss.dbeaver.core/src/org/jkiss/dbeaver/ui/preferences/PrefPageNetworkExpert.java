@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.core.CoreMessages;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.utils.GeneralUtils;
 
@@ -56,7 +56,7 @@ public class PrefPageNetworkExpert extends AbstractPrefPage implements IWorkbenc
             SWT.NONE,
             2,
             null,
-            DBeaverIcons.getImage(DBIcon.SMALL_WARNING)
+            BoberKurwaIcons.getImage(DBIcon.SMALL_WARNING)
         );
 
         new Label(composite, SWT.SEPARATOR | SWT.HORIZONTAL)

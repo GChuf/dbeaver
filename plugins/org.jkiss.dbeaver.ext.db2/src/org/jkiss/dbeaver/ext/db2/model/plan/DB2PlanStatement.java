@@ -1,7 +1,7 @@
 /*
- * DBeaver - Universal Database Manager
+ * BoberKurwa - Universal Database Manager
  * Copyright (C) 2013-2015 Denis Forveille (titou10.titou10@gmail.com)
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -96,7 +96,7 @@ public class DB2PlanStatement {
             // LOG.debug(planStream.getStreamId() + " src=" + planStream.getSourceName() + " tgt=" + planStream.getTargetName());
 
             // DF: "Data Objects" may be "target" of "Explain" Streams and have multiple parents..
-            // DBeaver Explain Plan Viewer shows nodes in parent-child hierarchy so a node can not have multiple "parents"
+            // BoberKurwa Explain Plan Viewer shows nodes in parent-child hierarchy so a node can not have multiple "parents"
             // It seems reasonable to reverse the stream after cloning the Object because the same Data Object has multiple
             // parents
 

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -229,7 +229,7 @@ public class ProgressPageControl extends Composite implements ISearchContextProv
         customControlsComposite.setLayout(gl);
 
         listInfoLabel = new CLabel(infoGroup, SWT.NONE);
-        listInfoLabel.setImage(DBeaverIcons.getImage(UIIcon.SEPARATOR_V));
+        listInfoLabel.setImage(BoberKurwaIcons.getImage(UIIcon.SEPARATOR_V));
         listInfoLabel.setLayoutData(GridDataFactory.swtDefaults().minSize(100, SWT.DEFAULT).create());
 
         searchControlsComposite = UIUtils.createPlaceholder(infoGroup, 1);

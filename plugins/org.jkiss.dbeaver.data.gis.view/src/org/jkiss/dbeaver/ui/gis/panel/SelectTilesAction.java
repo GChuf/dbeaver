@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.jface.action.Separator;
 import org.eclipse.jface.dialogs.IDialogConstants;
 import org.jkiss.dbeaver.model.rm.RMConstants;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.MenuCreator;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.gis.IGeometryValueEditor;
@@ -38,7 +38,7 @@ class SelectTilesAction extends Action {
 
     SelectTilesAction(IGeometryValueEditor valueEditor) {
         super(valueEditor.getValueSRID() == 0 ? GISMessages.panel_select_tiles_action_text_plain : getActionText(), Action.AS_DROP_DOWN_MENU);
-        setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.PICTURE));
+        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.PICTURE));
         this.valueEditor = valueEditor;
     }
 

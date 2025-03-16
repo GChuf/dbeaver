@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.model.preferences.DBPPreferenceStore;
 import org.jkiss.dbeaver.model.runtime.RunnableWithResult;
 import org.jkiss.dbeaver.model.sql.SQLQueryResult;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetModel;
@@ -118,7 +118,7 @@ public class SQLTerminalEditorAddIn implements SQLEditorAddIn {
             tabItem.setControl(view.getControl());
             tabItem.setText(SQLTerminalMessages.sql_terminal_item_text);
             tabItem.setToolTipText("");
-            tabItem.setImage(DBeaverIcons.getImage(UIIcon.SQL_CONSOLE));
+            tabItem.setImage(BoberKurwaIcons.getImage(UIIcon.SQL_CONSOLE));
             tabItem.setData(view);
             tabsContainer.addCTabFolder2Listener(new CTabFolder2Adapter() {
                 @Override

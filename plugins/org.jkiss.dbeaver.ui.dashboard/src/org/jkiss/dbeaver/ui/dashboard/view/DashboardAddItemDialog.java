@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.ui.dialogs.BaseDialog;
  */
 public class DashboardAddItemDialog extends BaseDialog {
 
-    private static final String DIALOG_ID = "DBeaver.DashboardAddDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DashboardAddDialog";//$NON-NLS-1$
 
     private final DashboardConfiguration viewConfiguration;
     private DashboardCatalogPanel catalogPanel;

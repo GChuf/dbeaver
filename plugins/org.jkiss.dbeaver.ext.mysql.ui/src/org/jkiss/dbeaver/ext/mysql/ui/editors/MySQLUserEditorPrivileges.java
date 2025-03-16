@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -36,7 +36,7 @@ import org.jkiss.dbeaver.model.edit.DBECommandReflector;
 import org.jkiss.dbeaver.model.navigator.DBNEvent;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.load.DatabaseLoadService;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.LoadingJob;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CustomSashForm;
@@ -104,12 +104,12 @@ public class MySQLUserEditorPrivileges extends MySQLUserEditorAbstract
             {
                 TableItem item = new TableItem(catalogsTable, SWT.NONE);
                 item.setText("% (All)"); //$NON-NLS-1$
-                item.setImage(DBeaverIcons.getImage(DBIcon.TREE_DATABASE));
+                item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_DATABASE));
             }
             for (MySQLCatalog catalog : getDatabaseObject().getDataSource().getCatalogs()) {
                 TableItem item = new TableItem(catalogsTable, SWT.NONE);
                 item.setText(catalog.getName());
-                item.setImage(DBeaverIcons.getImage(DBIcon.TREE_DATABASE));
+                item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_DATABASE));
                 item.setData(catalog);
             }
             UIUtils.packColumns(catalogsTable);
@@ -403,13 +403,13 @@ public class MySQLUserEditorPrivileges extends MySQLUserEditorAbstract
                     {
                         TableItem item = new TableItem(tablesTable, SWT.NONE);
                         item.setText("% (All)"); //$NON-NLS-1$
-                        item.setImage(DBeaverIcons.getImage(DBIcon.TREE_TABLE));
+                        item.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_TABLE));
                     }
                     if (tables != null) {
                         for (MySQLTableBase table : tables) {
                             TableItem item = new TableItem(tablesTable, SWT.NONE);
                             item.setText(table.getName());
-                            item.setImage(DBeaverIcons.getImage(table.isView() ? DBIcon.TREE_VIEW : DBIcon.TREE_TABLE));
+                            item.setImage(BoberKurwaIcons.getImage(table.isView() ? DBIcon.TREE_VIEW : DBIcon.TREE_TABLE));
                             item.setData(table);
                         }
                         highlightTables();

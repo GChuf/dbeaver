@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -217,7 +217,7 @@ class BundleProcessConfig {
             if (Files.exists(Path.of(bundleReference))) {
                 cmd.add("-cp");
                 cmd.add(bundleReference);
-                launcherApp = "org.jkiss.dbeaver.launcher.DBeaverLauncher";
+                launcherApp = "org.jkiss.dbeaver.launcher.BoberKurwaLauncher";
             }
         }
         String debugParams = System.getProperty("dbeaver.debug.dpi.launch.parameters");

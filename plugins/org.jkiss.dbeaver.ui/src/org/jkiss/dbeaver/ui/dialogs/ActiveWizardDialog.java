@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -89,7 +89,7 @@ public class ActiveWizardDialog extends WizardDialog
     @Override
     protected IDialogSettings getDialogBoundsSettings()
     {
-        return UIUtils.getDialogSettings("DBeaver.ActiveWizardDialog." + getWizard().getClass().getSimpleName());
+        return UIUtils.getDialogSettings("BoberKurwa.ActiveWizardDialog." + getWizard().getClass().getSimpleName());
     }
 
     public void setAdaptContainerSizeToPages(boolean adaptContainerSizeToPages) {

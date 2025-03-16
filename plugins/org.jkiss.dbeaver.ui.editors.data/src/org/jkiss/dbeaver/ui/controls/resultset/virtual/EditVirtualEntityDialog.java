@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -47,7 +47,7 @@ import org.jkiss.dbeaver.model.struct.DBSEntityAttribute;
 import org.jkiss.dbeaver.model.struct.DBSEntityConstraint;
 import org.jkiss.dbeaver.model.virtual.*;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.resultset.ResultSetViewer;
 import org.jkiss.dbeaver.ui.controls.resultset.internal.ResultSetMessages;
@@ -68,7 +68,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
 
     private static final Log log = Log.getLog(EditVirtualEntityDialog.class);
 
-    private static final String DIALOG_ID = "DBeaver.EditVirtualEntityDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.EditVirtualEntityDialog";//$NON-NLS-1$
 
     public static final int ID_CREATE_UNIQUE_KEY = 1000;
     public static final int ID_REMOVE_UNIQUE_KEY = 1001;
@@ -169,7 +169,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
             editDictionaryPage.createControl(tabFolder);
             CTabItem dictItem = new CTabItem(tabFolder, SWT.NONE);
             dictItem.setText(ResultSetMessages.controls_resultset_virtual_dictionary_page_text);
-            dictItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_PACKAGE));
+            dictItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_PACKAGE));
             dictItem.setControl(editDictionaryPage.getControl());
             dictItem.setData(InitPage.DICTIONARY);
             dictItem.setData(DATA_PAGE, editDictionaryPage);
@@ -179,7 +179,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
     private void createColumnsPage(CTabFolder tabFolder) {
         CTabItem attrsItem = new CTabItem(tabFolder, SWT.NONE);
         attrsItem.setText(ResultSetMessages.controls_resultset_virtual_columns_page_text);
-        attrsItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_COLUMN));
+        attrsItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_COLUMN));
         attrsItem.setData(InitPage.ATTRIBUTES);
 
         columnsPage = new EditVirtualColumnsPage(viewer, vEntity);
@@ -234,7 +234,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
         }
         CTabItem ukItem = new CTabItem(tabFolder, SWT.NONE);
         ukItem.setText("Virtual Unique Key");
-        ukItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_UNIQUE_KEY));
+        ukItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_UNIQUE_KEY));
         ukItem.setData(InitPage.UNIQUE_KEY);
 
         editUniqueKeyPage = new EditConstraintPage(
@@ -255,7 +255,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
     private void createForeignKeysPage(CTabFolder tabFolder) {
         CTabItem fkItem = new CTabItem(tabFolder, SWT.NONE);
         fkItem.setText(ResultSetMessages.controls_resultset_virtual_foreignkey_page_text);
-        fkItem.setImage(DBeaverIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
+        fkItem.setImage(BoberKurwaIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
         fkItem.setData(InitPage.FOREIGN_KEYS);
 
         Composite panel = new Composite(tabFolder, 1);
@@ -335,10 +335,10 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
         }
 
         TableItem item = new TableItem(fkTable, SWT.NONE);
-        //item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
+        //item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
         DBSEntity refEntity = referencedConstraint.getParentObject();
 
-        item.setImage(0, DBeaverIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
+        item.setImage(0, BoberKurwaIcons.getImage(DBIcon.TREE_FOREIGN_KEY));
         if (referencedConstraint != null) {
             item.setText(0, DBUtils.getObjectFullName(refEntity, DBPEvaluationContext.UI));
         }
@@ -348,7 +348,7 @@ public class EditVirtualEntityDialog extends BaseTitleDialog implements IDialogP
             .collect(Collectors.joining(","));
         item.setText(1, "(" + ownAttrNames + ") -> (" + refAttrNames + ")");
 
-        item.setImage(2, DBeaverIcons.getImage(refEntity.getDataSource().getContainer().getDriver().getIcon()));
+        item.setImage(2, BoberKurwaIcons.getImage(refEntity.getDataSource().getContainer().getDriver().getIcon()));
         item.setText(2, refEntity.getDataSource().getContainer().getName());
 
         item.setData(fk);

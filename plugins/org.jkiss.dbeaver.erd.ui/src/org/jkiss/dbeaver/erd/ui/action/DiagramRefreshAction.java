@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ package org.jkiss.dbeaver.erd.ui.action;
 import org.eclipse.jface.action.Action;
 import org.jkiss.dbeaver.erd.ui.editor.ERDEditorPart;
 import org.jkiss.dbeaver.erd.ui.internal.ERDUIMessages;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 
 /**
@@ -36,7 +36,7 @@ public class DiagramRefreshAction extends Action
 
 	public DiagramRefreshAction(ERDEditorPart editor)
 	{
-		super(ERDUIMessages.erd_editor_control_action_refresh_diagram, DBeaverIcons.getImageDescriptor(UIIcon.REFRESH));
+		super(ERDUIMessages.erd_editor_control_action_refresh_diagram, BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH));
 		this.editor = editor;
 	}
 

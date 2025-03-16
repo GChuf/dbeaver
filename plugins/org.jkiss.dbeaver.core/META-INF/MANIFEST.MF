@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Vendor: DBeaver Corp
-Bundle-Name: DBeaver Desktop Application Core
+Bundle-Vendor: BoberKurwa Corp
+Bundle-Name: BoberKurwa Desktop Application Core
 Bundle-SymbolicName: org.jkiss.dbeaver.core;singleton:=true
 Bundle-Version: 25.0.1.qualifier
 Bundle-Release-Date: 20250325
-Bundle-Activator: org.jkiss.dbeaver.core.DBeaverActivator
+Bundle-Activator: org.jkiss.dbeaver.core.BoberKurwaActivator
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: org.jkiss.dbeaver,

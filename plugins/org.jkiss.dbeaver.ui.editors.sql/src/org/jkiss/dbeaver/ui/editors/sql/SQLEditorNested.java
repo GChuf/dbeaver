@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -301,7 +301,7 @@ public abstract class SQLEditorNested<T extends DBSObject>
 
     public class ViewLogAction extends Action {
         ViewLogAction() {
-            super("View compile log", DBeaverIcons.getImageDescriptor(UIIcon.COMPILE_LOG)); //$NON-NLS-2$
+            super("View compile log", BoberKurwaIcons.getImageDescriptor(UIIcon.COMPILE_LOG)); //$NON-NLS-2$
         }
 
         @Override

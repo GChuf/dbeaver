@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -264,7 +264,7 @@ public class ClientHomesPanel extends Composite {
         homeInfo.isDefault = defaultLocalClientLocation != null && clientLocation.getName().equals(defaultLocalClientLocation.getName());
         TableItem homeItem = new TableItem(homesTable, SWT.NONE);
         homeItem.setText(clientLocation.getDisplayName());
-        homeItem.setImage(DBeaverIcons.getImage(UIIcon.HOME));
+        homeItem.setImage(BoberKurwaIcons.getImage(UIIcon.HOME));
         homeItem.setData(homeInfo);
         if (!homeInfo.isProvided) {
             homeItem.setFont(BaseThemeSettings.instance.baseFontItalic);

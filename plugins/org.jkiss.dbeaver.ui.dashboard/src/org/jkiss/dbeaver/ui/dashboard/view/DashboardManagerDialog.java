@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.model.connection.DBPDriver;
 import org.jkiss.dbeaver.model.dashboard.registry.DashboardItemConfiguration;
 import org.jkiss.dbeaver.model.dashboard.registry.DashboardProviderDescriptor;
 import org.jkiss.dbeaver.model.dashboard.registry.DashboardRegistry;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.TreeContentProvider;
 import org.jkiss.dbeaver.ui.dashboard.internal.UIDashboardActivator;
@@ -54,7 +54,7 @@ import java.util.Map;
 
 public class DashboardManagerDialog extends BaseDialog {
 
-    private static final String DIALOG_ID = "DBeaver.DashboardManagerDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DashboardManagerDialog";//$NON-NLS-1$
 
     private DashboardItemConfiguration selectedDashboard;
 
@@ -134,11 +134,11 @@ public class DashboardManagerDialog extends BaseDialog {
                     if (cell.getColumnIndex() == 0) {
                         cell.setText(element.getName());
                         if (element instanceof DBPDriver driver) {
-                            cell.setImage(DBeaverIcons.getImage(driver.getIcon()));
+                            cell.setImage(BoberKurwaIcons.getImage(driver.getIcon()));
                         } else if (element instanceof DashboardProviderDescriptor dpd) {
-                            cell.setImage(DBeaverIcons.getImage(dpd.getIcon()));
+                            cell.setImage(BoberKurwaIcons.getImage(dpd.getIcon()));
                         } else if (element instanceof DBPDataSourceProviderDescriptor dspd) {
-                            cell.setImage(DBeaverIcons.getImage(dspd.getIcon()));
+                            cell.setImage(BoberKurwaIcons.getImage(dspd.getIcon()));
                         } else if (element instanceof DashboardItemConfiguration dashboardDescriptor) {
                             DBPImage icon = null;
                             if (dashboardDescriptor.isCustom()) {
@@ -150,7 +150,7 @@ public class DashboardManagerDialog extends BaseDialog {
                                 }
                             }
                             if (icon != null) {
-                                cell.setImage(DBeaverIcons.getImage(icon));
+                                cell.setImage(BoberKurwaIcons.getImage(icon));
                             }
                         }
                     } else {

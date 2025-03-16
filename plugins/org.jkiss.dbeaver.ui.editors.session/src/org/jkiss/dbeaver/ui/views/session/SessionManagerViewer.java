@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -165,7 +165,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
 
                 CTabItem sqlViewItem = new CTabItem(previewFolder, SWT.NONE);
                 sqlViewItem.setText(SessionEditorMessages.viewer_view_item_sql);
-                sqlViewItem.setImage(DBeaverIcons.getImage(UIIcon.SQL_TEXT));
+                sqlViewItem.setImage(BoberKurwaIcons.getImage(UIIcon.SQL_TEXT));
                 sqlViewItem.setControl(sqlViewer.getEditorControlWrapper());
 
                 previewFolder.setSelection(sqlViewItem);
@@ -188,7 +188,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
 
                 detailsItem = new CTabItem(detailsFolder, SWT.NONE);
                 detailsItem.setText(SessionEditorMessages.viewer_details_item_details);
-                detailsItem.setImage(DBeaverIcons.getImage(UIIcon.PROPERTIES));
+                detailsItem.setImage(BoberKurwaIcons.getImage(UIIcon.PROPERTIES));
                 detailsItem.setControl(sessionProps.getControl());
 
                 if (sessionManager instanceof DBAServerSessionDetailsProvider) {
@@ -199,7 +199,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
                             extDetailsItem.setData(detailsInfo);
                             extDetailsItem.setText(detailsInfo.getDetailsTitle());
                             if (detailsInfo.getDetailsIcon() != null) {
-                                extDetailsItem.setImage(DBeaverIcons.getImage(detailsInfo.getDetailsIcon()));
+                                extDetailsItem.setImage(BoberKurwaIcons.getImage(detailsInfo.getDetailsIcon()));
                             }
                             if (detailsInfo.getDetailsTooltip() != null) {
                                 extDetailsItem.setToolTipText(detailsInfo.getDetailsTooltip());
@@ -312,7 +312,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
 
         CTabItem sqlPlanItem = new CTabItem(previewFolder, SWT.NONE);
         sqlPlanItem.setText(SessionEditorMessages.viewer_sql_plan_item_execution_plan);
-        sqlPlanItem.setImage(DBeaverIcons.getImage(UIIcon.SQL_PAGE_EXPLAIN_PLAN));
+        sqlPlanItem.setImage(BoberKurwaIcons.getImage(UIIcon.SQL_PAGE_EXPLAIN_PLAN));
         sqlPlanItem.setControl(planViewer.getControl());
         sqlPlanItem.setData(planViewer);
     }
@@ -418,7 +418,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
 
     void loadSettings(AbstractSessionEditor sessionEditor) {
         //$NON-NLS-1$
-        settings = UIUtils.getDialogSettings("DBeaver." + sessionEditor.getClass().getSimpleName());
+        settings = UIUtils.getDialogSettings("BoberKurwa." + sessionEditor.getClass().getSimpleName());
         loadSettings(settings);
     }
 
@@ -465,7 +465,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
             {
                 contributionManager.add(ActionUtils.makeActionContribution(new Action(SessionEditorMessages.viewer_open_sql_editor_text, IAction.AS_PUSH_BUTTON) {
                     {
-                        setImageDescriptor(DBeaverIcons.getImageDescriptor(DBIcon.TREE_SCRIPT));
+                        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(DBIcon.TREE_SCRIPT));
                         setToolTipText(SessionEditorMessages.viewer_open_sql_editor_tip);
                     }
                     @Override
@@ -497,7 +497,7 @@ public class SessionManagerViewer<SESSION_TYPE extends DBAServerSession>
             }
 
             refreshControl.populateRefreshButton(contributionManager);
-            contributionManager.add(new Action(SessionEditorMessages.viewer_session_manager_refresh_sessions_action, DBeaverIcons.getImageDescriptor(UIIcon.REFRESH)) {
+            contributionManager.add(new Action(SessionEditorMessages.viewer_session_manager_refresh_sessions_action, BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH)) {
                 @Override
                 public void run()
                 {

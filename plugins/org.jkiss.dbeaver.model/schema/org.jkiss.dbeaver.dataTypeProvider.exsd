@@ -6,7 +6,7 @@
          <meta.schema plugin="org.jkiss.dbeaver.model" id="org.jkiss.dbeaver.dataTypeProvider" name="DataType provider"/>
       </appInfo>
       <documentation>
-         DBeaver custom data type provider
+         BoberKurwa custom data type provider
       </documentation>
    </annotation>
 

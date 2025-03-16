@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -35,7 +35,7 @@ import org.jkiss.dbeaver.model.app.DBPPlatformDesktop;
 import org.jkiss.dbeaver.model.app.DBPProject;
 import org.jkiss.dbeaver.model.rcp.RCPProject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.utils.RuntimeUtils;
@@ -126,7 +126,7 @@ class ProjectExportWizardPage extends WizardPage {
 
         for (DBPProject project : DBWorkbench.getPlatform().getWorkspace().getProjects()) {
             final TableItem item = new TableItem(projectsTable, SWT.NONE);
-            item.setImage(DBeaverIcons.getImage(DBIcon.PROJECT));
+            item.setImage(BoberKurwaIcons.getImage(DBIcon.PROJECT));
             item.setText(project.getName());
             item.setData(project);
             if (projectList.contains(project)) {
@@ -165,7 +165,7 @@ class ProjectExportWizardPage extends WizardPage {
             });
 
             Button openFolder = new Button(generalSettings, SWT.PUSH);
-            openFolder.setImage(DBeaverIcons.getImage(UIIcon.OPEN));
+            openFolder.setImage(BoberKurwaIcons.getImage(UIIcon.OPEN));
             openFolder.addSelectionListener(new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e)

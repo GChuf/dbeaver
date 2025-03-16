@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ import org.jkiss.dbeaver.registry.DataSourceProviderRegistry;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
 import org.jkiss.dbeaver.registry.driver.DriverUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IHelpContextIds;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -56,7 +56,7 @@ import java.util.List;
  */
 public class DriverManagerDialog extends HelpEnabledDialog implements ISelectionChangedListener, IDoubleClickListener {
 
-    private static final String DIALOG_ID = "DBeaver.DriverManagerDialog";//$NON-NLS-1$
+    private static final String DIALOG_ID = "BoberKurwa.DriverManagerDialog";//$NON-NLS-1$
     private static final String DEFAULT_DS_PROVIDER = "generic";
 
     private static final boolean SHOW_EXPORT = false;
@@ -106,7 +106,7 @@ public class DriverManagerDialog extends HelpEnabledDialog implements ISelection
 
         getShell().setText(UIConnectionMessages.dialog_driver_manager_title);
         getShell().setMinimumSize(300, 300);
-        ImageDescriptor dialogImage = DBeaverIcons.getImageDescriptor(UIIcon.DRIVER_MANAGER);
+        ImageDescriptor dialogImage = BoberKurwaIcons.getImageDescriptor(UIIcon.DRIVER_MANAGER);
         Image image = dialogImage.createImage();
         getShell().setImage(image);
         getShell().addDisposeListener(e -> UIUtils.dispose(image));
@@ -292,7 +292,7 @@ public class DriverManagerDialog extends HelpEnabledDialog implements ISelection
                 this.selectedCategory = ((DriverTreeViewer.DriverCategory) selectedObject).getName();
             }
         }
-        //super.updateStatus(new Status(Status.INFO, DBeaverConstants.PLUGIN_ID, selectedDriver == null ? "" : selectedDriver.getDescription()));
+        //super.updateStatus(new Status(Status.INFO, BoberKurwaConstants.PLUGIN_ID, selectedDriver == null ? "" : selectedDriver.getDescription()));
         this.updateButtons();
     }
 
@@ -409,7 +409,7 @@ public class DriverManagerDialog extends HelpEnabledDialog implements ISelection
                     for (DBPDriver dd : dspd.getDrivers()) {
                         if (dd.isDisabled()) {
                             TableItem item = new TableItem(driverTable, SWT.NONE);
-                            item.setImage(DBeaverIcons.getImage(dd.getIcon()));
+                            item.setImage(BoberKurwaIcons.getImage(dd.getIcon()));
                             item.setText(dd.getName());
                             item.setData(dd);
                         }

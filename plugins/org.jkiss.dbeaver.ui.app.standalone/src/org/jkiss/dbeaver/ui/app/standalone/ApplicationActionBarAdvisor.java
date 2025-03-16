@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -197,8 +197,8 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor
 
     private void patchImages() {
         // We have to patch images manually because using commandImages extension point doesn't guarantee order
-        //WorkbenchImages.declareImage(IWorkbenchGraphicConstants.IMG_WIZBAN_IMPORT_WIZ, DBeaverIcons.getImageDescriptor(UIIcon.IMPORT), true);
-        //WorkbenchImages.declareImage(IWorkbenchGraphicConstants.IMG_WIZBAN_EXPORT_WIZ, DBeaverIcons.getImageDescriptor(UIIcon.EXPORT), true);
+        //WorkbenchImages.declareImage(IWorkbenchGraphicConstants.IMG_WIZBAN_IMPORT_WIZ, BoberKurwaIcons.getImageDescriptor(UIIcon.IMPORT), true);
+        //WorkbenchImages.declareImage(IWorkbenchGraphicConstants.IMG_WIZBAN_EXPORT_WIZ, BoberKurwaIcons.getImageDescriptor(UIIcon.EXPORT), true);
 
         IWorkbenchWindow workbenchWindow = getActionBarConfigurer().getWindowConfigurer().getWindow();
         if (workbenchWindow != null) {
@@ -220,7 +220,7 @@ public class ApplicationActionBarAdvisor extends ActionBarAdvisor
     }
 
     private void bindImage(CommandImageService cis, String commandId, DBIcon icon) {
-        ImageDescriptor id = DBeaverIcons.getImageDescriptor(icon);
+        ImageDescriptor id = BoberKurwaIcons.getImageDescriptor(icon);
         cis.bind(commandId, CommandImageManager.TYPE_DEFAULT, null, id);
         cis.bind(commandId, CommandImageManager.TYPE_HOVER, null, id);
         cis.bind(commandId, CommandImageManager.TYPE_DISABLED, null, (ImageDescriptor) null);

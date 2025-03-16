@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,7 +20,7 @@ import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.GC;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.graphics.Rectangle;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UITextUtils;
 import org.jkiss.utils.CommonUtils;
@@ -29,8 +29,8 @@ import org.jkiss.utils.CommonUtils;
  * Grid row header renderer.
  */
 class GridRowRenderer extends AbstractRenderer {
-    static final Image IMG_EXPAND = DBeaverIcons.getImage(UIIcon.TREE_EXPAND);
-    static final Image IMG_COLLAPSE = DBeaverIcons.getImage(UIIcon.TREE_COLLAPSE);
+    static final Image IMG_EXPAND = BoberKurwaIcons.getImage(UIIcon.TREE_EXPAND);
+    static final Image IMG_COLLAPSE = BoberKurwaIcons.getImage(UIIcon.TREE_COLLAPSE);
     static final Rectangle EXPANDED_BOUNDS = IMG_EXPAND.getBounds();
 
     public static final int LEFT_MARGIN = 4;

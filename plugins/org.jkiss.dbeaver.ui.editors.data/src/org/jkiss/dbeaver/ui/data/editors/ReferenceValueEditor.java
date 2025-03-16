@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -523,13 +523,13 @@ public class ReferenceValueEditor {
         }
     }
     
-    private final Action actionGoBackward = new Action("Move Backward", DBeaverIcons.getImageDescriptor(UIIcon.ARROW_LEFT)) {
+    private final Action actionGoBackward = new Action("Move Backward", BoberKurwaIcons.getImageDescriptor(UIIcon.ARROW_LEFT)) {
         @Override
         public void run() {
             controller.goToPrevPage();
         }
     }; 
-    private final Action actionGoForward = new Action("Move Forward", DBeaverIcons.getImageDescriptor(UIIcon.ARROW_RIGHT)) {
+    private final Action actionGoForward = new Action("Move Forward", BoberKurwaIcons.getImageDescriptor(UIIcon.ARROW_RIGHT)) {
         @Override
         public void run() {
             controller.goToNextPage();

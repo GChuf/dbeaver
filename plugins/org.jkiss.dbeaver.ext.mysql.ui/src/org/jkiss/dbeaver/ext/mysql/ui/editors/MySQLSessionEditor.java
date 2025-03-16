@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,7 +31,7 @@ import org.jkiss.dbeaver.model.admin.sessions.DBAServerSession;
 import org.jkiss.dbeaver.model.admin.sessions.DBAServerSessionManager;
 import org.jkiss.dbeaver.model.exec.DBCExecutionContext;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.views.session.AbstractSessionEditor;
@@ -77,7 +77,7 @@ public class MySQLSessionEditor extends AbstractSessionEditor
                     new Action(MySQLUIMessages.editors_session_hide_sleeping_text, Action.AS_CHECK_BOX) {
                         {
                             setToolTipText(MySQLUIMessages.editors_session_hide_sleeping_tip);
-                            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.HIDE_ALL_DETAILS));
+                            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.HIDE_ALL_DETAILS));
                             setChecked(hideSleeping);
                         }
 
@@ -93,7 +93,7 @@ public class MySQLSessionEditor extends AbstractSessionEditor
                         new Action(MySQLUIMessages.editors_session_show_performance_text, Action.AS_CHECK_BOX) {
                             {
                                 setToolTipText(MySQLUIMessages.editors_session_show_performance_tip);
-                                setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.SHOW_ALL_DETAILS));
+                                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.SHOW_ALL_DETAILS));
                                 setChecked(showPerformance);
                             }
 
@@ -151,7 +151,7 @@ public class MySQLSessionEditor extends AbstractSessionEditor
                 killQuery ? MySQLUIMessages.editors_session_editor_action_terminate_Query : MySQLUIMessages.editors_session_editor_action_kill_Session,
                 killQuery ?
                     UIUtils.getShardImageDescriptor(ISharedImages.IMG_ELCL_STOP) :
-                    DBeaverIcons.getImageDescriptor(UIIcon.SQL_DISCONNECT));
+                    BoberKurwaIcons.getImageDescriptor(UIIcon.SQL_DISCONNECT));
             this.killQuery = killQuery;
         }
 

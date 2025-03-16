@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,7 +18,7 @@ package org.jkiss.dbeaver.ui.app.standalone.actions;
 
 import org.eclipse.core.expressions.PropertyTester;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.app.standalone.DBeaverApplication;
+import org.jkiss.dbeaver.ui.app.standalone.BoberKurwaApplication;
 
 public class MenuConfigurationPropertyTester extends PropertyTester {
 
@@ -28,7 +28,7 @@ public class MenuConfigurationPropertyTester extends PropertyTester {
     @Override
     public boolean test(Object receiver, String property, Object[] args, Object expectedValue) {
         if (PROP_IS_COMMUNITY.equals(property)) {
-            return DBWorkbench.getPlatform().getApplication().getClass() == DBeaverApplication.class;
+            return DBWorkbench.getPlatform().getApplication().getClass() == BoberKurwaApplication.class;
         }
         return true;
     }

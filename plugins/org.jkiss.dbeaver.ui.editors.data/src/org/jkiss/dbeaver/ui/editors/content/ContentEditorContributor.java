@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.eclipse.ui.texteditor.BasicTextEditorActionContributor;
 import org.jkiss.dbeaver.model.DBIcon;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
 import org.jkiss.dbeaver.ui.ActionUtils;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.data.IValueController;
@@ -186,7 +186,7 @@ public class ContentEditorContributor extends MultiPageEditorActionBarContributo
     public abstract class SimpleAction extends Action {
 
         SimpleAction(String id, String text, String toolTip, DBIcon icon) {
-            super(text, DBeaverIcons.getImageDescriptor(icon));
+            super(text, BoberKurwaIcons.getImageDescriptor(icon));
             setId(id);
             //setActionDefinitionId(id);
             setToolTipText(toolTip);

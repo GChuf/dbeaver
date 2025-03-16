@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -183,11 +183,11 @@ public class ProjectExplorerView extends DecoratedProjectView implements DBPProj
         /*
                         DBNNode node = (DBNNode) element;
                         if (node instanceof DBNDatabaseNode) {
-                            return DBeaverIcons.getImage(((DBNDatabaseNode) node).getDataSourceContainer().getDriver().getIcon());
+                            return BoberKurwaIcons.getImage(((DBNDatabaseNode) node).getDataSourceContainer().getDriver().getIcon());
                         } else if (node instanceof DBNResource) {
                             Collection<DBPDataSourceContainer> containers = ((DBNResource) node).getAssociatedDataSources();
                             if (containers != null && containers.size() == 1) {
-                                return DBeaverIcons.getImage((containers.iterator().next().getDriver().getIcon()));
+                                return BoberKurwaIcons.getImage((containers.iterator().next().getDriver().getIcon()));
                             }
                         }
         */

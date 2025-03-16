@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,7 +45,7 @@ import org.jkiss.dbeaver.model.runtime.load.DatabaseLoadService;
 import org.jkiss.dbeaver.model.runtime.load.ILoadVisualizerExt;
 import org.jkiss.dbeaver.model.sql.SQLQuery;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.LoadingJob;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -128,7 +128,7 @@ public class ExplainPlanViewer extends Viewer implements IAdaptable
                 if (!CommonUtils.isEmpty(viewDesc.getDescription())) {
                     treeViewButton.setToolTipText(viewDesc.getDescription());
                     if (viewDesc.getIcon() != null) {
-                        treeViewButton.setImage(DBeaverIcons.getImage(viewDesc.getIcon()));
+                        treeViewButton.setImage(BoberKurwaIcons.getImage(viewDesc.getIcon()));
                     }
                 }
                 treeViewButton.setData(new PlanViewInfo(viewDesc));
@@ -423,7 +423,7 @@ public class ExplainPlanViewer extends Viewer implements IAdaptable
     private class RefreshPlanAction extends Action {
         private RefreshPlanAction()
         {
-            super(SQLEditorMessages.editors_sql_explain_refresh_plan_action_text, DBeaverIcons.getImageDescriptor(UIIcon.REFRESH));
+            super(SQLEditorMessages.editors_sql_explain_refresh_plan_action_text, BoberKurwaIcons.getImageDescriptor(UIIcon.REFRESH));
         }
 
         @Override

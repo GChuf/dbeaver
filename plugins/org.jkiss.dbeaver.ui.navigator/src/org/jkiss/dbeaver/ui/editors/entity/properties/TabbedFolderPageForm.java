@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -291,19 +291,19 @@ public class TabbedFolderPageForm extends TabbedFolderPage implements IRefreshab
                 rowLayout.pack = true;
                 rowLayout.fill = true;
                 buttonsGroup.setLayout(rowLayout);
-                saveButton = UIUtils.createPushButton(buttonsGroup, "Save", DBeaverIcons.getImage(UIIcon.SAVE), new SelectionAdapter() {
+                saveButton = UIUtils.createPushButton(buttonsGroup, "Save", BoberKurwaIcons.getImage(UIIcon.SAVE), new SelectionAdapter() {
                     @Override
                     public void widgetSelected(SelectionEvent e) {
                         ActionUtils.runCommand(IWorkbenchCommandConstants.FILE_SAVE, part.getSite());
                     }
                 });
-                scriptButton = UIUtils.createPushButton(buttonsGroup, "View script", DBeaverIcons.getImage(DBIcon.TREE_SCRIPT), new SelectionAdapter() {
+                scriptButton = UIUtils.createPushButton(buttonsGroup, "View script", BoberKurwaIcons.getImage(DBIcon.TREE_SCRIPT), new SelectionAdapter() {
                     @Override
                     public void widgetSelected(SelectionEvent e) {
                         showAlterScript();
                     }
                 });
-                revertButton = UIUtils.createPushButton(buttonsGroup, "Revert", DBeaverIcons.getImage(UIIcon.REVERT), new SelectionAdapter() {
+                revertButton = UIUtils.createPushButton(buttonsGroup, "Revert", BoberKurwaIcons.getImage(UIIcon.REVERT), new SelectionAdapter() {
                     @Override
                     public void widgetSelected(SelectionEvent e) {
                         ActionUtils.runCommand(IWorkbenchCommandConstants.FILE_REVERT, part.getSite());
@@ -440,7 +440,7 @@ public class TabbedFolderPageForm extends TabbedFolderPage implements IRefreshab
     @Override
     public void fillCustomActions(IContributionManager contributionManager) {
 /*
-        contributionManager.add(new Action(isAttached() ? "Detach properties to top panel" : "Move properties to tab", DBeaverIcons.getImageDescriptor(UIIcon.ASTERISK)) {
+        contributionManager.add(new Action(isAttached() ? "Detach properties to top panel" : "Move properties to tab", BoberKurwaIcons.getImageDescriptor(UIIcon.ASTERISK)) {
             @Override
             public void run() {
                 detachPropertiesPanel();

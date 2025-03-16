@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -29,7 +29,7 @@ public class SpannerMetaModel extends GenericMetaModel {
     }
     
     // The default schema in Cloud Spanner is an empty string. This ensures that this
-    // default schema will be shown as 'DEFAULT' in DBeaver, and enables auto complete
+    // default schema will be shown as 'DEFAULT' in BoberKurwa, and enables auto complete
     // for tables and views in both the DEFAULT schema, as well as the INFORMATION_SCHEMA
     // and SPANNER_SYS schemas.
     public boolean supportsNullSchemas() {

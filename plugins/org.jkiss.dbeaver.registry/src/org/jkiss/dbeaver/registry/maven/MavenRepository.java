@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -239,7 +239,7 @@ public class MavenRepository
             DriverDescriptor.getWorkspaceDriversStorageFolder() :
             DriverDescriptor.getCustomDriversHome();
         Path homeFolder = customDriversHome.resolve("maven/" + extPath);
-        //File homeFolder = new File(DBeaverActivator.getInstance().getStateLocation().toFile(), "maven/" + extPath);
+        //File homeFolder = new File(BoberKurwaActivator.getInstance().getStateLocation().toFile(), "maven/" + extPath);
         if (!Files.exists(homeFolder)) {
             try {
                 Files.createDirectories(homeFolder);

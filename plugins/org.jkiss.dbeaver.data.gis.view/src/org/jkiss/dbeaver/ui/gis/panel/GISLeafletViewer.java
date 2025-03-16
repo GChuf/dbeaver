@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -517,13 +517,13 @@ public class GISLeafletViewer implements IGeometryValueEditor, DBPPreferenceList
             return;
         }
         toolBarManager.removeAll();
-        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_open, DBeaverIcons.getImageDescriptor(UIIcon.BROWSER)) {
+        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_open, BoberKurwaIcons.getImageDescriptor(UIIcon.BROWSER)) {
             @Override
             public void run() {
                 ShellUtils.launchProgram(scriptFile.toAbsolutePath().toString());
             }
         });
-        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_copy_as, DBeaverIcons.getImageDescriptor(UIIcon.PICTURE)) {
+        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_copy_as, BoberKurwaIcons.getImageDescriptor(UIIcon.PICTURE)) {
             @Override
             public void run() {
                 ImageTransfer imageTransfer = ImageTransfer.getInstance();
@@ -532,7 +532,7 @@ public class GISLeafletViewer implements IGeometryValueEditor, DBPPreferenceList
                 clipboard.setContents(new Object[] { imageData }, new Transfer[]{imageTransfer});
             }
         });
-        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_save_as, DBeaverIcons.getImageDescriptor(UIIcon.PICTURE_SAVE)) {
+        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_save_as, BoberKurwaIcons.getImageDescriptor(UIIcon.PICTURE_SAVE)) {
             @Override
             public void run() {
                 final Shell shell = browser.getShell();
@@ -572,7 +572,7 @@ public class GISLeafletViewer implements IGeometryValueEditor, DBPPreferenceList
             }
         });
 
-        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_print, DBeaverIcons.getImageDescriptor(UIIcon.PRINT)) {
+        toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_print, BoberKurwaIcons.getImageDescriptor(UIIcon.PRINT)) {
             @Override
             public void run() {
                 GC gc = new GC(browser.getDisplay());
@@ -602,7 +602,7 @@ public class GISLeafletViewer implements IGeometryValueEditor, DBPPreferenceList
         toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_flip, Action.AS_CHECK_BOX) {
             {
                 setToolTipText(GISMessages.panel_leaflet_viewer_tool_bar_action_tool_tip_text_flip);
-                setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.LINK_TO_EDITOR));
+                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.LINK_TO_EDITOR));
             }
 
             @Override
@@ -627,7 +627,7 @@ public class GISLeafletViewer implements IGeometryValueEditor, DBPPreferenceList
 
         toolBarManager.add(new Action(GISMessages.panel_leaflet_viewer_tool_bar_action_text_show_hide, Action.AS_CHECK_BOX) {
             {
-                setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.PALETTE));
+                setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.PALETTE));
             }
 
             @Override

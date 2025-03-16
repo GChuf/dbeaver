@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.ProxyProgressMonitor;
 import org.jkiss.dbeaver.model.runtime.load.ILoadService;
 import org.jkiss.dbeaver.model.runtime.load.ILoadVisualizer;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.utils.RuntimeUtils;
@@ -136,7 +136,7 @@ public class ProgressLoaderVisualizer<RESULT> implements ILoadVisualizer<RESULT>
             cancelButton = new Button(progressPane, SWT.PUSH);
             cancelButton.setText("Cancel");
             GridData gd = new GridData(GridData.FILL_BOTH);
-            gd.verticalIndent = DBeaverIcons.getImage(UIIcon.PROGRESS0).getBounds().height * 2;
+            gd.verticalIndent = BoberKurwaIcons.getImage(UIIcon.PROGRESS0).getBounds().height * 2;
             cancelButton.setLayoutData(gd);
             cancelButton.addSelectionListener(new SelectionAdapter() {
                 @Override
@@ -161,7 +161,7 @@ public class ProgressLoaderVisualizer<RESULT> implements ILoadVisualizer<RESULT>
                 }
                 GC gc = e.gc;
 
-                Image image = DBeaverIcons.getImage(PROGRESS_IMAGES[drawCount % PROGRESS_IMAGES.length]);
+                Image image = BoberKurwaIcons.getImage(PROGRESS_IMAGES[drawCount % PROGRESS_IMAGES.length]);
                 Rectangle buttonBounds = cancelButton.getBounds();
                 Rectangle imageBounds = image.getBounds();
                 gc.drawImage(

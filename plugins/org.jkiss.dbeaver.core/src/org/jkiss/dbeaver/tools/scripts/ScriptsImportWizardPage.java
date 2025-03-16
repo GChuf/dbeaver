@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -42,7 +42,7 @@ import org.jkiss.dbeaver.model.navigator.DBNResource;
 import org.jkiss.dbeaver.registry.DataSourceDescriptor;
 import org.jkiss.dbeaver.registry.DataSourceRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.CSmartCombo;
@@ -103,7 +103,7 @@ class ScriptsImportWizardPage extends WizardPage {
             });
 
             Button openFolder = new Button(generalSettings, SWT.PUSH);
-            openFolder.setImage(DBeaverIcons.getImage(UIIcon.OPEN));
+            openFolder.setImage(BoberKurwaIcons.getImage(UIIcon.OPEN));
             openFolder.addSelectionListener(new SelectionAdapter() {
                 @Override
                 public void widgetSelected(SelectionEvent e) {
@@ -221,7 +221,7 @@ class ScriptsImportWizardPage extends WizardPage {
         @Override
         public Image getImage(Object element) {
             final DBNDatabaseNode node = DBWorkbench.getPlatform().getNavigatorModel().findNode((DataSourceDescriptor) element);
-            return node == null ? null : DBeaverIcons.getImage(node.getNodeIcon());
+            return node == null ? null : BoberKurwaIcons.getImage(node.getNodeIcon());
         }
 
         @Override

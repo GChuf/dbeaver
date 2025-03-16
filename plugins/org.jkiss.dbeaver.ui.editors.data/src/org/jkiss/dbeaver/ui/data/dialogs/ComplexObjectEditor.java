@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -57,7 +57,7 @@ import org.jkiss.dbeaver.model.struct.DBSAttributeBase;
 import org.jkiss.dbeaver.model.struct.DBSDataType;
 import org.jkiss.dbeaver.model.struct.DBSTypedObject;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
 import org.jkiss.dbeaver.ui.controls.TreeContentProvider;
@@ -311,7 +311,7 @@ public class ComplexObjectEditor extends TreeViewer {
     @Nullable
     private Image getColumnImage(@NotNull ComplexElementItem item, int columnIndex) {
         if (columnIndex == 0) {
-            return DBeaverIcons.getImage(DBValueFormatting.getTypeImage(item.getDataType()));
+            return BoberKurwaIcons.getImage(DBValueFormatting.getTypeImage(item.getDataType()));
         } else {
             return null;
         }
@@ -682,7 +682,7 @@ public class ComplexObjectEditor extends TreeViewer {
 
     private class AddElementAction extends Action {
         AddElementAction() {
-            super(DataEditorsMessages.complex_object_editor_dialog_menu_add_element, DBeaverIcons.getImageDescriptor(UIIcon.ROW_ADD));
+            super(DataEditorsMessages.complex_object_editor_dialog_menu_add_element, BoberKurwaIcons.getImageDescriptor(UIIcon.ROW_ADD));
         }
 
         @Override
@@ -722,7 +722,7 @@ public class ComplexObjectEditor extends TreeViewer {
 
     private class RemoveElementAction extends Action {
         RemoveElementAction() {
-            super(DataEditorsMessages.complex_object_editor_dialog_menu_remove_element, DBeaverIcons.getImageDescriptor(UIIcon.ROW_DELETE));
+            super(DataEditorsMessages.complex_object_editor_dialog_menu_remove_element, BoberKurwaIcons.getImageDescriptor(UIIcon.ROW_DELETE));
         }
 
         @Override
@@ -751,7 +751,7 @@ public class ComplexObjectEditor extends TreeViewer {
             super(dir == SWT.UP
                       ? DataEditorsMessages.complex_object_editor_dialog_menu_move_up_element
                       : DataEditorsMessages.complex_object_editor_dialog_menu_move_down_element,
-                DBeaverIcons.getImageDescriptor(dir == SWT.UP ? UIIcon.ARROW_UP : UIIcon.ARROW_DOWN));
+                BoberKurwaIcons.getImageDescriptor(dir == SWT.UP ? UIIcon.ARROW_UP : UIIcon.ARROW_DOWN));
             this.direction = dir;
         }
 

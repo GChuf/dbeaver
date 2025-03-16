@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jfree.chart.plot.Zoomable;
 import org.jfree.chart.swt.ChartComposite;
 import org.jkiss.code.NotNull;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.charts.internal.UIChartsMessages;
 import org.jkiss.dbeaver.utils.GeneralUtils;
@@ -83,19 +83,19 @@ public class BaseChartComposite extends ChartComposite {
     protected void fillContextMenu(IMenuManager manager) {
         final Zoomable zoomable = GeneralUtils.adapt(getChart().getPlot(), Zoomable.class);
         if (zoomable != null) {
-            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_in, DBeaverIcons.getImageDescriptor(UIIcon.ZOOM_IN)) {
+            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_in, BoberKurwaIcons.getImageDescriptor(UIIcon.ZOOM_IN)) {
                 @Override
                 public void runWithEvent(Event e) {
                     doZoom(zoomable, getChartCanvas().toControl(getDisplay().getCursorLocation()), getZoomInFactor());
                 }
             });
-            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_out, DBeaverIcons.getImageDescriptor(UIIcon.ZOOM_OUT)) {
+            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_out, BoberKurwaIcons.getImageDescriptor(UIIcon.ZOOM_OUT)) {
                 @Override
                 public void runWithEvent(Event e) {
                     doZoom(zoomable, getChartCanvas().toControl(getDisplay().getCursorLocation()), getZoomOutFactor());
                 }
             });
-            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_reset, DBeaverIcons.getImageDescriptor(UIIcon.ZOOM)) {
+            manager.add(new Action(UIChartsMessages.base_chart_composite_action_zoom_reset, BoberKurwaIcons.getImageDescriptor(UIIcon.ZOOM)) {
                 @Override
                 public void runWithEvent(Event e) {
                     restoreAutoBounds();
@@ -130,7 +130,7 @@ public class BaseChartComposite extends ChartComposite {
         if (hasConfigurationDialog()) {
             manager.add(new Separator());
 
-            manager.add(new Action(UIChartsMessages.base_chart_composite_action_settings, DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
+            manager.add(new Action(UIChartsMessages.base_chart_composite_action_settings, BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION)) {
                 @Override
                 public void run() {
                     showChartConfigDialog();
@@ -138,7 +138,7 @@ public class BaseChartComposite extends ChartComposite {
             });
         }
         if (hasColorsConfiguration()) {
-            manager.add(new Action(UIChartsMessages.base_chart_composite_action_colors, DBeaverIcons.getImageDescriptor(UIIcon.PALETTE)) {
+            manager.add(new Action(UIChartsMessages.base_chart_composite_action_colors, BoberKurwaIcons.getImageDescriptor(UIIcon.PALETTE)) {
                 @Override
                 public void run() {
                     PreferenceDialog preferenceDialog = PreferencesUtil.createPreferenceDialogOn(getShell(), ExtensionFactory.COLORS_AND_FONTS_PREFERENCE_PAGE, null, null);

@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -79,7 +79,7 @@ import org.jkiss.dbeaver.registry.configurator.UIPropertyConfiguratorRegistry;
 import org.jkiss.dbeaver.registry.data.hints.ValueHintProviderDescriptor;
 import org.jkiss.dbeaver.registry.data.hints.ValueHintRegistry;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.jobs.DataSourceJob;
 import org.jkiss.dbeaver.tools.transfer.DTConstants;
 import org.jkiss.dbeaver.tools.transfer.ui.internal.DTUIMessages;
@@ -610,8 +610,8 @@ public class ResultSetViewer extends Viewer
         DataFilterRegistry.getInstance().saveDataFilter(dataContainer, model.getDataFilter());
 
         if (filtersPanel != null) {
-            DBeaverNotifications.showNotification(
-                DBeaverNotifications.NT_GENERIC,
+            BoberKurwaNotifications.showNotification(
+                BoberKurwaNotifications.NT_GENERIC,
                 "Data filter was saved",
                 filtersPanel.getFilterText(),
                 DBPMessageType.INFORMATION, null);
@@ -892,7 +892,7 @@ public class ResultSetViewer extends Viewer
                 }
                 for (ResultSetPresentationDescriptor pd : availablePresentations) {
                     VerticalButton item = new VerticalButton(presentationSwitchFolder, SWT.LEFT | SWT.RADIO);
-                    item.setImage(DBeaverIcons.getImage(pd.getIcon()));
+                    item.setImage(BoberKurwaIcons.getImage(pd.getIcon()));
                     item.setText(pd.getLabel());
                     item.setToolTipText(pd.getDescription());
                     item.setData(pd);
@@ -986,7 +986,7 @@ public class ResultSetViewer extends Viewer
                 VerticalButton panelsButton = new VerticalButton(panelSwitchFolder, SWT.RIGHT | SWT.CHECK);
                 {
                     panelsButton.setText(ResultSetMessages.controls_resultset_config_panels);
-                    panelsButton.setImage(DBeaverIcons.getImage(UIIcon.PANEL_CUSTOMIZE));
+                    panelsButton.setImage(BoberKurwaIcons.getImage(UIIcon.PANEL_CUSTOMIZE));
                     panelsButton.addSelectionListener(new SelectionAdapter() {
                         @Override
                         public void widgetSelected(SelectionEvent e) {
@@ -1009,7 +1009,7 @@ public class ResultSetViewer extends Viewer
                     gd.verticalIndent = 2;
                     panelButton.setLayoutData(gd);
                     panelButton.setData(panel);
-                    panelButton.setImage(DBeaverIcons.getImage(panel.getIcon()));
+                    panelButton.setImage(BoberKurwaIcons.getImage(panel.getIcon()));
                     panelButton.setToolTipText(panel.getLabel());
                     String toolTip = ActionUtils.findCommandDescription(
                         ResultSetHandlerTogglePanel.CMD_TOGGLE_PANEL, getSite(), true,
@@ -1282,7 +1282,7 @@ public class ResultSetViewer extends Viewer
             CTabItem panelTab = new CTabItem(panelFolder, SWT.CLOSE);
             panelTab.setData(id);
             panelTab.setText(panelDescriptor.getLabel());
-            panelTab.setImage(DBeaverIcons.getImage(panelDescriptor.getIcon()));
+            panelTab.setImage(BoberKurwaIcons.getImage(panelDescriptor.getIcon()));
             panelTab.setToolTipText(panelDescriptor.getDescription());
             panelTab.setControl(panelControl);
             UIUtils.disposeControlOnItemDispose(panelTab);
@@ -1932,7 +1932,7 @@ public class ResultSetViewer extends Viewer
             });
             UIUtils.addDefaultEditActionsSupport(site, resultSetSize);
 
-            rowCountLabel = new ActiveStatusMessage(statusBar, DBeaverIcons.getImage(UIIcon.COMPILE), ResultSetMessages.controls_resultset_viewer_calculate_row_count, this) {
+            rowCountLabel = new ActiveStatusMessage(statusBar, BoberKurwaIcons.getImage(UIIcon.COMPILE), ResultSetMessages.controls_resultset_viewer_calculate_row_count, this) {
                 @Override
                 protected boolean isActionEnabled() {
                     return hasData();
@@ -2897,7 +2897,7 @@ public class ResultSetViewer extends Viewer
                 if ((decoratorFeatures & IResultSetDecorator.FEATURE_FILTERS) != 0) {
                     MenuManager filtersMenu = new MenuManager(
                         ResultSetMessages.controls_resultset_viewer_action_filter,
-                        DBeaverIcons.getImageDescriptor(UIIcon.FILTER),
+                        BoberKurwaIcons.getImageDescriptor(UIIcon.FILTER),
                         MENU_ID_FILTERS); //$NON-NLS-1$
                     filtersMenu.setActionDefinitionId(ResultSetHandlerMain.CMD_FILTER_MENU);
                     filtersMenu.setRemoveAllWhenShown(true);
@@ -2907,7 +2907,7 @@ public class ResultSetViewer extends Viewer
                 {
                     MenuManager orderMenu = new MenuManager(
                         ResultSetMessages.controls_resultset_viewer_action_order,
-                        DBeaverIcons.getImageDescriptor(UIIcon.SORT),
+                        BoberKurwaIcons.getImageDescriptor(UIIcon.SORT),
                         MENU_ID_ORDER); //$NON-NLS-1$
                     orderMenu.setRemoveAllWhenShown(true);
                     orderMenu.addMenuListener(manager1 -> fillOrderingsMenu(manager1, attr, row));
@@ -2924,7 +2924,7 @@ public class ResultSetViewer extends Viewer
 
                 final MenuManager editMenu = new MenuManager(
                     ResultSetMessages.controls_resultset_viewer_action_edit,
-                    DBeaverIcons.getImageDescriptor(UIIcon.ROW_EDIT),
+                    BoberKurwaIcons.getImageDescriptor(UIIcon.ROW_EDIT),
                     MENU_ID_EDIT
                 );
 
@@ -3269,7 +3269,7 @@ public class ResultSetViewer extends Viewer
         if ((getDecorator().getDecoratorFeatures() & IResultSetDecorator.FEATURE_PANELS) != 0) {
             MenuManager panelsMenu = new MenuManager(
                 ResultSetMessages.controls_resultset_viewer_action_panels,
-                DBeaverIcons.getImageDescriptor(UIIcon.PANEL_CUSTOMIZE),
+                BoberKurwaIcons.getImageDescriptor(UIIcon.PANEL_CUSTOMIZE),
                 "result_panels"); //$NON-NLS-1$
             layoutMenu.add(panelsMenu);
             for (IContributionItem item : fillPanelsMenu()) {
@@ -3283,7 +3283,7 @@ public class ResultSetViewer extends Viewer
                     final ResultSetPresentationDescriptor presentation;
                     {
                         presentation = pd;
-                        setImageDescriptor(DBeaverIcons.getImageDescriptor(presentation.getIcon()));
+                        setImageDescriptor(BoberKurwaIcons.getImageDescriptor(presentation.getIcon()));
                     }
 
                     @Override
@@ -5020,7 +5020,7 @@ public class ResultSetViewer extends Viewer
         ConfigAction()
         {
             super(ResultSetMessages.controls_resultset_viewer_action_options);
-            setImageDescriptor(DBeaverIcons.getImageDescriptor(UIIcon.CONFIGURATION));
+            setImageDescriptor(BoberKurwaIcons.getImageDescriptor(UIIcon.CONFIGURATION));
         }
 
         @Override

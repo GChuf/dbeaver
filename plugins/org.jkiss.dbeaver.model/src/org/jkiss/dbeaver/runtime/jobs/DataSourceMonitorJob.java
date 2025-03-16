@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -44,7 +44,7 @@ import org.jkiss.dbeaver.model.runtime.AbstractJob;
 import org.jkiss.dbeaver.model.runtime.DBRProgressMonitor;
 import org.jkiss.dbeaver.model.struct.DBSInstance;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.runtime.DBeaverNotifications;
+import org.jkiss.dbeaver.runtime.BoberKurwaNotifications;
 import org.jkiss.dbeaver.runtime.OperationSystemState;
 
 import java.util.*;
@@ -365,9 +365,9 @@ public class DataSourceMonitorJob extends AbstractJob {
     }
 
     protected void showNotification(@NotNull DBPDataSource dataSource) {
-        DBeaverNotifications.showNotification(
+        BoberKurwaNotifications.showNotification(
             dataSource,
-            DBeaverNotifications.NT_DISCONNECT_IDLE,
+            BoberKurwaNotifications.NT_DISCONNECT_IDLE,
             "Connection '" + dataSource.getContainer().getName() + "' has been closed after long idle period",
             DBPMessageType.ERROR
         );

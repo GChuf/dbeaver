@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import org.jkiss.dbeaver.DBException;
 import org.jkiss.dbeaver.model.DBPObjectController;
 
 /**
- * Helps to work properly with tasks: read and save configuration file in different type of DBeaver applications.
+ * Helps to work properly with tasks: read and save configuration file in different type of BoberKurwa applications.
  */
 public interface DBTTaskController extends DBPObjectController {
 

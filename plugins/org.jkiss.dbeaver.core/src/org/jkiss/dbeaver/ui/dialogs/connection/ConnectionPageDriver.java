@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ import org.jkiss.dbeaver.registry.DataSourceNavigatorSettings;
 import org.jkiss.dbeaver.registry.DataSourceProviderDescriptor;
 import org.jkiss.dbeaver.registry.driver.DriverDescriptor;
 import org.jkiss.dbeaver.runtime.DBWorkbench;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.IHelpContextIds;
 import org.jkiss.dbeaver.ui.UIIcon;
 import org.jkiss.dbeaver.ui.UIUtils;
@@ -128,7 +128,7 @@ class ConnectionPageDriver extends ActiveWizardPage implements ISelectionChanged
         Composite orderGroup = new Composite(controlsGroup, SWT.NONE);
         orderGroup.setLayoutData(new GridData(GridData.HORIZONTAL_ALIGN_END));
         orderGroup.setLayout(new RowLayout());
-        //new Label(orderGroup, SWT.NONE).setImage(DBeaverIcons.getImage(UIIcon.SORT));
+        //new Label(orderGroup, SWT.NONE).setImage(BoberKurwaIcons.getImage(UIIcon.SORT));
         new Label(orderGroup, SWT.NONE).setText(CoreMessages.driver_connection_sort_by + " ");
         DriverSelectViewer.OrderBy defaultOrderBy = DriverSelectViewer.getDefaultOrderBy();
 
@@ -154,7 +154,7 @@ class ConnectionPageDriver extends ActiveWizardPage implements ISelectionChanged
         Composite filler = UIUtils.createComposite(controlsGroup, 3);
         filler.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
         new Label(filler, SWT.NONE).setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
-        new Label(filler, SWT.NONE).setImage(DBeaverIcons.getImage(UIIcon.SEPARATOR_V));
+        new Label(filler, SWT.NONE).setImage(BoberKurwaIcons.getImage(UIIcon.SEPARATOR_V));
         new Label(filler, SWT.NONE).setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
     }
 

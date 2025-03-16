@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.ui.PlatformUI;
 import org.jkiss.code.NotNull;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.DBException;
-import org.jkiss.dbeaver.DBeaverPreferences;
+import org.jkiss.dbeaver.BoberKurwaPreferences;
 import org.jkiss.dbeaver.Log;
 import org.jkiss.dbeaver.ModelPreferences;
 import org.jkiss.dbeaver.model.DBConstants;
@@ -70,7 +70,7 @@ public class DesktopPlatform extends BasePlatformImpl implements DBPPlatformDesk
 
     // The plug-in ID
     public static final String PLUGIN_ID = "org.jkiss.dbeaver.core"; //$NON-NLS-1$
-    public static final String DBEAVER_DATA_DIR = "DBeaverData";
+    public static final String DBEAVER_DATA_DIR = "BoberKurwaData";
 
     private static final String TEMP_PROJECT_NAME = ".dbeaver-temp"; //$NON-NLS-1$
     private static final String DBEAVER_CONFIG_FOLDER = "settings";
@@ -124,13 +124,13 @@ public class DesktopPlatform extends BasePlatformImpl implements DBPPlatformDesk
             }
         }
 
-        if (getPreferenceStore().getBoolean(DBeaverPreferences.SECURITY_USE_BOUNCY_CASTLE)) {
+        if (getPreferenceStore().getBoolean(BoberKurwaPreferences.SECURITY_USE_BOUNCY_CASTLE)) {
             // Register BC security provider
             SecurityProviderUtils.registerSecurityProvider();
         }
 
         this.certificateStorage = new DefaultCertificateStorage(
-            RuntimeUtils.getPluginStateLocation(DBeaverActivator.getInstance())
+            RuntimeUtils.getPluginStateLocation(BoberKurwaActivator.getInstance())
                 .resolve(DBConstants.CERTIFICATE_STORAGE_FOLDER));
 
         // Create workspace
@@ -217,7 +217,7 @@ public class DesktopPlatform extends BasePlatformImpl implements DBPPlatformDesk
 
     @Override
     protected Plugin getProductPlugin() {
-        return DBeaverActivator.getInstance();
+        return BoberKurwaActivator.getInstance();
     }
 
     @NotNull
@@ -276,7 +276,7 @@ public class DesktopPlatform extends BasePlatformImpl implements DBPPlatformDesk
         Files.createDirectories(file.getParent());
 
         try (Writer writer = Files.newBufferedWriter(file)) {
-            properties.store(writer, "DBeaver configuration");
+            properties.store(writer, "BoberKurwa configuration");
         }
     }
 

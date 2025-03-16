@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,7 +23,7 @@ import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.graphics.Rectangle;
 import org.jkiss.code.Nullable;
 import org.jkiss.dbeaver.model.DBPImage;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.utils.CommonUtils;
 
 import java.util.ArrayList;
@@ -228,7 +228,7 @@ public class GridColumn implements IGridColumn {
         if (!hint.icons.isEmpty()) {
             int maxIconWidth = GridColumnRenderer.IMAGE_SPACING;
             for (DBPImage hi : hint.icons) {
-                maxIconWidth = Math.max(maxIconWidth, DBeaverIcons.getImage(hi).getBounds().width);
+                maxIconWidth = Math.max(maxIconWidth, BoberKurwaIcons.getImage(hi).getBounds().width);
             }
             x += maxIconWidth;
         }
@@ -337,7 +337,7 @@ public class GridColumn implements IGridColumn {
             imageBounds = GridCellRenderer.LINK_IMAGE_BOUNDS;
         } else {
             DBPImage image = cellInfo.image;
-            imageBounds = image == null ? null : DBeaverIcons.getImage(image).getBounds();
+            imageBounds = image == null ? null : BoberKurwaIcons.getImage(image).getBounds();
         }
         if (imageBounds != null) {
             x += imageBounds.width + insideMargin;

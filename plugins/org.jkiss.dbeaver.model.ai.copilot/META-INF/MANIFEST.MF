@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: DBeaver Copilot Model
+Bundle-Name: BoberKurwa Copilot Model
 Bundle-SymbolicName: org.jkiss.dbeaver.model.ai.copilot;singleton:=true
 Bundle-Version: 1.0.16.qualifier
 Bundle-Release-Date: 20250310
-Bundle-Vendor: DBeaver Corp
+Bundle-Vendor: BoberKurwa Corp
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Bundle-ActivationPolicy: lazy
 Export-Package: org.jkiss.dbeaver.model.ai.copilot,

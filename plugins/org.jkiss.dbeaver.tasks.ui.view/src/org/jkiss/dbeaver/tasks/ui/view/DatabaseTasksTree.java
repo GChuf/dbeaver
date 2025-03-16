@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -753,7 +753,7 @@ public class DatabaseTasksTree {
             cell.setText(CommonUtils.notEmpty(getCellText(element)));
             DBPImage cellImage = getCellImage(element);
             if (cellImage != null) {
-                cell.setImage(DBeaverIcons.getImage(cellImage));
+                cell.setImage(BoberKurwaIcons.getImage(cellImage));
             }
 
         }

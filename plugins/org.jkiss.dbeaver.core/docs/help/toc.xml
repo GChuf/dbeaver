@@ -2,8 +2,8 @@
 <?NLS TYPE="org.eclipse.help.toc"?>
 
 <!--
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,8 +18,8 @@
  * limitations under the License.
   -->
 
-<toc label="DBeaver Help">
-	<topic label="About DBeaver" href="docs/help/html/about.html">
+<toc label="BoberKurwa Help">
+	<topic label="About BoberKurwa" href="docs/help/html/about.html">
 	</topic>
     <topic label="Manage connections">
         <topic href="docs/help/html/dialogs/driver-manager.html" label="Manage drivers"/>

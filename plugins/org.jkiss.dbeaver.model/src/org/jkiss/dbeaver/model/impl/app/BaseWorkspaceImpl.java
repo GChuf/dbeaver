@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -117,7 +117,7 @@ public abstract class BaseWorkspaceImpl implements DBPWorkspace {
         Path versionFile = metadataFolder.resolve(DBConstants.WORKSPACE_PROPS_FILE);
 
         try (OutputStream os = Files.newOutputStream(versionFile)) {
-            props.store(os, "DBeaver workspace version");
+            props.store(os, "BoberKurwa workspace version");
         } catch (Exception e) {
             log.error(e);
         }

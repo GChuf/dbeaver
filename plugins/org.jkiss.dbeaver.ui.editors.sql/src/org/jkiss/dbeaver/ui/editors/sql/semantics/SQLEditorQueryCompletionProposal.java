@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2025 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2025 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ import org.jkiss.dbeaver.model.sql.semantics.completion.SQLQueryCompletionItemKi
 import org.jkiss.dbeaver.model.sql.semantics.completion.SQLQueryCompletionProposal;
 import org.jkiss.dbeaver.model.sql.semantics.completion.SQLQueryWordEntry;
 import org.jkiss.dbeaver.model.struct.DBSObject;
-import org.jkiss.dbeaver.ui.DBeaverIcons;
+import org.jkiss.dbeaver.ui.BoberKurwaIcons;
 import org.jkiss.dbeaver.ui.editors.sql.dialogs.SuggestionInformationControlCreator;
 import org.jkiss.utils.CommonUtils;
 
@@ -95,7 +95,7 @@ public class SQLEditorQueryCompletionProposal extends SQLQueryCompletionProposal
             ? null
             : this.cachedSwtImage != null
                 ? this.cachedSwtImage
-                : (this.cachedSwtImage = DBeaverIcons.getImage(this.image));
+                : (this.cachedSwtImage = BoberKurwaIcons.getImage(this.image));
     }
 
     @Override

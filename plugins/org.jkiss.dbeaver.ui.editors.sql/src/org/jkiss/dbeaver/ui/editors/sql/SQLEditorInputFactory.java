@@ -1,6 +1,6 @@
 /*
- * DBeaver - Universal Database Manager
- * Copyright (C) 2010-2024 DBeaver Corp and others
+ * BoberKurwa - Universal Database Manager
+ * Copyright (C) 2010-2024 BoberKurwa Corp and others
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,7 +33,7 @@ import java.io.ByteArrayInputStream;
 
 /**
  * SQL editor input factory.
- * It is left for backward compatibility (for old DBeaver versions and SQL editors saved with this factory).
+ * It is left for backward compatibility (for old BoberKurwa versions and SQL editors saved with this factory).
  * TODO: remove it at some moment
  */
 public class SQLEditorInputFactory implements IElementFactory

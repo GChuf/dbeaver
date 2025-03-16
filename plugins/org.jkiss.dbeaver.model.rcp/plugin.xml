@@ -8,10 +8,10 @@
         <extender id="dbfs" root="true" class="org.jkiss.dbeaver.model.navigator.RCPNavigatorExtender"/>
     </extension>
 
-    <extension point="org.eclipse.core.resources.natures" id="org.jkiss.dbeaver.DBeaverNature"
-               name="%extension.org.jkiss.dbeaver.DBeaverNature.name">
+    <extension point="org.eclipse.core.resources.natures" id="org.jkiss.dbeaver.BoberKurwaNature"
+               name="%extension.org.jkiss.dbeaver.BoberKurwaNature.name">
         <runtime>
-            <run class="org.jkiss.dbeaver.model.rcp.DBeaverNature">
+            <run class="org.jkiss.dbeaver.model.rcp.BoberKurwaNature">
             </run>
         </runtime>
     </extension>

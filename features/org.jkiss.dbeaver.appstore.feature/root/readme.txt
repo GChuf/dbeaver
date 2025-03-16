@@ -1,6 +1,6 @@
 ${dbeaver-product} ${dbeaver-version} for AppStore
 
-This is a special DBeaver distribution for Microsoft and Apple app store.
+This is a special BoberKurwa distribution for Microsoft and Apple app store.
 
 License
 ==========================
